@@ -1,0 +1,2 @@
+/usr/bin/ar qc libplotter2_lib.a CMakeFiles/plotter2_lib.dir/temp/plotter2.cpp.o
+/usr/bin/ranlib libplotter2_lib.a

@@ -1,0 +1,14 @@
+[
+{
+  "directory": "/Users/heathfortin/programing/c++/plotter/build/src/libs/plotter2",
+  "command": "/usr/bin/c++  -isystem /opt/homebrew/opt/python@3.13/Frameworks/Python.framework/Versions/3.13/include/python3.13 -isystem /opt/homebrew/include/eigen3 -g -std=gnu++2b -arch arm64 -o CMakeFiles/plotter2_lib.dir/temp/plotter2.cpp.o -c /Users/heathfortin/programing/c++/plotter/src/libs/plotter2/temp/plotter2.cpp",
+  "file": "/Users/heathfortin/programing/c++/plotter/src/libs/plotter2/temp/plotter2.cpp",
+  "output": "src/libs/plotter2/CMakeFiles/plotter2_lib.dir/temp/plotter2.cpp.o"
+},
+{
+  "directory": "/Users/heathfortin/programing/c++/plotter/build/src/executable/src",
+  "command": "/usr/bin/c++  -isystem /opt/homebrew/opt/python@3.13/Frameworks/Python.framework/Versions/3.13/include/python3.13 -isystem /opt/homebrew/include/eigen3 -g -std=gnu++2b -arch arm64 -o CMakeFiles/exe.dir/main.cpp.o -c /Users/heathfortin/programing/c++/plotter/src/executable/src/main.cpp",
+  "file": "/Users/heathfortin/programing/c++/plotter/src/executable/src/main.cpp",
+  "output": "src/executable/src/CMakeFiles/exe.dir/main.cpp.o"
+}
+]

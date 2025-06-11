@@ -1,0 +1,12 @@
+{
+	"InstallScripts" : 
+	[
+		"/Users/heathfortin/programing/c++/plotter/build/cmake_install.cmake",
+		"/Users/heathfortin/programing/c++/plotter/build/src/cmake_install.cmake",
+		"/Users/heathfortin/programing/c++/plotter/build/src/libs/cmake_install.cmake",
+		"/Users/heathfortin/programing/c++/plotter/build/src/libs/plotter2/cmake_install.cmake",
+		"/Users/heathfortin/programing/c++/plotter/build/src/executable/cmake_install.cmake",
+		"/Users/heathfortin/programing/c++/plotter/build/src/executable/src/cmake_install.cmake"
+	],
+	"Parallel" : false
+}

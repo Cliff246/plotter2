@@ -1,0 +1,1 @@
+/usr/bin/c++ -g -arch arm64 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/exe.dir/main.cpp.o -o exe  ../../libs/plotter2/libplotter2_lib.a /opt/homebrew/opt/python@3.13/Frameworks/Python.framework/Versions/3.13/lib/libpython3.13.dylib /Library/Frameworks/Python.framework/Versions/3.13/lib/libpython3.13.dylib
