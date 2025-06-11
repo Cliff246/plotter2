@@ -130,6 +130,45 @@ plotter2_lib/fast:
 .PHONY : plotter2_lib/fast
 
 #=============================================================================
+# Target rules for targets named grapher_lib
+
+# Build rule for target.
+grapher_lib: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 grapher_lib
+.PHONY : grapher_lib
+
+# fast build rule for target.
+grapher_lib/fast:
+	$(MAKE) $(MAKESILENT) -f src/libs/plotter2/grapher/lib/CMakeFiles/grapher_lib.dir/build.make src/libs/plotter2/grapher/lib/CMakeFiles/grapher_lib.dir/build
+.PHONY : grapher_lib/fast
+
+#=============================================================================
+# Target rules for targets named manager_lib
+
+# Build rule for target.
+manager_lib: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 manager_lib
+.PHONY : manager_lib
+
+# fast build rule for target.
+manager_lib/fast:
+	$(MAKE) $(MAKESILENT) -f src/libs/plotter2/manager/lib/CMakeFiles/manager_lib.dir/build.make src/libs/plotter2/manager/lib/CMakeFiles/manager_lib.dir/build
+.PHONY : manager_lib/fast
+
+#=============================================================================
+# Target rules for targets named scripter_lib
+
+# Build rule for target.
+scripter_lib: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 scripter_lib
+.PHONY : scripter_lib
+
+# fast build rule for target.
+scripter_lib/fast:
+	$(MAKE) $(MAKESILENT) -f src/libs/plotter2/scripter/lib/CMakeFiles/scripter_lib.dir/build.make src/libs/plotter2/scripter/lib/CMakeFiles/scripter_lib.dir/build
+.PHONY : scripter_lib/fast
+
+#=============================================================================
 # Target rules for targets named exe
 
 # Build rule for target.
@@ -139,7 +178,7 @@ exe: cmake_check_build_system
 
 # fast build rule for target.
 exe/fast:
-	$(MAKE) $(MAKESILENT) -f src/executable/src/CMakeFiles/exe.dir/build.make src/executable/src/CMakeFiles/exe.dir/build
+	$(MAKE) $(MAKESILENT) -f src/executable/exesrcs/CMakeFiles/exe.dir/build.make src/executable/exesrcs/CMakeFiles/exe.dir/build
 .PHONY : exe/fast
 
 # Help Target
@@ -151,7 +190,10 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... exe"
+	@echo "... grapher_lib"
+	@echo "... manager_lib"
 	@echo "... plotter2_lib"
+	@echo "... scripter_lib"
 .PHONY : help
 
 

@@ -529,3 +529,46 @@ events:
       LTO support using: LLVM version 17.0.0 (static support for 29, runtime is 29)
       TAPI support using: Apple TAPI version 17.0.0 (tapi-1700.0.3.5)
 ...
+
+---
+events:
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/Internal/CheckSourceCompiles.cmake:104 (try_compile)"
+      - "/opt/homebrew/share/cmake/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "/opt/homebrew/share/cmake/Modules/CheckCXXCompilerFlag.cmake:55 (cmake_check_compiler_flag)"
+      - "/opt/homebrew/share/cmake/pybind11/pybind11Common.cmake:323 (check_cxx_compiler_flag)"
+      - "/opt/homebrew/share/cmake/pybind11/pybind11Common.cmake:363 (_pybind11_return_if_cxx_and_linker_flags_work)"
+      - "/opt/homebrew/share/cmake/pybind11/pybind11Common.cmake:435 (_pybind11_generate_lto)"
+      - "/opt/homebrew/share/cmake/pybind11/pybind11Config.cmake:250 (include)"
+      - "CMakeLists.txt:53 (find_package)"
+    checks:
+      - "Performing Test HAS_FLTO_THIN"
+    directories:
+      source: "/Users/heathfortin/programing/c++/plotter/build/CMakeFiles/CMakeScratch/TryCompile-Mgfa5c"
+      binary: "/Users/heathfortin/programing/c++/plotter/build/CMakeFiles/CMakeScratch/TryCompile-Mgfa5c"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_OSX_ARCHITECTURES: ""
+      CMAKE_OSX_DEPLOYMENT_TARGET: ""
+      CMAKE_OSX_SYSROOT: ""
+    buildResult:
+      variable: "HAS_FLTO_THIN"
+      cached: true
+      stdout: |
+        Change Dir: '/Users/heathfortin/programing/c++/plotter/build/CMakeFiles/CMakeScratch/TryCompile-Mgfa5c'
+        
+        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_542d0/fast
+        /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_542d0.dir/build.make CMakeFiles/cmTC_542d0.dir/build
+        Building CXX object CMakeFiles/cmTC_542d0.dir/src.cxx.o
+        /usr/bin/c++ -DHAS_FLTO_THIN  -std=gnu++2b -arch arm64   -flto -MD -MT CMakeFiles/cmTC_542d0.dir/src.cxx.o -MF CMakeFiles/cmTC_542d0.dir/src.cxx.o.d -o CMakeFiles/cmTC_542d0.dir/src.cxx.o -c /Users/heathfortin/programing/c++/plotter/build/CMakeFiles/CMakeScratch/TryCompile-Mgfa5c/src.cxx
+        Linking CXX executable cmTC_542d0
+        /opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_542d0.dir/link.txt --verbose=1
+        ld: warning: search path '/usr/local/lib' is not a directory
+        /usr/bin/c++  -arch arm64 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_542d0.dir/src.cxx.o -o cmTC_542d0  -flto
+        
+      exitCode: 0
+...

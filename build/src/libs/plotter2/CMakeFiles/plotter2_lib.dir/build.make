@@ -72,28 +72,28 @@ include src/libs/plotter2/CMakeFiles/plotter2_lib.dir/flags.make
 src/libs/plotter2/CMakeFiles/plotter2_lib.dir/codegen:
 .PHONY : src/libs/plotter2/CMakeFiles/plotter2_lib.dir/codegen
 
-src/libs/plotter2/CMakeFiles/plotter2_lib.dir/temp/plotter2.cpp.o: src/libs/plotter2/CMakeFiles/plotter2_lib.dir/flags.make
-src/libs/plotter2/CMakeFiles/plotter2_lib.dir/temp/plotter2.cpp.o: /Users/heathfortin/programing/c++/plotter/src/libs/plotter2/temp/plotter2.cpp
-src/libs/plotter2/CMakeFiles/plotter2_lib.dir/temp/plotter2.cpp.o: src/libs/plotter2/CMakeFiles/plotter2_lib.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/heathfortin/programing/c++/plotter/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object src/libs/plotter2/CMakeFiles/plotter2_lib.dir/temp/plotter2.cpp.o"
-	cd /Users/heathfortin/programing/c++/plotter/build/src/libs/plotter2 && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/libs/plotter2/CMakeFiles/plotter2_lib.dir/temp/plotter2.cpp.o -MF CMakeFiles/plotter2_lib.dir/temp/plotter2.cpp.o.d -o CMakeFiles/plotter2_lib.dir/temp/plotter2.cpp.o -c /Users/heathfortin/programing/c++/plotter/src/libs/plotter2/temp/plotter2.cpp
+src/libs/plotter2/CMakeFiles/plotter2_lib.dir/plotter.cpp.o: src/libs/plotter2/CMakeFiles/plotter2_lib.dir/flags.make
+src/libs/plotter2/CMakeFiles/plotter2_lib.dir/plotter.cpp.o: /Users/heathfortin/programing/c++/plotter/src/libs/plotter2/plotter.cpp
+src/libs/plotter2/CMakeFiles/plotter2_lib.dir/plotter.cpp.o: src/libs/plotter2/CMakeFiles/plotter2_lib.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/heathfortin/programing/c++/plotter/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object src/libs/plotter2/CMakeFiles/plotter2_lib.dir/plotter.cpp.o"
+	cd /Users/heathfortin/programing/c++/plotter/build/src/libs/plotter2 && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/libs/plotter2/CMakeFiles/plotter2_lib.dir/plotter.cpp.o -MF CMakeFiles/plotter2_lib.dir/plotter.cpp.o.d -o CMakeFiles/plotter2_lib.dir/plotter.cpp.o -c /Users/heathfortin/programing/c++/plotter/src/libs/plotter2/plotter.cpp
 
-src/libs/plotter2/CMakeFiles/plotter2_lib.dir/temp/plotter2.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/plotter2_lib.dir/temp/plotter2.cpp.i"
-	cd /Users/heathfortin/programing/c++/plotter/build/src/libs/plotter2 && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/heathfortin/programing/c++/plotter/src/libs/plotter2/temp/plotter2.cpp > CMakeFiles/plotter2_lib.dir/temp/plotter2.cpp.i
+src/libs/plotter2/CMakeFiles/plotter2_lib.dir/plotter.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/plotter2_lib.dir/plotter.cpp.i"
+	cd /Users/heathfortin/programing/c++/plotter/build/src/libs/plotter2 && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/heathfortin/programing/c++/plotter/src/libs/plotter2/plotter.cpp > CMakeFiles/plotter2_lib.dir/plotter.cpp.i
 
-src/libs/plotter2/CMakeFiles/plotter2_lib.dir/temp/plotter2.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/plotter2_lib.dir/temp/plotter2.cpp.s"
-	cd /Users/heathfortin/programing/c++/plotter/build/src/libs/plotter2 && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/heathfortin/programing/c++/plotter/src/libs/plotter2/temp/plotter2.cpp -o CMakeFiles/plotter2_lib.dir/temp/plotter2.cpp.s
+src/libs/plotter2/CMakeFiles/plotter2_lib.dir/plotter.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/plotter2_lib.dir/plotter.cpp.s"
+	cd /Users/heathfortin/programing/c++/plotter/build/src/libs/plotter2 && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/heathfortin/programing/c++/plotter/src/libs/plotter2/plotter.cpp -o CMakeFiles/plotter2_lib.dir/plotter.cpp.s
 
 # Object files for target plotter2_lib
 plotter2_lib_OBJECTS = \
-"CMakeFiles/plotter2_lib.dir/temp/plotter2.cpp.o"
+"CMakeFiles/plotter2_lib.dir/plotter.cpp.o"
 
 # External object files for target plotter2_lib
 plotter2_lib_EXTERNAL_OBJECTS =
 
-src/libs/plotter2/libplotter2_lib.a: src/libs/plotter2/CMakeFiles/plotter2_lib.dir/temp/plotter2.cpp.o
+src/libs/plotter2/libplotter2_lib.a: src/libs/plotter2/CMakeFiles/plotter2_lib.dir/plotter.cpp.o
 src/libs/plotter2/libplotter2_lib.a: src/libs/plotter2/CMakeFiles/plotter2_lib.dir/build.make
 src/libs/plotter2/libplotter2_lib.a: src/libs/plotter2/CMakeFiles/plotter2_lib.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/heathfortin/programing/c++/plotter/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX static library libplotter2_lib.a"

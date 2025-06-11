@@ -1,14 +1,32 @@
 [
 {
   "directory": "/Users/heathfortin/programing/c++/plotter/build/src/libs/plotter2",
-  "command": "/usr/bin/c++  -isystem /opt/homebrew/opt/python@3.13/Frameworks/Python.framework/Versions/3.13/include/python3.13 -isystem /opt/homebrew/include/eigen3 -g -std=gnu++2b -arch arm64 -o CMakeFiles/plotter2_lib.dir/temp/plotter2.cpp.o -c /Users/heathfortin/programing/c++/plotter/src/libs/plotter2/temp/plotter2.cpp",
-  "file": "/Users/heathfortin/programing/c++/plotter/src/libs/plotter2/temp/plotter2.cpp",
-  "output": "src/libs/plotter2/CMakeFiles/plotter2_lib.dir/temp/plotter2.cpp.o"
+  "command": "/usr/bin/c++  -I/Users/heathfortin/programing/c++/plotter/src/libs/plotter2/grapher_lib -I/Users/heathfortin/programing/c++/plotter/src/libs/plotter2/manager_lib -I/Users/heathfortin/programing/c++/plotter/src/libs/plotter2/scripter_lib -I/Users/heathfortin/programing/c++/plotter/src/libs/plotter2/grapher/lib/include -I/Users/heathfortin/programing/c++/plotter/src/libs/plotter2/manager/lib/include -I/Users/heathfortin/programing/c++/plotter/src/libs/plotter2/scripter/lib/include -isystem /opt/homebrew/opt/python@3.13/Frameworks/Python.framework/Versions/3.13/include/python3.13 -isystem /opt/homebrew/include/eigen3 -g -std=gnu++2b -arch arm64 -o CMakeFiles/plotter2_lib.dir/plotter.cpp.o -c /Users/heathfortin/programing/c++/plotter/src/libs/plotter2/plotter.cpp",
+  "file": "/Users/heathfortin/programing/c++/plotter/src/libs/plotter2/plotter.cpp",
+  "output": "src/libs/plotter2/CMakeFiles/plotter2_lib.dir/plotter.cpp.o"
 },
 {
-  "directory": "/Users/heathfortin/programing/c++/plotter/build/src/executable/src",
-  "command": "/usr/bin/c++  -isystem /opt/homebrew/opt/python@3.13/Frameworks/Python.framework/Versions/3.13/include/python3.13 -isystem /opt/homebrew/include/eigen3 -g -std=gnu++2b -arch arm64 -o CMakeFiles/exe.dir/main.cpp.o -c /Users/heathfortin/programing/c++/plotter/src/executable/src/main.cpp",
-  "file": "/Users/heathfortin/programing/c++/plotter/src/executable/src/main.cpp",
-  "output": "src/executable/src/CMakeFiles/exe.dir/main.cpp.o"
+  "directory": "/Users/heathfortin/programing/c++/plotter/build/src/libs/plotter2/grapher/lib",
+  "command": "/usr/bin/c++  -I/opt/homebrew/opt/python@3.13/Frameworks/Python.framework/Versions/3.13/include/python3.13 -I/Users/heathfortin/programing/c++/plotter/src/libs/plotter2/grapher/lib/include -g -std=gnu++2b -arch arm64 -o CMakeFiles/grapher_lib.dir/sources/grapher.cpp.o -c /Users/heathfortin/programing/c++/plotter/src/libs/plotter2/grapher/lib/sources/grapher.cpp",
+  "file": "/Users/heathfortin/programing/c++/plotter/src/libs/plotter2/grapher/lib/sources/grapher.cpp",
+  "output": "src/libs/plotter2/grapher/lib/CMakeFiles/grapher_lib.dir/sources/grapher.cpp.o"
+},
+{
+  "directory": "/Users/heathfortin/programing/c++/plotter/build/src/libs/plotter2/manager/lib",
+  "command": "/usr/bin/c++  -I/Users/heathfortin/programing/c++/plotter/src/libs/plotter2/manager/lib/include -isystem /opt/homebrew/opt/python@3.13/Frameworks/Python.framework/Versions/3.13/include/python3.13 -isystem /opt/homebrew/include/eigen3 -g -std=gnu++2b -arch arm64 -o CMakeFiles/manager_lib.dir/sources/manager.cpp.o -c /Users/heathfortin/programing/c++/plotter/src/libs/plotter2/manager/lib/sources/manager.cpp",
+  "file": "/Users/heathfortin/programing/c++/plotter/src/libs/plotter2/manager/lib/sources/manager.cpp",
+  "output": "src/libs/plotter2/manager/lib/CMakeFiles/manager_lib.dir/sources/manager.cpp.o"
+},
+{
+  "directory": "/Users/heathfortin/programing/c++/plotter/build/src/libs/plotter2/scripter/lib",
+  "command": "/usr/bin/c++  -I/Users/heathfortin/programing/c++/plotter/src/libs/plotter2/scripter/lib/include -isystem /opt/homebrew/opt/python@3.13/Frameworks/Python.framework/Versions/3.13/include/python3.13 -isystem /opt/homebrew/include/eigen3 -g -std=gnu++2b -arch arm64 -o CMakeFiles/scripter_lib.dir/sources/scripter.cpp.o -c /Users/heathfortin/programing/c++/plotter/src/libs/plotter2/scripter/lib/sources/scripter.cpp",
+  "file": "/Users/heathfortin/programing/c++/plotter/src/libs/plotter2/scripter/lib/sources/scripter.cpp",
+  "output": "src/libs/plotter2/scripter/lib/CMakeFiles/scripter_lib.dir/sources/scripter.cpp.o"
+},
+{
+  "directory": "/Users/heathfortin/programing/c++/plotter/build/src/executable/exesrcs",
+  "command": "/usr/bin/c++  -I/Users/heathfortin/programing/c++/plotter/src/libs/plotter2/grapher_lib -I/Users/heathfortin/programing/c++/plotter/src/libs/plotter2/manager_lib -I/Users/heathfortin/programing/c++/plotter/src/libs/plotter2/scripter_lib -I/Users/heathfortin/programing/c++/plotter/src/libs/plotter2/grapher/lib/include -I/Users/heathfortin/programing/c++/plotter/src/libs/plotter2/manager/lib/include -I/Users/heathfortin/programing/c++/plotter/src/libs/plotter2/scripter/lib/include -isystem /opt/homebrew/opt/python@3.13/Frameworks/Python.framework/Versions/3.13/include/python3.13 -isystem /opt/homebrew/include/eigen3 -g -std=gnu++2b -arch arm64 -o CMakeFiles/exe.dir/main.cpp.o -c /Users/heathfortin/programing/c++/plotter/src/executable/exesrcs/main.cpp",
+  "file": "/Users/heathfortin/programing/c++/plotter/src/executable/exesrcs/main.cpp",
+  "output": "src/executable/exesrcs/CMakeFiles/exe.dir/main.cpp.o"
 }
 ]

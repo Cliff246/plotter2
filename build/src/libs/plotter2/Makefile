@@ -130,29 +130,29 @@ plotter2_lib/fast:
 	cd /Users/heathfortin/programing/c++/plotter/build && $(MAKE) $(MAKESILENT) -f src/libs/plotter2/CMakeFiles/plotter2_lib.dir/build.make src/libs/plotter2/CMakeFiles/plotter2_lib.dir/build
 .PHONY : plotter2_lib/fast
 
-temp/plotter2.o: temp/plotter2.cpp.o
-.PHONY : temp/plotter2.o
+plotter.o: plotter.cpp.o
+.PHONY : plotter.o
 
 # target to build an object file
-temp/plotter2.cpp.o:
-	cd /Users/heathfortin/programing/c++/plotter/build && $(MAKE) $(MAKESILENT) -f src/libs/plotter2/CMakeFiles/plotter2_lib.dir/build.make src/libs/plotter2/CMakeFiles/plotter2_lib.dir/temp/plotter2.cpp.o
-.PHONY : temp/plotter2.cpp.o
+plotter.cpp.o:
+	cd /Users/heathfortin/programing/c++/plotter/build && $(MAKE) $(MAKESILENT) -f src/libs/plotter2/CMakeFiles/plotter2_lib.dir/build.make src/libs/plotter2/CMakeFiles/plotter2_lib.dir/plotter.cpp.o
+.PHONY : plotter.cpp.o
 
-temp/plotter2.i: temp/plotter2.cpp.i
-.PHONY : temp/plotter2.i
+plotter.i: plotter.cpp.i
+.PHONY : plotter.i
 
 # target to preprocess a source file
-temp/plotter2.cpp.i:
-	cd /Users/heathfortin/programing/c++/plotter/build && $(MAKE) $(MAKESILENT) -f src/libs/plotter2/CMakeFiles/plotter2_lib.dir/build.make src/libs/plotter2/CMakeFiles/plotter2_lib.dir/temp/plotter2.cpp.i
-.PHONY : temp/plotter2.cpp.i
+plotter.cpp.i:
+	cd /Users/heathfortin/programing/c++/plotter/build && $(MAKE) $(MAKESILENT) -f src/libs/plotter2/CMakeFiles/plotter2_lib.dir/build.make src/libs/plotter2/CMakeFiles/plotter2_lib.dir/plotter.cpp.i
+.PHONY : plotter.cpp.i
 
-temp/plotter2.s: temp/plotter2.cpp.s
-.PHONY : temp/plotter2.s
+plotter.s: plotter.cpp.s
+.PHONY : plotter.s
 
 # target to generate assembly for a file
-temp/plotter2.cpp.s:
-	cd /Users/heathfortin/programing/c++/plotter/build && $(MAKE) $(MAKESILENT) -f src/libs/plotter2/CMakeFiles/plotter2_lib.dir/build.make src/libs/plotter2/CMakeFiles/plotter2_lib.dir/temp/plotter2.cpp.s
-.PHONY : temp/plotter2.cpp.s
+plotter.cpp.s:
+	cd /Users/heathfortin/programing/c++/plotter/build && $(MAKE) $(MAKESILENT) -f src/libs/plotter2/CMakeFiles/plotter2_lib.dir/build.make src/libs/plotter2/CMakeFiles/plotter2_lib.dir/plotter.cpp.s
+.PHONY : plotter.cpp.s
 
 # Help Target
 help:
@@ -163,9 +163,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... plotter2_lib"
-	@echo "... temp/plotter2.o"
-	@echo "... temp/plotter2.i"
-	@echo "... temp/plotter2.s"
+	@echo "... plotter.o"
+	@echo "... plotter.i"
+	@echo "... plotter.s"
 .PHONY : help
 
 

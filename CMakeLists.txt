@@ -39,6 +39,7 @@ if(APPLE)
 elseif()
     set(Python3::Python ${Python3_LIBRARY})
 endif()
+#FUCK
 get_target_property(PYTHON_LINKS_NEW Python3::Python INTERFACE_LINK_LIBRARIES)
 message(STATUS "Python3::Python INTERFACE_LINK_LIBRARIES after modification: ${PYTHON_LINKS_NEW}")
 
@@ -48,21 +49,17 @@ message(STATUS "Python3::Python INTERFACE_LINK_LIBRARIES after modification: ${P
 find_package(Eigen3 REQUIRED)
 message(STATUS "Eigen3 found at: ${EIGEN3_INCLUDE_DIR}")
 
+
+find_package(pybind11 REQUIRED)
+
 # --- Global Include Directories (if needed) ---
 
-# Include Python3 and Eigen3 directories globally.
-# (You can also specify these on a per-target basis if you prefer.)
 include_directories(
     ${Python3_INCLUDE_DIRS}
     ${Eigen3_INCLUDE_DIRS}
+	
 )
 
-
-# --- Add Subdirectories ---
-
-# Add your source code directories. For example, your TALI library and other modules.
-# Ensure that any CMakeLists.txt inside subdirectories do not reintroduce linking
-# against the empty ${Python3_LIBRARY} variable.
 add_subdirectory(src)
 
 
