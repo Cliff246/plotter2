@@ -9,5 +9,11 @@ add_library(grapher_lib ${GRAPHER_SUBLIB_SOURCES})
 target_include_directories(grapher_lib PUBLIC 
 	${CMAKE_CURRENT_SOURCE_DIR}/include
 )
-
+target_link_libraries(grapher_lib 
+	PRIVATE
+    Eigen3::Eigen
+    Python3::Python
+	shared_lib
+	PUBLIC
+)
 

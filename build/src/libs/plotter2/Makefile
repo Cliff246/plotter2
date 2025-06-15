@@ -57,13 +57,23 @@ RM = /opt/homebrew/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/heathfortin/programing/c++/plotter
+CMAKE_SOURCE_DIR = /Users/heathfortin/programing/languages/c++/plotter
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/heathfortin/programing/c++/plotter/build
+CMAKE_BINARY_DIR = /Users/heathfortin/programing/languages/c++/plotter/build
 
 #=============================================================================
 # Targets provided globally by CMake.
+
+# Special rule for the target test
+test:
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Running tests..."
+	/opt/homebrew/bin/ctest $(ARGS)
+.PHONY : test
+
+# Special rule for the target test
+test/fast: test
+.PHONY : test/fast
 
 # Special rule for the target edit_cache
 edit_cache:
@@ -87,14 +97,14 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	cd /Users/heathfortin/programing/c++/plotter/build && $(CMAKE_COMMAND) -E cmake_progress_start /Users/heathfortin/programing/c++/plotter/build/CMakeFiles /Users/heathfortin/programing/c++/plotter/build/src/libs/plotter2//CMakeFiles/progress.marks
-	cd /Users/heathfortin/programing/c++/plotter/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/libs/plotter2/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/heathfortin/programing/c++/plotter/build/CMakeFiles 0
+	cd /Users/heathfortin/programing/languages/c++/plotter/build && $(CMAKE_COMMAND) -E cmake_progress_start /Users/heathfortin/programing/languages/c++/plotter/build/CMakeFiles /Users/heathfortin/programing/languages/c++/plotter/build/src/libs/plotter2//CMakeFiles/progress.marks
+	cd /Users/heathfortin/programing/languages/c++/plotter/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/libs/plotter2/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/heathfortin/programing/languages/c++/plotter/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /Users/heathfortin/programing/c++/plotter/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/libs/plotter2/clean
+	cd /Users/heathfortin/programing/languages/c++/plotter/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/libs/plotter2/clean
 .PHONY : clean
 
 # The main clean target
@@ -103,22 +113,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /Users/heathfortin/programing/c++/plotter/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/libs/plotter2/preinstall
+	cd /Users/heathfortin/programing/languages/c++/plotter/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/libs/plotter2/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /Users/heathfortin/programing/c++/plotter/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/libs/plotter2/preinstall
+	cd /Users/heathfortin/programing/languages/c++/plotter/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/libs/plotter2/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /Users/heathfortin/programing/c++/plotter/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /Users/heathfortin/programing/languages/c++/plotter/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 src/libs/plotter2/CMakeFiles/plotter2_lib.dir/rule:
-	cd /Users/heathfortin/programing/c++/plotter/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/libs/plotter2/CMakeFiles/plotter2_lib.dir/rule
+	cd /Users/heathfortin/programing/languages/c++/plotter/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/libs/plotter2/CMakeFiles/plotter2_lib.dir/rule
 .PHONY : src/libs/plotter2/CMakeFiles/plotter2_lib.dir/rule
 
 # Convenience name for target.
@@ -127,7 +137,7 @@ plotter2_lib: src/libs/plotter2/CMakeFiles/plotter2_lib.dir/rule
 
 # fast build rule for target.
 plotter2_lib/fast:
-	cd /Users/heathfortin/programing/c++/plotter/build && $(MAKE) $(MAKESILENT) -f src/libs/plotter2/CMakeFiles/plotter2_lib.dir/build.make src/libs/plotter2/CMakeFiles/plotter2_lib.dir/build
+	cd /Users/heathfortin/programing/languages/c++/plotter/build && $(MAKE) $(MAKESILENT) -f src/libs/plotter2/CMakeFiles/plotter2_lib.dir/build.make src/libs/plotter2/CMakeFiles/plotter2_lib.dir/build
 .PHONY : plotter2_lib/fast
 
 plotter.o: plotter.cpp.o
@@ -135,7 +145,7 @@ plotter.o: plotter.cpp.o
 
 # target to build an object file
 plotter.cpp.o:
-	cd /Users/heathfortin/programing/c++/plotter/build && $(MAKE) $(MAKESILENT) -f src/libs/plotter2/CMakeFiles/plotter2_lib.dir/build.make src/libs/plotter2/CMakeFiles/plotter2_lib.dir/plotter.cpp.o
+	cd /Users/heathfortin/programing/languages/c++/plotter/build && $(MAKE) $(MAKESILENT) -f src/libs/plotter2/CMakeFiles/plotter2_lib.dir/build.make src/libs/plotter2/CMakeFiles/plotter2_lib.dir/plotter.cpp.o
 .PHONY : plotter.cpp.o
 
 plotter.i: plotter.cpp.i
@@ -143,7 +153,7 @@ plotter.i: plotter.cpp.i
 
 # target to preprocess a source file
 plotter.cpp.i:
-	cd /Users/heathfortin/programing/c++/plotter/build && $(MAKE) $(MAKESILENT) -f src/libs/plotter2/CMakeFiles/plotter2_lib.dir/build.make src/libs/plotter2/CMakeFiles/plotter2_lib.dir/plotter.cpp.i
+	cd /Users/heathfortin/programing/languages/c++/plotter/build && $(MAKE) $(MAKESILENT) -f src/libs/plotter2/CMakeFiles/plotter2_lib.dir/build.make src/libs/plotter2/CMakeFiles/plotter2_lib.dir/plotter.cpp.i
 .PHONY : plotter.cpp.i
 
 plotter.s: plotter.cpp.s
@@ -151,7 +161,7 @@ plotter.s: plotter.cpp.s
 
 # target to generate assembly for a file
 plotter.cpp.s:
-	cd /Users/heathfortin/programing/c++/plotter/build && $(MAKE) $(MAKESILENT) -f src/libs/plotter2/CMakeFiles/plotter2_lib.dir/build.make src/libs/plotter2/CMakeFiles/plotter2_lib.dir/plotter.cpp.s
+	cd /Users/heathfortin/programing/languages/c++/plotter/build && $(MAKE) $(MAKESILENT) -f src/libs/plotter2/CMakeFiles/plotter2_lib.dir/build.make src/libs/plotter2/CMakeFiles/plotter2_lib.dir/plotter.cpp.s
 .PHONY : plotter.cpp.s
 
 # Help Target
@@ -162,6 +172,7 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
+	@echo "... test"
 	@echo "... plotter2_lib"
 	@echo "... plotter.o"
 	@echo "... plotter.i"
@@ -177,6 +188,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /Users/heathfortin/programing/c++/plotter/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /Users/heathfortin/programing/languages/c++/plotter/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

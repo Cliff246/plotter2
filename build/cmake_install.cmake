@@ -1,4 +1,4 @@
-# Install script for directory: /Users/heathfortin/programing/c++/plotter
+# Install script for directory: /Users/heathfortin/programing/languages/c++/plotter
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -39,14 +39,14 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/Users/heathfortin/programing/c++/plotter/build/src/cmake_install.cmake")
+  include("/Users/heathfortin/programing/languages/c++/plotter/build/src/cmake_install.cmake")
 
 endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
 if(CMAKE_INSTALL_LOCAL_ONLY)
-  file(WRITE "/Users/heathfortin/programing/c++/plotter/build/install_local_manifest.txt"
+  file(WRITE "/Users/heathfortin/programing/languages/c++/plotter/build/install_local_manifest.txt"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
 endif()
 if(CMAKE_INSTALL_COMPONENT)
@@ -62,6 +62,6 @@ else()
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
-  file(WRITE "/Users/heathfortin/programing/c++/plotter/build/${CMAKE_INSTALL_MANIFEST}"
+  file(WRITE "/Users/heathfortin/programing/languages/c++/plotter/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
 endif()

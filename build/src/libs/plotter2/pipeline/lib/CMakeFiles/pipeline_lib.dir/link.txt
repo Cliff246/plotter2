@@ -1,0 +1,2 @@
+/usr/bin/ar qc libpipeline_lib.a CMakeFiles/pipeline_lib.dir/sources/pipeline.cpp.o CMakeFiles/pipeline_lib.dir/sources/layer.cpp.o
+/usr/bin/ranlib libpipeline_lib.a

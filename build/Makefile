@@ -57,13 +57,23 @@ RM = /opt/homebrew/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/heathfortin/programing/c++/plotter
+CMAKE_SOURCE_DIR = /Users/heathfortin/programing/languages/c++/plotter
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/heathfortin/programing/c++/plotter/build
+CMAKE_BINARY_DIR = /Users/heathfortin/programing/languages/c++/plotter/build
 
 #=============================================================================
 # Targets provided globally by CMake.
+
+# Special rule for the target test
+test:
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Running tests..."
+	/opt/homebrew/bin/ctest $(ARGS)
+.PHONY : test
+
+# Special rule for the target test
+test/fast: test
+.PHONY : test/fast
 
 # Special rule for the target edit_cache
 edit_cache:
@@ -87,9 +97,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/heathfortin/programing/c++/plotter/build/CMakeFiles /Users/heathfortin/programing/c++/plotter/build//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/heathfortin/programing/languages/c++/plotter/build/CMakeFiles /Users/heathfortin/programing/languages/c++/plotter/build//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/heathfortin/programing/c++/plotter/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/heathfortin/programing/languages/c++/plotter/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -130,17 +140,30 @@ plotter2_lib/fast:
 .PHONY : plotter2_lib/fast
 
 #=============================================================================
-# Target rules for targets named grapher_lib
+# Target rules for targets named shared_lib
 
 # Build rule for target.
-grapher_lib: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 grapher_lib
-.PHONY : grapher_lib
+shared_lib: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 shared_lib
+.PHONY : shared_lib
 
 # fast build rule for target.
-grapher_lib/fast:
-	$(MAKE) $(MAKESILENT) -f src/libs/plotter2/grapher/lib/CMakeFiles/grapher_lib.dir/build.make src/libs/plotter2/grapher/lib/CMakeFiles/grapher_lib.dir/build
-.PHONY : grapher_lib/fast
+shared_lib/fast:
+	$(MAKE) $(MAKESILENT) -f src/libs/plotter2/shared/lib/CMakeFiles/shared_lib.dir/build.make src/libs/plotter2/shared/lib/CMakeFiles/shared_lib.dir/build
+.PHONY : shared_lib/fast
+
+#=============================================================================
+# Target rules for targets named pipeline_lib
+
+# Build rule for target.
+pipeline_lib: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 pipeline_lib
+.PHONY : pipeline_lib
+
+# fast build rule for target.
+pipeline_lib/fast:
+	$(MAKE) $(MAKESILENT) -f src/libs/plotter2/pipeline/lib/CMakeFiles/pipeline_lib.dir/build.make src/libs/plotter2/pipeline/lib/CMakeFiles/pipeline_lib.dir/build
+.PHONY : pipeline_lib/fast
 
 #=============================================================================
 # Target rules for targets named manager_lib
@@ -156,17 +179,30 @@ manager_lib/fast:
 .PHONY : manager_lib/fast
 
 #=============================================================================
-# Target rules for targets named scripter_lib
+# Target rules for targets named manager_tests
 
 # Build rule for target.
-scripter_lib: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 scripter_lib
-.PHONY : scripter_lib
+manager_tests: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 manager_tests
+.PHONY : manager_tests
 
 # fast build rule for target.
-scripter_lib/fast:
-	$(MAKE) $(MAKESILENT) -f src/libs/plotter2/scripter/lib/CMakeFiles/scripter_lib.dir/build.make src/libs/plotter2/scripter/lib/CMakeFiles/scripter_lib.dir/build
-.PHONY : scripter_lib/fast
+manager_tests/fast:
+	$(MAKE) $(MAKESILENT) -f src/libs/plotter2/manager/tests/CMakeFiles/manager_tests.dir/build.make src/libs/plotter2/manager/tests/CMakeFiles/manager_tests.dir/build
+.PHONY : manager_tests/fast
+
+#=============================================================================
+# Target rules for targets named grapher_lib
+
+# Build rule for target.
+grapher_lib: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 grapher_lib
+.PHONY : grapher_lib
+
+# fast build rule for target.
+grapher_lib/fast:
+	$(MAKE) $(MAKESILENT) -f src/libs/plotter2/grapher/lib/CMakeFiles/grapher_lib.dir/build.make src/libs/plotter2/grapher/lib/CMakeFiles/grapher_lib.dir/build
+.PHONY : grapher_lib/fast
 
 #=============================================================================
 # Target rules for targets named exe
@@ -189,11 +225,14 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
+	@echo "... test"
 	@echo "... exe"
 	@echo "... grapher_lib"
 	@echo "... manager_lib"
+	@echo "... manager_tests"
+	@echo "... pipeline_lib"
 	@echo "... plotter2_lib"
-	@echo "... scripter_lib"
+	@echo "... shared_lib"
 .PHONY : help
 
 

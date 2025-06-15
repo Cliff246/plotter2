@@ -1,0 +1,36 @@
+{
+
+	"date": "heloo",
+	"time": 10,
+	"timezone": "EST",
+	"manifest_version": 1,
+	"orgin_point": "here",
+	"destination": "there",
+	"comunication_type": {
+		"test": ""
+	},
+	"user": "me",
+	"meta": {
+		"test": 10
+	},	
+	"preprocessor": {
+		
+	},
+	"tasks": {
+
+	},
+	"plots": {
+
+	},
+	"style" : {
+
+	},
+	"custom_render_templates" : {
+
+	},
+	"directory_tree" : {
+
+	},
+	"render_kit" : "kit"
+
+}

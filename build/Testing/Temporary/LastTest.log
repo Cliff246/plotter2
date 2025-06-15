@@ -1,0 +1,19 @@
+Start testing: Jun 14 14:27 EDT
+----------------------------------------------------------
+1/1 Testing: manager_tests
+1/1 Test: manager_tests
+Command: "/Users/heathfortin/programing/languages/c++/plotter/build/src/libs/plotter2/manager/tests/manager_tests"
+Directory: /Users/heathfortin/programing/languages/c++/plotter/build/src/libs/plotter2/manager/tests
+"manager_tests" start time: Jun 14 14:27 EDT
+Output:
+----------------------------------------------------------
+16 16
+<end of output>
+Test time =   0.15 sec
+----------------------------------------------------------
+Test Passed.
+"manager_tests" end time: Jun 14 14:27 EDT
+"manager_tests" time elapsed: 00:00:00
+----------------------------------------------------------
+
+End testing: Jun 14 14:27 EDT

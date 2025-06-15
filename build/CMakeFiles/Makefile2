@@ -54,10 +54,10 @@ RM = /opt/homebrew/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/heathfortin/programing/c++/plotter
+CMAKE_SOURCE_DIR = /Users/heathfortin/programing/languages/c++/plotter
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/heathfortin/programing/c++/plotter/build
+CMAKE_BINARY_DIR = /Users/heathfortin/programing/languages/c++/plotter/build
 
 #=============================================================================
 # Directory level rules for the build root directory
@@ -167,29 +167,33 @@ src/libs/clean: src/libs/plotter2/clean
 
 # Recursive "all" directory target.
 src/libs/plotter2/all: src/libs/plotter2/CMakeFiles/plotter2_lib.dir/all
-src/libs/plotter2/all: src/libs/plotter2/grapher/all
+src/libs/plotter2/all: src/libs/plotter2/shared/all
+src/libs/plotter2/all: src/libs/plotter2/pipeline/all
 src/libs/plotter2/all: src/libs/plotter2/manager/all
-src/libs/plotter2/all: src/libs/plotter2/scripter/all
+src/libs/plotter2/all: src/libs/plotter2/grapher/all
 .PHONY : src/libs/plotter2/all
 
 # Recursive "codegen" directory target.
 src/libs/plotter2/codegen: src/libs/plotter2/CMakeFiles/plotter2_lib.dir/codegen
-src/libs/plotter2/codegen: src/libs/plotter2/grapher/codegen
+src/libs/plotter2/codegen: src/libs/plotter2/shared/codegen
+src/libs/plotter2/codegen: src/libs/plotter2/pipeline/codegen
 src/libs/plotter2/codegen: src/libs/plotter2/manager/codegen
-src/libs/plotter2/codegen: src/libs/plotter2/scripter/codegen
+src/libs/plotter2/codegen: src/libs/plotter2/grapher/codegen
 .PHONY : src/libs/plotter2/codegen
 
 # Recursive "preinstall" directory target.
-src/libs/plotter2/preinstall: src/libs/plotter2/grapher/preinstall
+src/libs/plotter2/preinstall: src/libs/plotter2/shared/preinstall
+src/libs/plotter2/preinstall: src/libs/plotter2/pipeline/preinstall
 src/libs/plotter2/preinstall: src/libs/plotter2/manager/preinstall
-src/libs/plotter2/preinstall: src/libs/plotter2/scripter/preinstall
+src/libs/plotter2/preinstall: src/libs/plotter2/grapher/preinstall
 .PHONY : src/libs/plotter2/preinstall
 
 # Recursive "clean" directory target.
 src/libs/plotter2/clean: src/libs/plotter2/CMakeFiles/plotter2_lib.dir/clean
-src/libs/plotter2/clean: src/libs/plotter2/grapher/clean
+src/libs/plotter2/clean: src/libs/plotter2/shared/clean
+src/libs/plotter2/clean: src/libs/plotter2/pipeline/clean
 src/libs/plotter2/clean: src/libs/plotter2/manager/clean
-src/libs/plotter2/clean: src/libs/plotter2/scripter/clean
+src/libs/plotter2/clean: src/libs/plotter2/grapher/clean
 .PHONY : src/libs/plotter2/clean
 
 #=============================================================================
@@ -235,18 +239,22 @@ src/libs/plotter2/grapher/lib/clean: src/libs/plotter2/grapher/lib/CMakeFiles/gr
 
 # Recursive "all" directory target.
 src/libs/plotter2/manager/all: src/libs/plotter2/manager/lib/all
+src/libs/plotter2/manager/all: src/libs/plotter2/manager/tests/all
 .PHONY : src/libs/plotter2/manager/all
 
 # Recursive "codegen" directory target.
 src/libs/plotter2/manager/codegen: src/libs/plotter2/manager/lib/codegen
+src/libs/plotter2/manager/codegen: src/libs/plotter2/manager/tests/codegen
 .PHONY : src/libs/plotter2/manager/codegen
 
 # Recursive "preinstall" directory target.
 src/libs/plotter2/manager/preinstall: src/libs/plotter2/manager/lib/preinstall
+src/libs/plotter2/manager/preinstall: src/libs/plotter2/manager/tests/preinstall
 .PHONY : src/libs/plotter2/manager/preinstall
 
 # Recursive "clean" directory target.
 src/libs/plotter2/manager/clean: src/libs/plotter2/manager/lib/clean
+src/libs/plotter2/manager/clean: src/libs/plotter2/manager/tests/clean
 .PHONY : src/libs/plotter2/manager/clean
 
 #=============================================================================
@@ -269,42 +277,99 @@ src/libs/plotter2/manager/lib/clean: src/libs/plotter2/manager/lib/CMakeFiles/ma
 .PHONY : src/libs/plotter2/manager/lib/clean
 
 #=============================================================================
-# Directory level rules for directory src/libs/plotter2/scripter
+# Directory level rules for directory src/libs/plotter2/manager/tests
 
 # Recursive "all" directory target.
-src/libs/plotter2/scripter/all: src/libs/plotter2/scripter/lib/all
-.PHONY : src/libs/plotter2/scripter/all
+src/libs/plotter2/manager/tests/all: src/libs/plotter2/manager/tests/CMakeFiles/manager_tests.dir/all
+.PHONY : src/libs/plotter2/manager/tests/all
 
 # Recursive "codegen" directory target.
-src/libs/plotter2/scripter/codegen: src/libs/plotter2/scripter/lib/codegen
-.PHONY : src/libs/plotter2/scripter/codegen
+src/libs/plotter2/manager/tests/codegen: src/libs/plotter2/manager/tests/CMakeFiles/manager_tests.dir/codegen
+.PHONY : src/libs/plotter2/manager/tests/codegen
 
 # Recursive "preinstall" directory target.
-src/libs/plotter2/scripter/preinstall: src/libs/plotter2/scripter/lib/preinstall
-.PHONY : src/libs/plotter2/scripter/preinstall
+src/libs/plotter2/manager/tests/preinstall:
+.PHONY : src/libs/plotter2/manager/tests/preinstall
 
 # Recursive "clean" directory target.
-src/libs/plotter2/scripter/clean: src/libs/plotter2/scripter/lib/clean
-.PHONY : src/libs/plotter2/scripter/clean
+src/libs/plotter2/manager/tests/clean: src/libs/plotter2/manager/tests/CMakeFiles/manager_tests.dir/clean
+.PHONY : src/libs/plotter2/manager/tests/clean
 
 #=============================================================================
-# Directory level rules for directory src/libs/plotter2/scripter/lib
+# Directory level rules for directory src/libs/plotter2/pipeline
 
 # Recursive "all" directory target.
-src/libs/plotter2/scripter/lib/all: src/libs/plotter2/scripter/lib/CMakeFiles/scripter_lib.dir/all
-.PHONY : src/libs/plotter2/scripter/lib/all
+src/libs/plotter2/pipeline/all: src/libs/plotter2/pipeline/lib/all
+.PHONY : src/libs/plotter2/pipeline/all
 
 # Recursive "codegen" directory target.
-src/libs/plotter2/scripter/lib/codegen: src/libs/plotter2/scripter/lib/CMakeFiles/scripter_lib.dir/codegen
-.PHONY : src/libs/plotter2/scripter/lib/codegen
+src/libs/plotter2/pipeline/codegen: src/libs/plotter2/pipeline/lib/codegen
+.PHONY : src/libs/plotter2/pipeline/codegen
 
 # Recursive "preinstall" directory target.
-src/libs/plotter2/scripter/lib/preinstall:
-.PHONY : src/libs/plotter2/scripter/lib/preinstall
+src/libs/plotter2/pipeline/preinstall: src/libs/plotter2/pipeline/lib/preinstall
+.PHONY : src/libs/plotter2/pipeline/preinstall
 
 # Recursive "clean" directory target.
-src/libs/plotter2/scripter/lib/clean: src/libs/plotter2/scripter/lib/CMakeFiles/scripter_lib.dir/clean
-.PHONY : src/libs/plotter2/scripter/lib/clean
+src/libs/plotter2/pipeline/clean: src/libs/plotter2/pipeline/lib/clean
+.PHONY : src/libs/plotter2/pipeline/clean
+
+#=============================================================================
+# Directory level rules for directory src/libs/plotter2/pipeline/lib
+
+# Recursive "all" directory target.
+src/libs/plotter2/pipeline/lib/all: src/libs/plotter2/pipeline/lib/CMakeFiles/pipeline_lib.dir/all
+.PHONY : src/libs/plotter2/pipeline/lib/all
+
+# Recursive "codegen" directory target.
+src/libs/plotter2/pipeline/lib/codegen: src/libs/plotter2/pipeline/lib/CMakeFiles/pipeline_lib.dir/codegen
+.PHONY : src/libs/plotter2/pipeline/lib/codegen
+
+# Recursive "preinstall" directory target.
+src/libs/plotter2/pipeline/lib/preinstall:
+.PHONY : src/libs/plotter2/pipeline/lib/preinstall
+
+# Recursive "clean" directory target.
+src/libs/plotter2/pipeline/lib/clean: src/libs/plotter2/pipeline/lib/CMakeFiles/pipeline_lib.dir/clean
+.PHONY : src/libs/plotter2/pipeline/lib/clean
+
+#=============================================================================
+# Directory level rules for directory src/libs/plotter2/shared
+
+# Recursive "all" directory target.
+src/libs/plotter2/shared/all: src/libs/plotter2/shared/lib/all
+.PHONY : src/libs/plotter2/shared/all
+
+# Recursive "codegen" directory target.
+src/libs/plotter2/shared/codegen: src/libs/plotter2/shared/lib/codegen
+.PHONY : src/libs/plotter2/shared/codegen
+
+# Recursive "preinstall" directory target.
+src/libs/plotter2/shared/preinstall: src/libs/plotter2/shared/lib/preinstall
+.PHONY : src/libs/plotter2/shared/preinstall
+
+# Recursive "clean" directory target.
+src/libs/plotter2/shared/clean: src/libs/plotter2/shared/lib/clean
+.PHONY : src/libs/plotter2/shared/clean
+
+#=============================================================================
+# Directory level rules for directory src/libs/plotter2/shared/lib
+
+# Recursive "all" directory target.
+src/libs/plotter2/shared/lib/all: src/libs/plotter2/shared/lib/CMakeFiles/shared_lib.dir/all
+.PHONY : src/libs/plotter2/shared/lib/all
+
+# Recursive "codegen" directory target.
+src/libs/plotter2/shared/lib/codegen: src/libs/plotter2/shared/lib/CMakeFiles/shared_lib.dir/codegen
+.PHONY : src/libs/plotter2/shared/lib/codegen
+
+# Recursive "preinstall" directory target.
+src/libs/plotter2/shared/lib/preinstall:
+.PHONY : src/libs/plotter2/shared/lib/preinstall
+
+# Recursive "clean" directory target.
+src/libs/plotter2/shared/lib/clean: src/libs/plotter2/shared/lib/CMakeFiles/shared_lib.dir/clean
+.PHONY : src/libs/plotter2/shared/lib/clean
 
 #=============================================================================
 # Directory level rules for directory src/plotter_module
@@ -329,19 +394,20 @@ src/plotter_module/clean:
 # Target rules for target src/libs/plotter2/CMakeFiles/plotter2_lib.dir
 
 # All Build rule for target.
-src/libs/plotter2/CMakeFiles/plotter2_lib.dir/all: src/libs/plotter2/grapher/lib/CMakeFiles/grapher_lib.dir/all
+src/libs/plotter2/CMakeFiles/plotter2_lib.dir/all: src/libs/plotter2/shared/lib/CMakeFiles/shared_lib.dir/all
+src/libs/plotter2/CMakeFiles/plotter2_lib.dir/all: src/libs/plotter2/pipeline/lib/CMakeFiles/pipeline_lib.dir/all
 src/libs/plotter2/CMakeFiles/plotter2_lib.dir/all: src/libs/plotter2/manager/lib/CMakeFiles/manager_lib.dir/all
-src/libs/plotter2/CMakeFiles/plotter2_lib.dir/all: src/libs/plotter2/scripter/lib/CMakeFiles/scripter_lib.dir/all
+src/libs/plotter2/CMakeFiles/plotter2_lib.dir/all: src/libs/plotter2/grapher/lib/CMakeFiles/grapher_lib.dir/all
 	$(MAKE) $(MAKESILENT) -f src/libs/plotter2/CMakeFiles/plotter2_lib.dir/build.make src/libs/plotter2/CMakeFiles/plotter2_lib.dir/depend
 	$(MAKE) $(MAKESILENT) -f src/libs/plotter2/CMakeFiles/plotter2_lib.dir/build.make src/libs/plotter2/CMakeFiles/plotter2_lib.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/heathfortin/programing/c++/plotter/build/CMakeFiles --progress-num=7,8 "Built target plotter2_lib"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/heathfortin/programing/languages/c++/plotter/build/CMakeFiles --progress-num=14,15 "Built target plotter2_lib"
 .PHONY : src/libs/plotter2/CMakeFiles/plotter2_lib.dir/all
 
 # Build rule for subdir invocation for target.
 src/libs/plotter2/CMakeFiles/plotter2_lib.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/heathfortin/programing/c++/plotter/build/CMakeFiles 8
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/heathfortin/programing/languages/c++/plotter/build/CMakeFiles 15
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/libs/plotter2/CMakeFiles/plotter2_lib.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/heathfortin/programing/c++/plotter/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/heathfortin/programing/languages/c++/plotter/build/CMakeFiles 0
 .PHONY : src/libs/plotter2/CMakeFiles/plotter2_lib.dir/rule
 
 # Convenience name for target.
@@ -351,7 +417,7 @@ plotter2_lib: src/libs/plotter2/CMakeFiles/plotter2_lib.dir/rule
 # codegen rule for target.
 src/libs/plotter2/CMakeFiles/plotter2_lib.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f src/libs/plotter2/CMakeFiles/plotter2_lib.dir/build.make src/libs/plotter2/CMakeFiles/plotter2_lib.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/heathfortin/programing/c++/plotter/build/CMakeFiles --progress-num=7,8 "Finished codegen for target plotter2_lib"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/heathfortin/programing/languages/c++/plotter/build/CMakeFiles --progress-num=14,15 "Finished codegen for target plotter2_lib"
 .PHONY : src/libs/plotter2/CMakeFiles/plotter2_lib.dir/codegen
 
 # clean rule for target.
@@ -360,52 +426,85 @@ src/libs/plotter2/CMakeFiles/plotter2_lib.dir/clean:
 .PHONY : src/libs/plotter2/CMakeFiles/plotter2_lib.dir/clean
 
 #=============================================================================
-# Target rules for target src/libs/plotter2/grapher/lib/CMakeFiles/grapher_lib.dir
+# Target rules for target src/libs/plotter2/shared/lib/CMakeFiles/shared_lib.dir
 
 # All Build rule for target.
-src/libs/plotter2/grapher/lib/CMakeFiles/grapher_lib.dir/all:
-	$(MAKE) $(MAKESILENT) -f src/libs/plotter2/grapher/lib/CMakeFiles/grapher_lib.dir/build.make src/libs/plotter2/grapher/lib/CMakeFiles/grapher_lib.dir/depend
-	$(MAKE) $(MAKESILENT) -f src/libs/plotter2/grapher/lib/CMakeFiles/grapher_lib.dir/build.make src/libs/plotter2/grapher/lib/CMakeFiles/grapher_lib.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/heathfortin/programing/c++/plotter/build/CMakeFiles --progress-num=3,4 "Built target grapher_lib"
-.PHONY : src/libs/plotter2/grapher/lib/CMakeFiles/grapher_lib.dir/all
+src/libs/plotter2/shared/lib/CMakeFiles/shared_lib.dir/all:
+	$(MAKE) $(MAKESILENT) -f src/libs/plotter2/shared/lib/CMakeFiles/shared_lib.dir/build.make src/libs/plotter2/shared/lib/CMakeFiles/shared_lib.dir/depend
+	$(MAKE) $(MAKESILENT) -f src/libs/plotter2/shared/lib/CMakeFiles/shared_lib.dir/build.make src/libs/plotter2/shared/lib/CMakeFiles/shared_lib.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/heathfortin/programing/languages/c++/plotter/build/CMakeFiles --progress-num=16,17,18,19,20 "Built target shared_lib"
+.PHONY : src/libs/plotter2/shared/lib/CMakeFiles/shared_lib.dir/all
 
 # Build rule for subdir invocation for target.
-src/libs/plotter2/grapher/lib/CMakeFiles/grapher_lib.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/heathfortin/programing/c++/plotter/build/CMakeFiles 2
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/libs/plotter2/grapher/lib/CMakeFiles/grapher_lib.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/heathfortin/programing/c++/plotter/build/CMakeFiles 0
-.PHONY : src/libs/plotter2/grapher/lib/CMakeFiles/grapher_lib.dir/rule
+src/libs/plotter2/shared/lib/CMakeFiles/shared_lib.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/heathfortin/programing/languages/c++/plotter/build/CMakeFiles 5
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/libs/plotter2/shared/lib/CMakeFiles/shared_lib.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/heathfortin/programing/languages/c++/plotter/build/CMakeFiles 0
+.PHONY : src/libs/plotter2/shared/lib/CMakeFiles/shared_lib.dir/rule
 
 # Convenience name for target.
-grapher_lib: src/libs/plotter2/grapher/lib/CMakeFiles/grapher_lib.dir/rule
-.PHONY : grapher_lib
+shared_lib: src/libs/plotter2/shared/lib/CMakeFiles/shared_lib.dir/rule
+.PHONY : shared_lib
 
 # codegen rule for target.
-src/libs/plotter2/grapher/lib/CMakeFiles/grapher_lib.dir/codegen:
-	$(MAKE) $(MAKESILENT) -f src/libs/plotter2/grapher/lib/CMakeFiles/grapher_lib.dir/build.make src/libs/plotter2/grapher/lib/CMakeFiles/grapher_lib.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/heathfortin/programing/c++/plotter/build/CMakeFiles --progress-num=3,4 "Finished codegen for target grapher_lib"
-.PHONY : src/libs/plotter2/grapher/lib/CMakeFiles/grapher_lib.dir/codegen
+src/libs/plotter2/shared/lib/CMakeFiles/shared_lib.dir/codegen:
+	$(MAKE) $(MAKESILENT) -f src/libs/plotter2/shared/lib/CMakeFiles/shared_lib.dir/build.make src/libs/plotter2/shared/lib/CMakeFiles/shared_lib.dir/codegen
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/heathfortin/programing/languages/c++/plotter/build/CMakeFiles --progress-num=16,17,18,19,20 "Finished codegen for target shared_lib"
+.PHONY : src/libs/plotter2/shared/lib/CMakeFiles/shared_lib.dir/codegen
 
 # clean rule for target.
-src/libs/plotter2/grapher/lib/CMakeFiles/grapher_lib.dir/clean:
-	$(MAKE) $(MAKESILENT) -f src/libs/plotter2/grapher/lib/CMakeFiles/grapher_lib.dir/build.make src/libs/plotter2/grapher/lib/CMakeFiles/grapher_lib.dir/clean
-.PHONY : src/libs/plotter2/grapher/lib/CMakeFiles/grapher_lib.dir/clean
+src/libs/plotter2/shared/lib/CMakeFiles/shared_lib.dir/clean:
+	$(MAKE) $(MAKESILENT) -f src/libs/plotter2/shared/lib/CMakeFiles/shared_lib.dir/build.make src/libs/plotter2/shared/lib/CMakeFiles/shared_lib.dir/clean
+.PHONY : src/libs/plotter2/shared/lib/CMakeFiles/shared_lib.dir/clean
+
+#=============================================================================
+# Target rules for target src/libs/plotter2/pipeline/lib/CMakeFiles/pipeline_lib.dir
+
+# All Build rule for target.
+src/libs/plotter2/pipeline/lib/CMakeFiles/pipeline_lib.dir/all: src/libs/plotter2/shared/lib/CMakeFiles/shared_lib.dir/all
+	$(MAKE) $(MAKESILENT) -f src/libs/plotter2/pipeline/lib/CMakeFiles/pipeline_lib.dir/build.make src/libs/plotter2/pipeline/lib/CMakeFiles/pipeline_lib.dir/depend
+	$(MAKE) $(MAKESILENT) -f src/libs/plotter2/pipeline/lib/CMakeFiles/pipeline_lib.dir/build.make src/libs/plotter2/pipeline/lib/CMakeFiles/pipeline_lib.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/heathfortin/programing/languages/c++/plotter/build/CMakeFiles --progress-num=11,12,13 "Built target pipeline_lib"
+.PHONY : src/libs/plotter2/pipeline/lib/CMakeFiles/pipeline_lib.dir/all
+
+# Build rule for subdir invocation for target.
+src/libs/plotter2/pipeline/lib/CMakeFiles/pipeline_lib.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/heathfortin/programing/languages/c++/plotter/build/CMakeFiles 8
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/libs/plotter2/pipeline/lib/CMakeFiles/pipeline_lib.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/heathfortin/programing/languages/c++/plotter/build/CMakeFiles 0
+.PHONY : src/libs/plotter2/pipeline/lib/CMakeFiles/pipeline_lib.dir/rule
+
+# Convenience name for target.
+pipeline_lib: src/libs/plotter2/pipeline/lib/CMakeFiles/pipeline_lib.dir/rule
+.PHONY : pipeline_lib
+
+# codegen rule for target.
+src/libs/plotter2/pipeline/lib/CMakeFiles/pipeline_lib.dir/codegen:
+	$(MAKE) $(MAKESILENT) -f src/libs/plotter2/pipeline/lib/CMakeFiles/pipeline_lib.dir/build.make src/libs/plotter2/pipeline/lib/CMakeFiles/pipeline_lib.dir/codegen
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/heathfortin/programing/languages/c++/plotter/build/CMakeFiles --progress-num=11,12,13 "Finished codegen for target pipeline_lib"
+.PHONY : src/libs/plotter2/pipeline/lib/CMakeFiles/pipeline_lib.dir/codegen
+
+# clean rule for target.
+src/libs/plotter2/pipeline/lib/CMakeFiles/pipeline_lib.dir/clean:
+	$(MAKE) $(MAKESILENT) -f src/libs/plotter2/pipeline/lib/CMakeFiles/pipeline_lib.dir/build.make src/libs/plotter2/pipeline/lib/CMakeFiles/pipeline_lib.dir/clean
+.PHONY : src/libs/plotter2/pipeline/lib/CMakeFiles/pipeline_lib.dir/clean
 
 #=============================================================================
 # Target rules for target src/libs/plotter2/manager/lib/CMakeFiles/manager_lib.dir
 
 # All Build rule for target.
-src/libs/plotter2/manager/lib/CMakeFiles/manager_lib.dir/all:
+src/libs/plotter2/manager/lib/CMakeFiles/manager_lib.dir/all: src/libs/plotter2/shared/lib/CMakeFiles/shared_lib.dir/all
+src/libs/plotter2/manager/lib/CMakeFiles/manager_lib.dir/all: src/libs/plotter2/pipeline/lib/CMakeFiles/pipeline_lib.dir/all
 	$(MAKE) $(MAKESILENT) -f src/libs/plotter2/manager/lib/CMakeFiles/manager_lib.dir/build.make src/libs/plotter2/manager/lib/CMakeFiles/manager_lib.dir/depend
 	$(MAKE) $(MAKESILENT) -f src/libs/plotter2/manager/lib/CMakeFiles/manager_lib.dir/build.make src/libs/plotter2/manager/lib/CMakeFiles/manager_lib.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/heathfortin/programing/c++/plotter/build/CMakeFiles --progress-num=5,6 "Built target manager_lib"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/heathfortin/programing/languages/c++/plotter/build/CMakeFiles --progress-num=5,6,7 "Built target manager_lib"
 .PHONY : src/libs/plotter2/manager/lib/CMakeFiles/manager_lib.dir/all
 
 # Build rule for subdir invocation for target.
 src/libs/plotter2/manager/lib/CMakeFiles/manager_lib.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/heathfortin/programing/c++/plotter/build/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/heathfortin/programing/languages/c++/plotter/build/CMakeFiles 11
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/libs/plotter2/manager/lib/CMakeFiles/manager_lib.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/heathfortin/programing/c++/plotter/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/heathfortin/programing/languages/c++/plotter/build/CMakeFiles 0
 .PHONY : src/libs/plotter2/manager/lib/CMakeFiles/manager_lib.dir/rule
 
 # Convenience name for target.
@@ -415,7 +514,7 @@ manager_lib: src/libs/plotter2/manager/lib/CMakeFiles/manager_lib.dir/rule
 # codegen rule for target.
 src/libs/plotter2/manager/lib/CMakeFiles/manager_lib.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f src/libs/plotter2/manager/lib/CMakeFiles/manager_lib.dir/build.make src/libs/plotter2/manager/lib/CMakeFiles/manager_lib.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/heathfortin/programing/c++/plotter/build/CMakeFiles --progress-num=5,6 "Finished codegen for target manager_lib"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/heathfortin/programing/languages/c++/plotter/build/CMakeFiles --progress-num=5,6,7 "Finished codegen for target manager_lib"
 .PHONY : src/libs/plotter2/manager/lib/CMakeFiles/manager_lib.dir/codegen
 
 # clean rule for target.
@@ -424,55 +523,90 @@ src/libs/plotter2/manager/lib/CMakeFiles/manager_lib.dir/clean:
 .PHONY : src/libs/plotter2/manager/lib/CMakeFiles/manager_lib.dir/clean
 
 #=============================================================================
-# Target rules for target src/libs/plotter2/scripter/lib/CMakeFiles/scripter_lib.dir
+# Target rules for target src/libs/plotter2/manager/tests/CMakeFiles/manager_tests.dir
 
 # All Build rule for target.
-src/libs/plotter2/scripter/lib/CMakeFiles/scripter_lib.dir/all:
-	$(MAKE) $(MAKESILENT) -f src/libs/plotter2/scripter/lib/CMakeFiles/scripter_lib.dir/build.make src/libs/plotter2/scripter/lib/CMakeFiles/scripter_lib.dir/depend
-	$(MAKE) $(MAKESILENT) -f src/libs/plotter2/scripter/lib/CMakeFiles/scripter_lib.dir/build.make src/libs/plotter2/scripter/lib/CMakeFiles/scripter_lib.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/heathfortin/programing/c++/plotter/build/CMakeFiles --progress-num=9,10 "Built target scripter_lib"
-.PHONY : src/libs/plotter2/scripter/lib/CMakeFiles/scripter_lib.dir/all
+src/libs/plotter2/manager/tests/CMakeFiles/manager_tests.dir/all: src/libs/plotter2/shared/lib/CMakeFiles/shared_lib.dir/all
+src/libs/plotter2/manager/tests/CMakeFiles/manager_tests.dir/all: src/libs/plotter2/pipeline/lib/CMakeFiles/pipeline_lib.dir/all
+src/libs/plotter2/manager/tests/CMakeFiles/manager_tests.dir/all: src/libs/plotter2/manager/lib/CMakeFiles/manager_lib.dir/all
+	$(MAKE) $(MAKESILENT) -f src/libs/plotter2/manager/tests/CMakeFiles/manager_tests.dir/build.make src/libs/plotter2/manager/tests/CMakeFiles/manager_tests.dir/depend
+	$(MAKE) $(MAKESILENT) -f src/libs/plotter2/manager/tests/CMakeFiles/manager_tests.dir/build.make src/libs/plotter2/manager/tests/CMakeFiles/manager_tests.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/heathfortin/programing/languages/c++/plotter/build/CMakeFiles --progress-num=8,9,10 "Built target manager_tests"
+.PHONY : src/libs/plotter2/manager/tests/CMakeFiles/manager_tests.dir/all
 
 # Build rule for subdir invocation for target.
-src/libs/plotter2/scripter/lib/CMakeFiles/scripter_lib.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/heathfortin/programing/c++/plotter/build/CMakeFiles 2
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/libs/plotter2/scripter/lib/CMakeFiles/scripter_lib.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/heathfortin/programing/c++/plotter/build/CMakeFiles 0
-.PHONY : src/libs/plotter2/scripter/lib/CMakeFiles/scripter_lib.dir/rule
+src/libs/plotter2/manager/tests/CMakeFiles/manager_tests.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/heathfortin/programing/languages/c++/plotter/build/CMakeFiles 14
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/libs/plotter2/manager/tests/CMakeFiles/manager_tests.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/heathfortin/programing/languages/c++/plotter/build/CMakeFiles 0
+.PHONY : src/libs/plotter2/manager/tests/CMakeFiles/manager_tests.dir/rule
 
 # Convenience name for target.
-scripter_lib: src/libs/plotter2/scripter/lib/CMakeFiles/scripter_lib.dir/rule
-.PHONY : scripter_lib
+manager_tests: src/libs/plotter2/manager/tests/CMakeFiles/manager_tests.dir/rule
+.PHONY : manager_tests
 
 # codegen rule for target.
-src/libs/plotter2/scripter/lib/CMakeFiles/scripter_lib.dir/codegen:
-	$(MAKE) $(MAKESILENT) -f src/libs/plotter2/scripter/lib/CMakeFiles/scripter_lib.dir/build.make src/libs/plotter2/scripter/lib/CMakeFiles/scripter_lib.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/heathfortin/programing/c++/plotter/build/CMakeFiles --progress-num=9,10 "Finished codegen for target scripter_lib"
-.PHONY : src/libs/plotter2/scripter/lib/CMakeFiles/scripter_lib.dir/codegen
+src/libs/plotter2/manager/tests/CMakeFiles/manager_tests.dir/codegen:
+	$(MAKE) $(MAKESILENT) -f src/libs/plotter2/manager/tests/CMakeFiles/manager_tests.dir/build.make src/libs/plotter2/manager/tests/CMakeFiles/manager_tests.dir/codegen
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/heathfortin/programing/languages/c++/plotter/build/CMakeFiles --progress-num=8,9,10 "Finished codegen for target manager_tests"
+.PHONY : src/libs/plotter2/manager/tests/CMakeFiles/manager_tests.dir/codegen
 
 # clean rule for target.
-src/libs/plotter2/scripter/lib/CMakeFiles/scripter_lib.dir/clean:
-	$(MAKE) $(MAKESILENT) -f src/libs/plotter2/scripter/lib/CMakeFiles/scripter_lib.dir/build.make src/libs/plotter2/scripter/lib/CMakeFiles/scripter_lib.dir/clean
-.PHONY : src/libs/plotter2/scripter/lib/CMakeFiles/scripter_lib.dir/clean
+src/libs/plotter2/manager/tests/CMakeFiles/manager_tests.dir/clean:
+	$(MAKE) $(MAKESILENT) -f src/libs/plotter2/manager/tests/CMakeFiles/manager_tests.dir/build.make src/libs/plotter2/manager/tests/CMakeFiles/manager_tests.dir/clean
+.PHONY : src/libs/plotter2/manager/tests/CMakeFiles/manager_tests.dir/clean
+
+#=============================================================================
+# Target rules for target src/libs/plotter2/grapher/lib/CMakeFiles/grapher_lib.dir
+
+# All Build rule for target.
+src/libs/plotter2/grapher/lib/CMakeFiles/grapher_lib.dir/all: src/libs/plotter2/shared/lib/CMakeFiles/shared_lib.dir/all
+	$(MAKE) $(MAKESILENT) -f src/libs/plotter2/grapher/lib/CMakeFiles/grapher_lib.dir/build.make src/libs/plotter2/grapher/lib/CMakeFiles/grapher_lib.dir/depend
+	$(MAKE) $(MAKESILENT) -f src/libs/plotter2/grapher/lib/CMakeFiles/grapher_lib.dir/build.make src/libs/plotter2/grapher/lib/CMakeFiles/grapher_lib.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/heathfortin/programing/languages/c++/plotter/build/CMakeFiles --progress-num=3,4 "Built target grapher_lib"
+.PHONY : src/libs/plotter2/grapher/lib/CMakeFiles/grapher_lib.dir/all
+
+# Build rule for subdir invocation for target.
+src/libs/plotter2/grapher/lib/CMakeFiles/grapher_lib.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/heathfortin/programing/languages/c++/plotter/build/CMakeFiles 7
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/libs/plotter2/grapher/lib/CMakeFiles/grapher_lib.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/heathfortin/programing/languages/c++/plotter/build/CMakeFiles 0
+.PHONY : src/libs/plotter2/grapher/lib/CMakeFiles/grapher_lib.dir/rule
+
+# Convenience name for target.
+grapher_lib: src/libs/plotter2/grapher/lib/CMakeFiles/grapher_lib.dir/rule
+.PHONY : grapher_lib
+
+# codegen rule for target.
+src/libs/plotter2/grapher/lib/CMakeFiles/grapher_lib.dir/codegen:
+	$(MAKE) $(MAKESILENT) -f src/libs/plotter2/grapher/lib/CMakeFiles/grapher_lib.dir/build.make src/libs/plotter2/grapher/lib/CMakeFiles/grapher_lib.dir/codegen
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/heathfortin/programing/languages/c++/plotter/build/CMakeFiles --progress-num=3,4 "Finished codegen for target grapher_lib"
+.PHONY : src/libs/plotter2/grapher/lib/CMakeFiles/grapher_lib.dir/codegen
+
+# clean rule for target.
+src/libs/plotter2/grapher/lib/CMakeFiles/grapher_lib.dir/clean:
+	$(MAKE) $(MAKESILENT) -f src/libs/plotter2/grapher/lib/CMakeFiles/grapher_lib.dir/build.make src/libs/plotter2/grapher/lib/CMakeFiles/grapher_lib.dir/clean
+.PHONY : src/libs/plotter2/grapher/lib/CMakeFiles/grapher_lib.dir/clean
 
 #=============================================================================
 # Target rules for target src/executable/exesrcs/CMakeFiles/exe.dir
 
 # All Build rule for target.
 src/executable/exesrcs/CMakeFiles/exe.dir/all: src/libs/plotter2/CMakeFiles/plotter2_lib.dir/all
-src/executable/exesrcs/CMakeFiles/exe.dir/all: src/libs/plotter2/grapher/lib/CMakeFiles/grapher_lib.dir/all
+src/executable/exesrcs/CMakeFiles/exe.dir/all: src/libs/plotter2/shared/lib/CMakeFiles/shared_lib.dir/all
+src/executable/exesrcs/CMakeFiles/exe.dir/all: src/libs/plotter2/pipeline/lib/CMakeFiles/pipeline_lib.dir/all
 src/executable/exesrcs/CMakeFiles/exe.dir/all: src/libs/plotter2/manager/lib/CMakeFiles/manager_lib.dir/all
-src/executable/exesrcs/CMakeFiles/exe.dir/all: src/libs/plotter2/scripter/lib/CMakeFiles/scripter_lib.dir/all
+src/executable/exesrcs/CMakeFiles/exe.dir/all: src/libs/plotter2/grapher/lib/CMakeFiles/grapher_lib.dir/all
 	$(MAKE) $(MAKESILENT) -f src/executable/exesrcs/CMakeFiles/exe.dir/build.make src/executable/exesrcs/CMakeFiles/exe.dir/depend
 	$(MAKE) $(MAKESILENT) -f src/executable/exesrcs/CMakeFiles/exe.dir/build.make src/executable/exesrcs/CMakeFiles/exe.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/heathfortin/programing/c++/plotter/build/CMakeFiles --progress-num=1,2 "Built target exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/heathfortin/programing/languages/c++/plotter/build/CMakeFiles --progress-num=1,2 "Built target exe"
 .PHONY : src/executable/exesrcs/CMakeFiles/exe.dir/all
 
 # Build rule for subdir invocation for target.
 src/executable/exesrcs/CMakeFiles/exe.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/heathfortin/programing/c++/plotter/build/CMakeFiles 10
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/heathfortin/programing/languages/c++/plotter/build/CMakeFiles 17
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/executable/exesrcs/CMakeFiles/exe.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/heathfortin/programing/c++/plotter/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/heathfortin/programing/languages/c++/plotter/build/CMakeFiles 0
 .PHONY : src/executable/exesrcs/CMakeFiles/exe.dir/rule
 
 # Convenience name for target.
@@ -482,7 +616,7 @@ exe: src/executable/exesrcs/CMakeFiles/exe.dir/rule
 # codegen rule for target.
 src/executable/exesrcs/CMakeFiles/exe.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f src/executable/exesrcs/CMakeFiles/exe.dir/build.make src/executable/exesrcs/CMakeFiles/exe.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/heathfortin/programing/c++/plotter/build/CMakeFiles --progress-num=1,2 "Finished codegen for target exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/heathfortin/programing/languages/c++/plotter/build/CMakeFiles --progress-num=1,2 "Finished codegen for target exe"
 .PHONY : src/executable/exesrcs/CMakeFiles/exe.dir/codegen
 
 # clean rule for target.
