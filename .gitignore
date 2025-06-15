@@ -1,5 +1,5 @@
 build/
-.clangd
+.clangd/
 .vscode/
 *.DS_STORE
 
