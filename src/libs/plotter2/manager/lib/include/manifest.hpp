@@ -4,10 +4,10 @@
 #include <plot.hpp>
 
 #include <nlohmann/json.hpp>
+#include "file_manager.hpp"
 
 namespace plt_manager
 {
-	using path_fs = std::filesystem::path;
 	using json = nlohmann::json;
 	class manifest 
 	{

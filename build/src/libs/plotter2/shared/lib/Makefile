@@ -212,6 +212,30 @@ plots/sources/plotobject.cpp.s:
 	cd /Users/heathfortin/programing/languages/c++/plotter/build && $(MAKE) $(MAKESILENT) -f src/libs/plotter2/shared/lib/CMakeFiles/shared_lib.dir/build.make src/libs/plotter2/shared/lib/CMakeFiles/shared_lib.dir/plots/sources/plotobject.cpp.s
 .PHONY : plots/sources/plotobject.cpp.s
 
+plots/sources/plotscene.o: plots/sources/plotscene.cpp.o
+.PHONY : plots/sources/plotscene.o
+
+# target to build an object file
+plots/sources/plotscene.cpp.o:
+	cd /Users/heathfortin/programing/languages/c++/plotter/build && $(MAKE) $(MAKESILENT) -f src/libs/plotter2/shared/lib/CMakeFiles/shared_lib.dir/build.make src/libs/plotter2/shared/lib/CMakeFiles/shared_lib.dir/plots/sources/plotscene.cpp.o
+.PHONY : plots/sources/plotscene.cpp.o
+
+plots/sources/plotscene.i: plots/sources/plotscene.cpp.i
+.PHONY : plots/sources/plotscene.i
+
+# target to preprocess a source file
+plots/sources/plotscene.cpp.i:
+	cd /Users/heathfortin/programing/languages/c++/plotter/build && $(MAKE) $(MAKESILENT) -f src/libs/plotter2/shared/lib/CMakeFiles/shared_lib.dir/build.make src/libs/plotter2/shared/lib/CMakeFiles/shared_lib.dir/plots/sources/plotscene.cpp.i
+.PHONY : plots/sources/plotscene.cpp.i
+
+plots/sources/plotscene.s: plots/sources/plotscene.cpp.s
+.PHONY : plots/sources/plotscene.s
+
+# target to generate assembly for a file
+plots/sources/plotscene.cpp.s:
+	cd /Users/heathfortin/programing/languages/c++/plotter/build && $(MAKE) $(MAKESILENT) -f src/libs/plotter2/shared/lib/CMakeFiles/shared_lib.dir/build.make src/libs/plotter2/shared/lib/CMakeFiles/shared_lib.dir/plots/sources/plotscene.cpp.s
+.PHONY : plots/sources/plotscene.cpp.s
+
 scripter/sources/scripter.o: scripter/sources/scripter.cpp.o
 .PHONY : scripter/sources/scripter.o
 
@@ -236,6 +260,30 @@ scripter/sources/scripter.cpp.s:
 	cd /Users/heathfortin/programing/languages/c++/plotter/build && $(MAKE) $(MAKESILENT) -f src/libs/plotter2/shared/lib/CMakeFiles/shared_lib.dir/build.make src/libs/plotter2/shared/lib/CMakeFiles/shared_lib.dir/scripter/sources/scripter.cpp.s
 .PHONY : scripter/sources/scripter.cpp.s
 
+utils/sources/fileholder.o: utils/sources/fileholder.cpp.o
+.PHONY : utils/sources/fileholder.o
+
+# target to build an object file
+utils/sources/fileholder.cpp.o:
+	cd /Users/heathfortin/programing/languages/c++/plotter/build && $(MAKE) $(MAKESILENT) -f src/libs/plotter2/shared/lib/CMakeFiles/shared_lib.dir/build.make src/libs/plotter2/shared/lib/CMakeFiles/shared_lib.dir/utils/sources/fileholder.cpp.o
+.PHONY : utils/sources/fileholder.cpp.o
+
+utils/sources/fileholder.i: utils/sources/fileholder.cpp.i
+.PHONY : utils/sources/fileholder.i
+
+# target to preprocess a source file
+utils/sources/fileholder.cpp.i:
+	cd /Users/heathfortin/programing/languages/c++/plotter/build && $(MAKE) $(MAKESILENT) -f src/libs/plotter2/shared/lib/CMakeFiles/shared_lib.dir/build.make src/libs/plotter2/shared/lib/CMakeFiles/shared_lib.dir/utils/sources/fileholder.cpp.i
+.PHONY : utils/sources/fileholder.cpp.i
+
+utils/sources/fileholder.s: utils/sources/fileholder.cpp.s
+.PHONY : utils/sources/fileholder.s
+
+# target to generate assembly for a file
+utils/sources/fileholder.cpp.s:
+	cd /Users/heathfortin/programing/languages/c++/plotter/build && $(MAKE) $(MAKESILENT) -f src/libs/plotter2/shared/lib/CMakeFiles/shared_lib.dir/build.make src/libs/plotter2/shared/lib/CMakeFiles/shared_lib.dir/utils/sources/fileholder.cpp.s
+.PHONY : utils/sources/fileholder.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -255,9 +303,15 @@ help:
 	@echo "... plots/sources/plotobject.o"
 	@echo "... plots/sources/plotobject.i"
 	@echo "... plots/sources/plotobject.s"
+	@echo "... plots/sources/plotscene.o"
+	@echo "... plots/sources/plotscene.i"
+	@echo "... plots/sources/plotscene.s"
 	@echo "... scripter/sources/scripter.o"
 	@echo "... scripter/sources/scripter.i"
 	@echo "... scripter/sources/scripter.s"
+	@echo "... utils/sources/fileholder.o"
+	@echo "... utils/sources/fileholder.i"
+	@echo "... utils/sources/fileholder.s"
 .PHONY : help
 
 

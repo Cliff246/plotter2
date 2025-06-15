@@ -2,17 +2,20 @@
 
 #include <Python.h>
 #include <filesystem>
-
+#include <fileholder.hpp>
+#include <memory>
 
 namespace plt_shared
 {
-	using path_fs = std::filesystem::path;  
 
 	class script
 	{
 	private:
-		//script path
-		path_fs m_script_path;
+	
+		//file holder	
+		std::shared_ptr<fileholder> m_file;
+		
+
 		//script_content
 		std::string m_script_content;	
 		//file is in memory(DOES NOT MEAN IT'S READY)

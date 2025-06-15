@@ -1,2 +1,2 @@
-/usr/bin/ar qc libshared_lib.a CMakeFiles/shared_lib.dir/plots/sources/plot.cpp.o CMakeFiles/shared_lib.dir/plots/sources/plotobject.cpp.o CMakeFiles/shared_lib.dir/scripter/sources/scripter.cpp.o CMakeFiles/shared_lib.dir/datter/sources/datter.cpp.o
+/usr/bin/ar qc libshared_lib.a CMakeFiles/shared_lib.dir/plots/sources/plot.cpp.o CMakeFiles/shared_lib.dir/plots/sources/plotobject.cpp.o CMakeFiles/shared_lib.dir/plots/sources/plotscene.cpp.o CMakeFiles/shared_lib.dir/scripter/sources/scripter.cpp.o CMakeFiles/shared_lib.dir/datter/sources/datter.cpp.o CMakeFiles/shared_lib.dir/utils/sources/fileholder.cpp.o
 /usr/bin/ranlib libshared_lib.a

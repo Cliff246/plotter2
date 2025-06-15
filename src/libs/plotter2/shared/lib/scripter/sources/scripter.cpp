@@ -1,15 +1,16 @@
 #include "scripter.hpp"
 #include <_types/_nl_item.h>
 #include <exception>
+#include <memory>
 #include <sstream>
 #include <fstream>
 #include <stdexcept>
 #include <unistd.h>
 
 //init script from path
-plt_shared::script::script(path_fs &path)
+plt_shared::script::script(plt_shared::path_fs &path)
 {
-	m_script_path = path;
+	m_file = std::make_shared<fileholder>(path);
 	m_loaded = false;
 	m_initalized = false;
 }
@@ -21,30 +22,19 @@ void plt_shared::script::load_script()
 	if(m_loaded)
 		return;
 	//forward declare script_stream
-	std::ifstream script_stream;
 	try 
 	{	
 		//open path
-		script_stream.open(m_script_path);
+		m_file->open_file(std::ios::in);
 			
-		//start up string stream
-		std::ostringstream string_stream;
-		//pipe script_stream into string_stream
-		string_stream << script_stream.rdbuf();
-		//get content		
-		m_script_content = string_stream.str();
-		//close
-		script_stream.close();	
+		m_script_content = m_file->read_all();
+		m_file->close_file();
 		//set loaded
 		m_loaded = true;
 		return;
 	}
 	catch(const std::exception &e) 
 	{
-		if(script_stream.is_open() == true) 
-		{
-			script_stream.close();
-		}	
 		throw e;
 	}
 	
