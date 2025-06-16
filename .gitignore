@@ -1,5 +1,6 @@
 build/
 .clangd/
+.cache/
 .vscode/
 *.DS_STORE
 
