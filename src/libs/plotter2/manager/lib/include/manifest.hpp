@@ -17,7 +17,7 @@ namespace plt_manager
 		bool m_loaded;
 	public:
 			
-		manifest(path_fs &path);
+		manifest(const path_fs &path);
 		~manifest();
 		bool get_loaded();		
 		void load_manifest();

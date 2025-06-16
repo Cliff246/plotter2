@@ -1,8 +1,4 @@
 #pragma once
-#include <iostream>
-#include <map>
-#include <unordered_map>
-#include <string>
 #include <memory>
 
 #include "plotobject.hpp"
@@ -14,9 +10,12 @@ namespace plt_shared
 	class plot
 	{
 	private:
-		plt_shared::plotscene scene;	
+		std::shared_ptr<plt_shared::plotscene> scene;	
+		
 	public:
 		plot();	
+		~plot();
+
 	};
 }
 

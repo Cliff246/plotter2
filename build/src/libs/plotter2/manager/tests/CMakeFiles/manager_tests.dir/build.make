@@ -86,10 +86,24 @@ src/libs/plotter2/manager/tests/CMakeFiles/manager_tests.dir/sources/tests_manif
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/manager_tests.dir/sources/tests_manifest.cpp.s"
 	cd /Users/heathfortin/programing/languages/c++/plotter/build/src/libs/plotter2/manager/tests && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/heathfortin/programing/languages/c++/plotter/src/libs/plotter2/manager/tests/sources/tests_manifest.cpp -o CMakeFiles/manager_tests.dir/sources/tests_manifest.cpp.s
 
+src/libs/plotter2/manager/tests/CMakeFiles/manager_tests.dir/sources/tests_manager.cpp.o: src/libs/plotter2/manager/tests/CMakeFiles/manager_tests.dir/flags.make
+src/libs/plotter2/manager/tests/CMakeFiles/manager_tests.dir/sources/tests_manager.cpp.o: /Users/heathfortin/programing/languages/c++/plotter/src/libs/plotter2/manager/tests/sources/tests_manager.cpp
+src/libs/plotter2/manager/tests/CMakeFiles/manager_tests.dir/sources/tests_manager.cpp.o: src/libs/plotter2/manager/tests/CMakeFiles/manager_tests.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/heathfortin/programing/languages/c++/plotter/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object src/libs/plotter2/manager/tests/CMakeFiles/manager_tests.dir/sources/tests_manager.cpp.o"
+	cd /Users/heathfortin/programing/languages/c++/plotter/build/src/libs/plotter2/manager/tests && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/libs/plotter2/manager/tests/CMakeFiles/manager_tests.dir/sources/tests_manager.cpp.o -MF CMakeFiles/manager_tests.dir/sources/tests_manager.cpp.o.d -o CMakeFiles/manager_tests.dir/sources/tests_manager.cpp.o -c /Users/heathfortin/programing/languages/c++/plotter/src/libs/plotter2/manager/tests/sources/tests_manager.cpp
+
+src/libs/plotter2/manager/tests/CMakeFiles/manager_tests.dir/sources/tests_manager.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/manager_tests.dir/sources/tests_manager.cpp.i"
+	cd /Users/heathfortin/programing/languages/c++/plotter/build/src/libs/plotter2/manager/tests && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/heathfortin/programing/languages/c++/plotter/src/libs/plotter2/manager/tests/sources/tests_manager.cpp > CMakeFiles/manager_tests.dir/sources/tests_manager.cpp.i
+
+src/libs/plotter2/manager/tests/CMakeFiles/manager_tests.dir/sources/tests_manager.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/manager_tests.dir/sources/tests_manager.cpp.s"
+	cd /Users/heathfortin/programing/languages/c++/plotter/build/src/libs/plotter2/manager/tests && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/heathfortin/programing/languages/c++/plotter/src/libs/plotter2/manager/tests/sources/tests_manager.cpp -o CMakeFiles/manager_tests.dir/sources/tests_manager.cpp.s
+
 src/libs/plotter2/manager/tests/CMakeFiles/manager_tests.dir/sources/tests.cpp.o: src/libs/plotter2/manager/tests/CMakeFiles/manager_tests.dir/flags.make
 src/libs/plotter2/manager/tests/CMakeFiles/manager_tests.dir/sources/tests.cpp.o: /Users/heathfortin/programing/languages/c++/plotter/src/libs/plotter2/manager/tests/sources/tests.cpp
 src/libs/plotter2/manager/tests/CMakeFiles/manager_tests.dir/sources/tests.cpp.o: src/libs/plotter2/manager/tests/CMakeFiles/manager_tests.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/heathfortin/programing/languages/c++/plotter/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object src/libs/plotter2/manager/tests/CMakeFiles/manager_tests.dir/sources/tests.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/heathfortin/programing/languages/c++/plotter/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object src/libs/plotter2/manager/tests/CMakeFiles/manager_tests.dir/sources/tests.cpp.o"
 	cd /Users/heathfortin/programing/languages/c++/plotter/build/src/libs/plotter2/manager/tests && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/libs/plotter2/manager/tests/CMakeFiles/manager_tests.dir/sources/tests.cpp.o -MF CMakeFiles/manager_tests.dir/sources/tests.cpp.o.d -o CMakeFiles/manager_tests.dir/sources/tests.cpp.o -c /Users/heathfortin/programing/languages/c++/plotter/src/libs/plotter2/manager/tests/sources/tests.cpp
 
 src/libs/plotter2/manager/tests/CMakeFiles/manager_tests.dir/sources/tests.cpp.i: cmake_force
@@ -103,24 +117,29 @@ src/libs/plotter2/manager/tests/CMakeFiles/manager_tests.dir/sources/tests.cpp.s
 # Object files for target manager_tests
 manager_tests_OBJECTS = \
 "CMakeFiles/manager_tests.dir/sources/tests_manifest.cpp.o" \
+"CMakeFiles/manager_tests.dir/sources/tests_manager.cpp.o" \
 "CMakeFiles/manager_tests.dir/sources/tests.cpp.o"
 
 # External object files for target manager_tests
 manager_tests_EXTERNAL_OBJECTS =
 
 src/libs/plotter2/manager/tests/manager_tests: src/libs/plotter2/manager/tests/CMakeFiles/manager_tests.dir/sources/tests_manifest.cpp.o
+src/libs/plotter2/manager/tests/manager_tests: src/libs/plotter2/manager/tests/CMakeFiles/manager_tests.dir/sources/tests_manager.cpp.o
 src/libs/plotter2/manager/tests/manager_tests: src/libs/plotter2/manager/tests/CMakeFiles/manager_tests.dir/sources/tests.cpp.o
 src/libs/plotter2/manager/tests/manager_tests: src/libs/plotter2/manager/tests/CMakeFiles/manager_tests.dir/build.make
+src/libs/plotter2/manager/tests/manager_tests: lib/libgtest_main.a
 src/libs/plotter2/manager/tests/manager_tests: src/libs/plotter2/shared/lib/libshared_lib.a
 src/libs/plotter2/manager/tests/manager_tests: src/libs/plotter2/pipeline/lib/libpipeline_lib.a
 src/libs/plotter2/manager/tests/manager_tests: src/libs/plotter2/manager/lib/libmanager_lib.a
+src/libs/plotter2/manager/tests/manager_tests: lib/libgtest.a
 src/libs/plotter2/manager/tests/manager_tests: src/libs/plotter2/pipeline/lib/libpipeline_lib.a
 src/libs/plotter2/manager/tests/manager_tests: src/libs/plotter2/shared/lib/libshared_lib.a
 src/libs/plotter2/manager/tests/manager_tests: /opt/homebrew/opt/python@3.13/Frameworks/Python.framework/Versions/3.13/lib/libpython3.13.dylib
 src/libs/plotter2/manager/tests/manager_tests: /Library/Frameworks/Python.framework/Versions/3.13/lib/libpython3.13.dylib
 src/libs/plotter2/manager/tests/manager_tests: src/libs/plotter2/manager/tests/CMakeFiles/manager_tests.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/heathfortin/programing/languages/c++/plotter/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable manager_tests"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/heathfortin/programing/languages/c++/plotter/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable manager_tests"
 	cd /Users/heathfortin/programing/languages/c++/plotter/build/src/libs/plotter2/manager/tests && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/manager_tests.dir/link.txt --verbose=$(VERBOSE)
+	cd /Users/heathfortin/programing/languages/c++/plotter/build/src/libs/plotter2/manager/tests && /opt/homebrew/bin/cmake -D TEST_TARGET=manager_tests -D TEST_EXECUTABLE=/Users/heathfortin/programing/languages/c++/plotter/build/src/libs/plotter2/manager/tests/manager_tests -D TEST_EXECUTOR= -D TEST_WORKING_DIR=/Users/heathfortin/programing/languages/c++/plotter/build/src/libs/plotter2/manager/tests -D TEST_EXTRA_ARGS= -D TEST_PROPERTIES= -D TEST_PREFIX= -D TEST_SUFFIX= -D TEST_FILTER= -D NO_PRETTY_TYPES=FALSE -D NO_PRETTY_VALUES=FALSE -D TEST_LIST=manager_tests_TESTS -D CTEST_FILE=/Users/heathfortin/programing/languages/c++/plotter/build/src/libs/plotter2/manager/tests/manager_tests[1]_tests.cmake -D TEST_DISCOVERY_TIMEOUT=5 -D TEST_DISCOVERY_EXTRA_ARGS= -D TEST_XML_OUTPUT_DIR= -P /opt/homebrew/share/cmake/Modules/GoogleTestAddTests.cmake
 
 # Rule to build all files generated by this target.
 src/libs/plotter2/manager/tests/CMakeFiles/manager_tests.dir/build: src/libs/plotter2/manager/tests/manager_tests

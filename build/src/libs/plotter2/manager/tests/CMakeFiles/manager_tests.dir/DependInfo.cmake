@@ -9,6 +9,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/Users/heathfortin/programing/languages/c++/plotter/src/libs/plotter2/manager/tests/sources/tests.cpp" "src/libs/plotter2/manager/tests/CMakeFiles/manager_tests.dir/sources/tests.cpp.o" "gcc" "src/libs/plotter2/manager/tests/CMakeFiles/manager_tests.dir/sources/tests.cpp.o.d"
+  "/Users/heathfortin/programing/languages/c++/plotter/src/libs/plotter2/manager/tests/sources/tests_manager.cpp" "src/libs/plotter2/manager/tests/CMakeFiles/manager_tests.dir/sources/tests_manager.cpp.o" "gcc" "src/libs/plotter2/manager/tests/CMakeFiles/manager_tests.dir/sources/tests_manager.cpp.o.d"
   "/Users/heathfortin/programing/languages/c++/plotter/src/libs/plotter2/manager/tests/sources/tests_manifest.cpp" "src/libs/plotter2/manager/tests/CMakeFiles/manager_tests.dir/sources/tests_manifest.cpp.o" "gcc" "src/libs/plotter2/manager/tests/CMakeFiles/manager_tests.dir/sources/tests_manifest.cpp.o.d"
   )
 

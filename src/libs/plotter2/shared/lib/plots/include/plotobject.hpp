@@ -23,7 +23,7 @@ namespace plt_shared
 	using plotobj_ptr = std::shared_ptr<plt_shared::plotobj>;
 	
 	//map of plot objects
-	class plotmap : plotobj 
+	class plotmap : public plotobj 
 	{
 	private:
 
@@ -32,7 +32,7 @@ namespace plt_shared
 		plotmap();
 	};
 
-	class plotary : plotobj 
+	class plotary : public plotobj 
 	{
 	private:
 		std::vector<plotobj_ptr> m_plotary;

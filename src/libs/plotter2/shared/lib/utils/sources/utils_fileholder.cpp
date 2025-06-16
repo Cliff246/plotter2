@@ -1,4 +1,4 @@
-#include "fileholder.hpp"
+#include "utils_fileholder.hpp"
 #include <exception>
 #include <fstream>
 #include <sstream>
@@ -6,7 +6,7 @@
 #include <stdexcept>
 #include <iostream>
 #include <vector>
-
+#include <set>
 plt_shared::fileholder::fileholder(plt_shared::path_fs path) 
 {
 	m_path = path;
@@ -21,6 +21,17 @@ plt_shared::fileholder::~fileholder()
 		m_stream.close();
 	}
 }
+
+bool plt_shared::fileholder::can_open()
+{
+	return true;
+}	
+
+plt_shared::filetype plt_shared::fileholder::get_filetype()
+{
+	return plt_shared::filetype::file;
+}
+
 bool plt_shared::fileholder::does_exist() const
 {
 	return std::filesystem::exists(m_path);	
@@ -72,13 +83,11 @@ char plt_shared::fileholder::read()
 {
 	if(!is_loaded() || !can_read())
 	{
-
 		throw std::runtime_error("cannot read from a file that's not loaded or readable");
 	}
 	char value;
 	return value;
 }
-
 
 std::string plt_shared::fileholder::read_line()
 {
@@ -102,8 +111,6 @@ std::string plt_shared::fileholder::read_all()
 	return buffer.str();
 }
 
-
-
 std::vector<char> plt_shared::fileholder::read_bytes()
 {
 	if(!is_loaded() || !can_read())
@@ -114,7 +121,6 @@ std::vector<char> plt_shared::fileholder::read_bytes()
 	return content;	
 	
 }
-
 
 void plt_shared::fileholder::set_seek(size_t seek)
 {
@@ -192,5 +198,48 @@ size_t plt_shared::fileholder::get_size()
     // Restore position
     m_stream.seekg(current);
     return size;
+}
+
+
+
+
+
+bool plt_shared::directoryholder::can_open()
+{
+	return false;
+}
+plt_shared::filetype plt_shared::directoryholder::get_filetype()
+{
+	return plt_shared::filetype::directory;
+}
+bool plt_shared::directoryholder::does_exist() const
+{
+	return std::filesystem::exists(m_path);	
+}
+
+
+plt_shared::fhold_ptr plt_shared::directoryholder::get_holder(const std::string &key)
+{
+	return m_map[key];
+}
+		
+std::set<std::string> plt_shared::directoryholder::get_keys()
+{
+	//sketchy 
+	std::set<std::string> keys;
+	for(const auto &pair : m_map)
+	{
+		keys.insert(pair.first);
+	}
+	return keys;	
+}
+std::set<plt_shared::fhold_ptr> plt_shared::directoryholder::get_values()
+{
+	std::set<plt_shared::fhold_ptr> values;
+	for(const auto &pair : m_map)
+	{
+		values.insert(pair.second);
+	}
+	return values;
 }
 

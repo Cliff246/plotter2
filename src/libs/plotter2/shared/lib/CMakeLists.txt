@@ -8,12 +8,19 @@ set(PLOTS_SOURCES
 set(SCRIPTER_SOURCES
 	${CMAKE_CURRENT_SOURCE_DIR}/scripter/sources/scripter.cpp
 )
+
+set(LOGGY_SOURCES
+	${CMAKE_CURRENT_SOURCE_DIR}/loggy/sources/loggy.cpp
+)
 set(DATTER_SOURCES
 	${CMAKE_CURRENT_SOURCE_DIR}/datter/sources/datter.cpp
 )
 
 set(UTILS_SOURCES 
-	${CMAKE_CURRENT_SOURCE_DIR}/utils/sources/fileholder.cpp
+	${CMAKE_CURRENT_SOURCE_DIR}/utils/sources/utils_fileholder.cpp
+
+	${CMAKE_CURRENT_SOURCE_DIR}/utils/sources/utils_threadpool.cpp
+	${CMAKE_CURRENT_SOURCE_DIR}/utils/sources/utils_threadworker.cpp
 )
 
 add_library(shared_lib STATIC 
@@ -21,7 +28,9 @@ add_library(shared_lib STATIC
 	${SCRIPTER_SOURCES}
 	${DATTER_SOURCES}
 	${UTILS_SOURCES}
+	${LOGGY_SOURCES}
 )
+
 
 target_include_directories(shared_lib 
 	PUBLIC
@@ -29,7 +38,9 @@ target_include_directories(shared_lib
 	${CMAKE_CURRENT_SOURCE_DIR}/scripter/include
 	${CMAKE_CURRENT_SOURCE_DIR}/datter/include
 	${CMAKE_CURRENT_SOURCE_DIR}/utils/include
+	${CMAKE_CURRENT_SOURCE_DIR}/loggy/include
 )
+
 target_link_libraries(shared_lib
 	PRIVATE
     Eigen3::Eigen

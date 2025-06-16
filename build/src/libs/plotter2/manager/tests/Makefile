@@ -95,6 +95,51 @@ rebuild_cache:
 rebuild_cache/fast: rebuild_cache
 .PHONY : rebuild_cache/fast
 
+# Special rule for the target list_install_components
+list_install_components:
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Available install components are: \"gmock\" \"gtest\""
+.PHONY : list_install_components
+
+# Special rule for the target list_install_components
+list_install_components/fast: list_install_components
+.PHONY : list_install_components/fast
+
+# Special rule for the target install
+install: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Install the project..."
+	/opt/homebrew/bin/cmake -P cmake_install.cmake
+.PHONY : install
+
+# Special rule for the target install
+install/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Install the project..."
+	/opt/homebrew/bin/cmake -P cmake_install.cmake
+.PHONY : install/fast
+
+# Special rule for the target install/local
+install/local: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Installing only the local directory..."
+	/opt/homebrew/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local
+
+# Special rule for the target install/local
+install/local/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Installing only the local directory..."
+	/opt/homebrew/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local/fast
+
+# Special rule for the target install/strip
+install/strip: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Installing the project stripped..."
+	/opt/homebrew/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+.PHONY : install/strip
+
+# Special rule for the target install/strip
+install/strip/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Installing the project stripped..."
+	/opt/homebrew/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+.PHONY : install/strip/fast
+
 # The main all target
 all: cmake_check_build_system
 	cd /Users/heathfortin/programing/languages/c++/plotter/build && $(CMAKE_COMMAND) -E cmake_progress_start /Users/heathfortin/programing/languages/c++/plotter/build/CMakeFiles /Users/heathfortin/programing/languages/c++/plotter/build/src/libs/plotter2/manager/tests//CMakeFiles/progress.marks
@@ -164,6 +209,30 @@ sources/tests.cpp.s:
 	cd /Users/heathfortin/programing/languages/c++/plotter/build && $(MAKE) $(MAKESILENT) -f src/libs/plotter2/manager/tests/CMakeFiles/manager_tests.dir/build.make src/libs/plotter2/manager/tests/CMakeFiles/manager_tests.dir/sources/tests.cpp.s
 .PHONY : sources/tests.cpp.s
 
+sources/tests_manager.o: sources/tests_manager.cpp.o
+.PHONY : sources/tests_manager.o
+
+# target to build an object file
+sources/tests_manager.cpp.o:
+	cd /Users/heathfortin/programing/languages/c++/plotter/build && $(MAKE) $(MAKESILENT) -f src/libs/plotter2/manager/tests/CMakeFiles/manager_tests.dir/build.make src/libs/plotter2/manager/tests/CMakeFiles/manager_tests.dir/sources/tests_manager.cpp.o
+.PHONY : sources/tests_manager.cpp.o
+
+sources/tests_manager.i: sources/tests_manager.cpp.i
+.PHONY : sources/tests_manager.i
+
+# target to preprocess a source file
+sources/tests_manager.cpp.i:
+	cd /Users/heathfortin/programing/languages/c++/plotter/build && $(MAKE) $(MAKESILENT) -f src/libs/plotter2/manager/tests/CMakeFiles/manager_tests.dir/build.make src/libs/plotter2/manager/tests/CMakeFiles/manager_tests.dir/sources/tests_manager.cpp.i
+.PHONY : sources/tests_manager.cpp.i
+
+sources/tests_manager.s: sources/tests_manager.cpp.s
+.PHONY : sources/tests_manager.s
+
+# target to generate assembly for a file
+sources/tests_manager.cpp.s:
+	cd /Users/heathfortin/programing/languages/c++/plotter/build && $(MAKE) $(MAKESILENT) -f src/libs/plotter2/manager/tests/CMakeFiles/manager_tests.dir/build.make src/libs/plotter2/manager/tests/CMakeFiles/manager_tests.dir/sources/tests_manager.cpp.s
+.PHONY : sources/tests_manager.cpp.s
+
 sources/tests_manifest.o: sources/tests_manifest.cpp.o
 .PHONY : sources/tests_manifest.o
 
@@ -195,12 +264,19 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... edit_cache"
+	@echo "... install"
+	@echo "... install/local"
+	@echo "... install/strip"
+	@echo "... list_install_components"
 	@echo "... rebuild_cache"
 	@echo "... test"
 	@echo "... manager_tests"
 	@echo "... sources/tests.o"
 	@echo "... sources/tests.i"
 	@echo "... sources/tests.s"
+	@echo "... sources/tests_manager.o"
+	@echo "... sources/tests_manager.i"
+	@echo "... sources/tests_manager.s"
 	@echo "... sources/tests_manifest.o"
 	@echo "... sources/tests_manifest.i"
 	@echo "... sources/tests_manifest.s"

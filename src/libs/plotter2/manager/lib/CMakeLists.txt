@@ -5,6 +5,7 @@ set(MANAGER_SUBLIB_SOURCES
 	${CMAKE_CURRENT_SOURCE_DIR}/sources/manager.cpp
 	${CMAKE_CURRENT_SOURCE_DIR}/sources/manifest.cpp
 	${CMAKE_CURRENT_SOURCE_DIR}/sources/file_manager.cpp
+	${CMAKE_CURRENT_SOURCE_DIR}/sources/head_manager.cpp
 )
 
 

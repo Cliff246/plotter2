@@ -95,6 +95,51 @@ rebuild_cache:
 rebuild_cache/fast: rebuild_cache
 .PHONY : rebuild_cache/fast
 
+# Special rule for the target list_install_components
+list_install_components:
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Available install components are: \"gmock\" \"gtest\""
+.PHONY : list_install_components
+
+# Special rule for the target list_install_components
+list_install_components/fast: list_install_components
+.PHONY : list_install_components/fast
+
+# Special rule for the target install
+install: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Install the project..."
+	/opt/homebrew/bin/cmake -P cmake_install.cmake
+.PHONY : install
+
+# Special rule for the target install
+install/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Install the project..."
+	/opt/homebrew/bin/cmake -P cmake_install.cmake
+.PHONY : install/fast
+
+# Special rule for the target install/local
+install/local: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Installing only the local directory..."
+	/opt/homebrew/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local
+
+# Special rule for the target install/local
+install/local/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Installing only the local directory..."
+	/opt/homebrew/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local/fast
+
+# Special rule for the target install/strip
+install/strip: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Installing the project stripped..."
+	/opt/homebrew/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+.PHONY : install/strip
+
+# Special rule for the target install/strip
+install/strip/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Installing the project stripped..."
+	/opt/homebrew/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+.PHONY : install/strip/fast
+
 # The main all target
 all: cmake_check_build_system
 	cd /Users/heathfortin/programing/languages/c++/plotter/build && $(CMAKE_COMMAND) -E cmake_progress_start /Users/heathfortin/programing/languages/c++/plotter/build/CMakeFiles /Users/heathfortin/programing/languages/c++/plotter/build/src/libs/plotter2/shared/lib//CMakeFiles/progress.marks
@@ -163,6 +208,30 @@ datter/sources/datter.s: datter/sources/datter.cpp.s
 datter/sources/datter.cpp.s:
 	cd /Users/heathfortin/programing/languages/c++/plotter/build && $(MAKE) $(MAKESILENT) -f src/libs/plotter2/shared/lib/CMakeFiles/shared_lib.dir/build.make src/libs/plotter2/shared/lib/CMakeFiles/shared_lib.dir/datter/sources/datter.cpp.s
 .PHONY : datter/sources/datter.cpp.s
+
+loggy/sources/loggy.o: loggy/sources/loggy.cpp.o
+.PHONY : loggy/sources/loggy.o
+
+# target to build an object file
+loggy/sources/loggy.cpp.o:
+	cd /Users/heathfortin/programing/languages/c++/plotter/build && $(MAKE) $(MAKESILENT) -f src/libs/plotter2/shared/lib/CMakeFiles/shared_lib.dir/build.make src/libs/plotter2/shared/lib/CMakeFiles/shared_lib.dir/loggy/sources/loggy.cpp.o
+.PHONY : loggy/sources/loggy.cpp.o
+
+loggy/sources/loggy.i: loggy/sources/loggy.cpp.i
+.PHONY : loggy/sources/loggy.i
+
+# target to preprocess a source file
+loggy/sources/loggy.cpp.i:
+	cd /Users/heathfortin/programing/languages/c++/plotter/build && $(MAKE) $(MAKESILENT) -f src/libs/plotter2/shared/lib/CMakeFiles/shared_lib.dir/build.make src/libs/plotter2/shared/lib/CMakeFiles/shared_lib.dir/loggy/sources/loggy.cpp.i
+.PHONY : loggy/sources/loggy.cpp.i
+
+loggy/sources/loggy.s: loggy/sources/loggy.cpp.s
+.PHONY : loggy/sources/loggy.s
+
+# target to generate assembly for a file
+loggy/sources/loggy.cpp.s:
+	cd /Users/heathfortin/programing/languages/c++/plotter/build && $(MAKE) $(MAKESILENT) -f src/libs/plotter2/shared/lib/CMakeFiles/shared_lib.dir/build.make src/libs/plotter2/shared/lib/CMakeFiles/shared_lib.dir/loggy/sources/loggy.cpp.s
+.PHONY : loggy/sources/loggy.cpp.s
 
 plots/sources/plot.o: plots/sources/plot.cpp.o
 .PHONY : plots/sources/plot.o
@@ -260,29 +329,77 @@ scripter/sources/scripter.cpp.s:
 	cd /Users/heathfortin/programing/languages/c++/plotter/build && $(MAKE) $(MAKESILENT) -f src/libs/plotter2/shared/lib/CMakeFiles/shared_lib.dir/build.make src/libs/plotter2/shared/lib/CMakeFiles/shared_lib.dir/scripter/sources/scripter.cpp.s
 .PHONY : scripter/sources/scripter.cpp.s
 
-utils/sources/fileholder.o: utils/sources/fileholder.cpp.o
-.PHONY : utils/sources/fileholder.o
+utils/sources/utils_fileholder.o: utils/sources/utils_fileholder.cpp.o
+.PHONY : utils/sources/utils_fileholder.o
 
 # target to build an object file
-utils/sources/fileholder.cpp.o:
-	cd /Users/heathfortin/programing/languages/c++/plotter/build && $(MAKE) $(MAKESILENT) -f src/libs/plotter2/shared/lib/CMakeFiles/shared_lib.dir/build.make src/libs/plotter2/shared/lib/CMakeFiles/shared_lib.dir/utils/sources/fileholder.cpp.o
-.PHONY : utils/sources/fileholder.cpp.o
+utils/sources/utils_fileholder.cpp.o:
+	cd /Users/heathfortin/programing/languages/c++/plotter/build && $(MAKE) $(MAKESILENT) -f src/libs/plotter2/shared/lib/CMakeFiles/shared_lib.dir/build.make src/libs/plotter2/shared/lib/CMakeFiles/shared_lib.dir/utils/sources/utils_fileholder.cpp.o
+.PHONY : utils/sources/utils_fileholder.cpp.o
 
-utils/sources/fileholder.i: utils/sources/fileholder.cpp.i
-.PHONY : utils/sources/fileholder.i
+utils/sources/utils_fileholder.i: utils/sources/utils_fileholder.cpp.i
+.PHONY : utils/sources/utils_fileholder.i
 
 # target to preprocess a source file
-utils/sources/fileholder.cpp.i:
-	cd /Users/heathfortin/programing/languages/c++/plotter/build && $(MAKE) $(MAKESILENT) -f src/libs/plotter2/shared/lib/CMakeFiles/shared_lib.dir/build.make src/libs/plotter2/shared/lib/CMakeFiles/shared_lib.dir/utils/sources/fileholder.cpp.i
-.PHONY : utils/sources/fileholder.cpp.i
+utils/sources/utils_fileholder.cpp.i:
+	cd /Users/heathfortin/programing/languages/c++/plotter/build && $(MAKE) $(MAKESILENT) -f src/libs/plotter2/shared/lib/CMakeFiles/shared_lib.dir/build.make src/libs/plotter2/shared/lib/CMakeFiles/shared_lib.dir/utils/sources/utils_fileholder.cpp.i
+.PHONY : utils/sources/utils_fileholder.cpp.i
 
-utils/sources/fileholder.s: utils/sources/fileholder.cpp.s
-.PHONY : utils/sources/fileholder.s
+utils/sources/utils_fileholder.s: utils/sources/utils_fileholder.cpp.s
+.PHONY : utils/sources/utils_fileholder.s
 
 # target to generate assembly for a file
-utils/sources/fileholder.cpp.s:
-	cd /Users/heathfortin/programing/languages/c++/plotter/build && $(MAKE) $(MAKESILENT) -f src/libs/plotter2/shared/lib/CMakeFiles/shared_lib.dir/build.make src/libs/plotter2/shared/lib/CMakeFiles/shared_lib.dir/utils/sources/fileholder.cpp.s
-.PHONY : utils/sources/fileholder.cpp.s
+utils/sources/utils_fileholder.cpp.s:
+	cd /Users/heathfortin/programing/languages/c++/plotter/build && $(MAKE) $(MAKESILENT) -f src/libs/plotter2/shared/lib/CMakeFiles/shared_lib.dir/build.make src/libs/plotter2/shared/lib/CMakeFiles/shared_lib.dir/utils/sources/utils_fileholder.cpp.s
+.PHONY : utils/sources/utils_fileholder.cpp.s
+
+utils/sources/utils_threadpool.o: utils/sources/utils_threadpool.cpp.o
+.PHONY : utils/sources/utils_threadpool.o
+
+# target to build an object file
+utils/sources/utils_threadpool.cpp.o:
+	cd /Users/heathfortin/programing/languages/c++/plotter/build && $(MAKE) $(MAKESILENT) -f src/libs/plotter2/shared/lib/CMakeFiles/shared_lib.dir/build.make src/libs/plotter2/shared/lib/CMakeFiles/shared_lib.dir/utils/sources/utils_threadpool.cpp.o
+.PHONY : utils/sources/utils_threadpool.cpp.o
+
+utils/sources/utils_threadpool.i: utils/sources/utils_threadpool.cpp.i
+.PHONY : utils/sources/utils_threadpool.i
+
+# target to preprocess a source file
+utils/sources/utils_threadpool.cpp.i:
+	cd /Users/heathfortin/programing/languages/c++/plotter/build && $(MAKE) $(MAKESILENT) -f src/libs/plotter2/shared/lib/CMakeFiles/shared_lib.dir/build.make src/libs/plotter2/shared/lib/CMakeFiles/shared_lib.dir/utils/sources/utils_threadpool.cpp.i
+.PHONY : utils/sources/utils_threadpool.cpp.i
+
+utils/sources/utils_threadpool.s: utils/sources/utils_threadpool.cpp.s
+.PHONY : utils/sources/utils_threadpool.s
+
+# target to generate assembly for a file
+utils/sources/utils_threadpool.cpp.s:
+	cd /Users/heathfortin/programing/languages/c++/plotter/build && $(MAKE) $(MAKESILENT) -f src/libs/plotter2/shared/lib/CMakeFiles/shared_lib.dir/build.make src/libs/plotter2/shared/lib/CMakeFiles/shared_lib.dir/utils/sources/utils_threadpool.cpp.s
+.PHONY : utils/sources/utils_threadpool.cpp.s
+
+utils/sources/utils_threadworker.o: utils/sources/utils_threadworker.cpp.o
+.PHONY : utils/sources/utils_threadworker.o
+
+# target to build an object file
+utils/sources/utils_threadworker.cpp.o:
+	cd /Users/heathfortin/programing/languages/c++/plotter/build && $(MAKE) $(MAKESILENT) -f src/libs/plotter2/shared/lib/CMakeFiles/shared_lib.dir/build.make src/libs/plotter2/shared/lib/CMakeFiles/shared_lib.dir/utils/sources/utils_threadworker.cpp.o
+.PHONY : utils/sources/utils_threadworker.cpp.o
+
+utils/sources/utils_threadworker.i: utils/sources/utils_threadworker.cpp.i
+.PHONY : utils/sources/utils_threadworker.i
+
+# target to preprocess a source file
+utils/sources/utils_threadworker.cpp.i:
+	cd /Users/heathfortin/programing/languages/c++/plotter/build && $(MAKE) $(MAKESILENT) -f src/libs/plotter2/shared/lib/CMakeFiles/shared_lib.dir/build.make src/libs/plotter2/shared/lib/CMakeFiles/shared_lib.dir/utils/sources/utils_threadworker.cpp.i
+.PHONY : utils/sources/utils_threadworker.cpp.i
+
+utils/sources/utils_threadworker.s: utils/sources/utils_threadworker.cpp.s
+.PHONY : utils/sources/utils_threadworker.s
+
+# target to generate assembly for a file
+utils/sources/utils_threadworker.cpp.s:
+	cd /Users/heathfortin/programing/languages/c++/plotter/build && $(MAKE) $(MAKESILENT) -f src/libs/plotter2/shared/lib/CMakeFiles/shared_lib.dir/build.make src/libs/plotter2/shared/lib/CMakeFiles/shared_lib.dir/utils/sources/utils_threadworker.cpp.s
+.PHONY : utils/sources/utils_threadworker.cpp.s
 
 # Help Target
 help:
@@ -291,12 +408,19 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... edit_cache"
+	@echo "... install"
+	@echo "... install/local"
+	@echo "... install/strip"
+	@echo "... list_install_components"
 	@echo "... rebuild_cache"
 	@echo "... test"
 	@echo "... shared_lib"
 	@echo "... datter/sources/datter.o"
 	@echo "... datter/sources/datter.i"
 	@echo "... datter/sources/datter.s"
+	@echo "... loggy/sources/loggy.o"
+	@echo "... loggy/sources/loggy.i"
+	@echo "... loggy/sources/loggy.s"
 	@echo "... plots/sources/plot.o"
 	@echo "... plots/sources/plot.i"
 	@echo "... plots/sources/plot.s"
@@ -309,9 +433,15 @@ help:
 	@echo "... scripter/sources/scripter.o"
 	@echo "... scripter/sources/scripter.i"
 	@echo "... scripter/sources/scripter.s"
-	@echo "... utils/sources/fileholder.o"
-	@echo "... utils/sources/fileholder.i"
-	@echo "... utils/sources/fileholder.s"
+	@echo "... utils/sources/utils_fileholder.o"
+	@echo "... utils/sources/utils_fileholder.i"
+	@echo "... utils/sources/utils_fileholder.s"
+	@echo "... utils/sources/utils_threadpool.o"
+	@echo "... utils/sources/utils_threadpool.i"
+	@echo "... utils/sources/utils_threadpool.s"
+	@echo "... utils/sources/utils_threadworker.o"
+	@echo "... utils/sources/utils_threadworker.i"
+	@echo "... utils/sources/utils_threadworker.s"
 .PHONY : help
 
 

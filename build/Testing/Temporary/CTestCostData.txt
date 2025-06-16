@@ -1,2 +1,4 @@
-manager_tests 3 0.0491318
+manager_tests 13 0.000731782
+manager_tests.manifest 1 0.0104131
+manager_tests.manager 1 0.00959621
 ---

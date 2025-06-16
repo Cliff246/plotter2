@@ -1,14 +1,14 @@
 #include "manifest.hpp"
+#include <array>
 #include <tuple>
 #include <iostream>
 #include <fstream>
-#include <sstream>
 
-plt_manager::manifest::manifest(path_fs &path)
+plt_manager::manifest::manifest(const path_fs &path)
 {
 	
 	m_manifest_path = path;		
-	
+	//basic and old but should work	
 	std::ifstream istream;
 	try
 	{
@@ -43,6 +43,15 @@ bool plt_manager::manifest::get_loaded()
 	return m_loaded;
 }	
 
+const std::array<std::string, 4> key_for_path = 
+{
+	"path",
+	"alias",
+	"directory",
+	"source",
+};
+
+
 #define TUP(x,y) std::make_tuple(x,y)
 //required
 
@@ -76,6 +85,13 @@ const std::array<std::tuple<std::string, json_types>, 16> manifest_required =
 	TUP("directory_tree", jmap),
 	TUP("render_kit", jstr)
 };
+
+
+const std::array<std::tuple<std::string, json_types>, 10> manifest_meta_required = 
+{
+	
+};
+
 #undef TUP
 
 /*
@@ -110,7 +126,7 @@ void plt_manager::manifest::load_manifest()
 {
 	if(m_loaded == true)
 	{
-				
+						
 	}	
 }
 
@@ -136,15 +152,8 @@ bool plt_manager::manifest::validate_manifest()
 				count++;	
 			}
 		}
-		else
-		{
-			std::cout << "we are " <<elem1 << " missing\n";
-		}
-		
-
 	}
 	const size_t size = manifest_required.size();
-	std::cout << size << " " << count << "\n";
 	if(count == size)
 		return true;
 	return false;

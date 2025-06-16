@@ -142,19 +142,61 @@ src/libs/plotter2/shared/lib/CMakeFiles/shared_lib.dir/datter/sources/datter.cpp
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/shared_lib.dir/datter/sources/datter.cpp.s"
 	cd /Users/heathfortin/programing/languages/c++/plotter/build/src/libs/plotter2/shared/lib && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/heathfortin/programing/languages/c++/plotter/src/libs/plotter2/shared/lib/datter/sources/datter.cpp -o CMakeFiles/shared_lib.dir/datter/sources/datter.cpp.s
 
-src/libs/plotter2/shared/lib/CMakeFiles/shared_lib.dir/utils/sources/fileholder.cpp.o: src/libs/plotter2/shared/lib/CMakeFiles/shared_lib.dir/flags.make
-src/libs/plotter2/shared/lib/CMakeFiles/shared_lib.dir/utils/sources/fileholder.cpp.o: /Users/heathfortin/programing/languages/c++/plotter/src/libs/plotter2/shared/lib/utils/sources/fileholder.cpp
-src/libs/plotter2/shared/lib/CMakeFiles/shared_lib.dir/utils/sources/fileholder.cpp.o: src/libs/plotter2/shared/lib/CMakeFiles/shared_lib.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/heathfortin/programing/languages/c++/plotter/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object src/libs/plotter2/shared/lib/CMakeFiles/shared_lib.dir/utils/sources/fileholder.cpp.o"
-	cd /Users/heathfortin/programing/languages/c++/plotter/build/src/libs/plotter2/shared/lib && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/libs/plotter2/shared/lib/CMakeFiles/shared_lib.dir/utils/sources/fileholder.cpp.o -MF CMakeFiles/shared_lib.dir/utils/sources/fileholder.cpp.o.d -o CMakeFiles/shared_lib.dir/utils/sources/fileholder.cpp.o -c /Users/heathfortin/programing/languages/c++/plotter/src/libs/plotter2/shared/lib/utils/sources/fileholder.cpp
+src/libs/plotter2/shared/lib/CMakeFiles/shared_lib.dir/utils/sources/utils_fileholder.cpp.o: src/libs/plotter2/shared/lib/CMakeFiles/shared_lib.dir/flags.make
+src/libs/plotter2/shared/lib/CMakeFiles/shared_lib.dir/utils/sources/utils_fileholder.cpp.o: /Users/heathfortin/programing/languages/c++/plotter/src/libs/plotter2/shared/lib/utils/sources/utils_fileholder.cpp
+src/libs/plotter2/shared/lib/CMakeFiles/shared_lib.dir/utils/sources/utils_fileholder.cpp.o: src/libs/plotter2/shared/lib/CMakeFiles/shared_lib.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/heathfortin/programing/languages/c++/plotter/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object src/libs/plotter2/shared/lib/CMakeFiles/shared_lib.dir/utils/sources/utils_fileholder.cpp.o"
+	cd /Users/heathfortin/programing/languages/c++/plotter/build/src/libs/plotter2/shared/lib && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/libs/plotter2/shared/lib/CMakeFiles/shared_lib.dir/utils/sources/utils_fileholder.cpp.o -MF CMakeFiles/shared_lib.dir/utils/sources/utils_fileholder.cpp.o.d -o CMakeFiles/shared_lib.dir/utils/sources/utils_fileholder.cpp.o -c /Users/heathfortin/programing/languages/c++/plotter/src/libs/plotter2/shared/lib/utils/sources/utils_fileholder.cpp
 
-src/libs/plotter2/shared/lib/CMakeFiles/shared_lib.dir/utils/sources/fileholder.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/shared_lib.dir/utils/sources/fileholder.cpp.i"
-	cd /Users/heathfortin/programing/languages/c++/plotter/build/src/libs/plotter2/shared/lib && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/heathfortin/programing/languages/c++/plotter/src/libs/plotter2/shared/lib/utils/sources/fileholder.cpp > CMakeFiles/shared_lib.dir/utils/sources/fileholder.cpp.i
+src/libs/plotter2/shared/lib/CMakeFiles/shared_lib.dir/utils/sources/utils_fileholder.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/shared_lib.dir/utils/sources/utils_fileholder.cpp.i"
+	cd /Users/heathfortin/programing/languages/c++/plotter/build/src/libs/plotter2/shared/lib && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/heathfortin/programing/languages/c++/plotter/src/libs/plotter2/shared/lib/utils/sources/utils_fileholder.cpp > CMakeFiles/shared_lib.dir/utils/sources/utils_fileholder.cpp.i
 
-src/libs/plotter2/shared/lib/CMakeFiles/shared_lib.dir/utils/sources/fileholder.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/shared_lib.dir/utils/sources/fileholder.cpp.s"
-	cd /Users/heathfortin/programing/languages/c++/plotter/build/src/libs/plotter2/shared/lib && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/heathfortin/programing/languages/c++/plotter/src/libs/plotter2/shared/lib/utils/sources/fileholder.cpp -o CMakeFiles/shared_lib.dir/utils/sources/fileholder.cpp.s
+src/libs/plotter2/shared/lib/CMakeFiles/shared_lib.dir/utils/sources/utils_fileholder.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/shared_lib.dir/utils/sources/utils_fileholder.cpp.s"
+	cd /Users/heathfortin/programing/languages/c++/plotter/build/src/libs/plotter2/shared/lib && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/heathfortin/programing/languages/c++/plotter/src/libs/plotter2/shared/lib/utils/sources/utils_fileholder.cpp -o CMakeFiles/shared_lib.dir/utils/sources/utils_fileholder.cpp.s
+
+src/libs/plotter2/shared/lib/CMakeFiles/shared_lib.dir/utils/sources/utils_threadpool.cpp.o: src/libs/plotter2/shared/lib/CMakeFiles/shared_lib.dir/flags.make
+src/libs/plotter2/shared/lib/CMakeFiles/shared_lib.dir/utils/sources/utils_threadpool.cpp.o: /Users/heathfortin/programing/languages/c++/plotter/src/libs/plotter2/shared/lib/utils/sources/utils_threadpool.cpp
+src/libs/plotter2/shared/lib/CMakeFiles/shared_lib.dir/utils/sources/utils_threadpool.cpp.o: src/libs/plotter2/shared/lib/CMakeFiles/shared_lib.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/heathfortin/programing/languages/c++/plotter/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object src/libs/plotter2/shared/lib/CMakeFiles/shared_lib.dir/utils/sources/utils_threadpool.cpp.o"
+	cd /Users/heathfortin/programing/languages/c++/plotter/build/src/libs/plotter2/shared/lib && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/libs/plotter2/shared/lib/CMakeFiles/shared_lib.dir/utils/sources/utils_threadpool.cpp.o -MF CMakeFiles/shared_lib.dir/utils/sources/utils_threadpool.cpp.o.d -o CMakeFiles/shared_lib.dir/utils/sources/utils_threadpool.cpp.o -c /Users/heathfortin/programing/languages/c++/plotter/src/libs/plotter2/shared/lib/utils/sources/utils_threadpool.cpp
+
+src/libs/plotter2/shared/lib/CMakeFiles/shared_lib.dir/utils/sources/utils_threadpool.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/shared_lib.dir/utils/sources/utils_threadpool.cpp.i"
+	cd /Users/heathfortin/programing/languages/c++/plotter/build/src/libs/plotter2/shared/lib && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/heathfortin/programing/languages/c++/plotter/src/libs/plotter2/shared/lib/utils/sources/utils_threadpool.cpp > CMakeFiles/shared_lib.dir/utils/sources/utils_threadpool.cpp.i
+
+src/libs/plotter2/shared/lib/CMakeFiles/shared_lib.dir/utils/sources/utils_threadpool.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/shared_lib.dir/utils/sources/utils_threadpool.cpp.s"
+	cd /Users/heathfortin/programing/languages/c++/plotter/build/src/libs/plotter2/shared/lib && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/heathfortin/programing/languages/c++/plotter/src/libs/plotter2/shared/lib/utils/sources/utils_threadpool.cpp -o CMakeFiles/shared_lib.dir/utils/sources/utils_threadpool.cpp.s
+
+src/libs/plotter2/shared/lib/CMakeFiles/shared_lib.dir/utils/sources/utils_threadworker.cpp.o: src/libs/plotter2/shared/lib/CMakeFiles/shared_lib.dir/flags.make
+src/libs/plotter2/shared/lib/CMakeFiles/shared_lib.dir/utils/sources/utils_threadworker.cpp.o: /Users/heathfortin/programing/languages/c++/plotter/src/libs/plotter2/shared/lib/utils/sources/utils_threadworker.cpp
+src/libs/plotter2/shared/lib/CMakeFiles/shared_lib.dir/utils/sources/utils_threadworker.cpp.o: src/libs/plotter2/shared/lib/CMakeFiles/shared_lib.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/heathfortin/programing/languages/c++/plotter/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object src/libs/plotter2/shared/lib/CMakeFiles/shared_lib.dir/utils/sources/utils_threadworker.cpp.o"
+	cd /Users/heathfortin/programing/languages/c++/plotter/build/src/libs/plotter2/shared/lib && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/libs/plotter2/shared/lib/CMakeFiles/shared_lib.dir/utils/sources/utils_threadworker.cpp.o -MF CMakeFiles/shared_lib.dir/utils/sources/utils_threadworker.cpp.o.d -o CMakeFiles/shared_lib.dir/utils/sources/utils_threadworker.cpp.o -c /Users/heathfortin/programing/languages/c++/plotter/src/libs/plotter2/shared/lib/utils/sources/utils_threadworker.cpp
+
+src/libs/plotter2/shared/lib/CMakeFiles/shared_lib.dir/utils/sources/utils_threadworker.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/shared_lib.dir/utils/sources/utils_threadworker.cpp.i"
+	cd /Users/heathfortin/programing/languages/c++/plotter/build/src/libs/plotter2/shared/lib && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/heathfortin/programing/languages/c++/plotter/src/libs/plotter2/shared/lib/utils/sources/utils_threadworker.cpp > CMakeFiles/shared_lib.dir/utils/sources/utils_threadworker.cpp.i
+
+src/libs/plotter2/shared/lib/CMakeFiles/shared_lib.dir/utils/sources/utils_threadworker.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/shared_lib.dir/utils/sources/utils_threadworker.cpp.s"
+	cd /Users/heathfortin/programing/languages/c++/plotter/build/src/libs/plotter2/shared/lib && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/heathfortin/programing/languages/c++/plotter/src/libs/plotter2/shared/lib/utils/sources/utils_threadworker.cpp -o CMakeFiles/shared_lib.dir/utils/sources/utils_threadworker.cpp.s
+
+src/libs/plotter2/shared/lib/CMakeFiles/shared_lib.dir/loggy/sources/loggy.cpp.o: src/libs/plotter2/shared/lib/CMakeFiles/shared_lib.dir/flags.make
+src/libs/plotter2/shared/lib/CMakeFiles/shared_lib.dir/loggy/sources/loggy.cpp.o: /Users/heathfortin/programing/languages/c++/plotter/src/libs/plotter2/shared/lib/loggy/sources/loggy.cpp
+src/libs/plotter2/shared/lib/CMakeFiles/shared_lib.dir/loggy/sources/loggy.cpp.o: src/libs/plotter2/shared/lib/CMakeFiles/shared_lib.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/heathfortin/programing/languages/c++/plotter/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object src/libs/plotter2/shared/lib/CMakeFiles/shared_lib.dir/loggy/sources/loggy.cpp.o"
+	cd /Users/heathfortin/programing/languages/c++/plotter/build/src/libs/plotter2/shared/lib && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/libs/plotter2/shared/lib/CMakeFiles/shared_lib.dir/loggy/sources/loggy.cpp.o -MF CMakeFiles/shared_lib.dir/loggy/sources/loggy.cpp.o.d -o CMakeFiles/shared_lib.dir/loggy/sources/loggy.cpp.o -c /Users/heathfortin/programing/languages/c++/plotter/src/libs/plotter2/shared/lib/loggy/sources/loggy.cpp
+
+src/libs/plotter2/shared/lib/CMakeFiles/shared_lib.dir/loggy/sources/loggy.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/shared_lib.dir/loggy/sources/loggy.cpp.i"
+	cd /Users/heathfortin/programing/languages/c++/plotter/build/src/libs/plotter2/shared/lib && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/heathfortin/programing/languages/c++/plotter/src/libs/plotter2/shared/lib/loggy/sources/loggy.cpp > CMakeFiles/shared_lib.dir/loggy/sources/loggy.cpp.i
+
+src/libs/plotter2/shared/lib/CMakeFiles/shared_lib.dir/loggy/sources/loggy.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/shared_lib.dir/loggy/sources/loggy.cpp.s"
+	cd /Users/heathfortin/programing/languages/c++/plotter/build/src/libs/plotter2/shared/lib && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/heathfortin/programing/languages/c++/plotter/src/libs/plotter2/shared/lib/loggy/sources/loggy.cpp -o CMakeFiles/shared_lib.dir/loggy/sources/loggy.cpp.s
 
 # Object files for target shared_lib
 shared_lib_OBJECTS = \
@@ -163,7 +205,10 @@ shared_lib_OBJECTS = \
 "CMakeFiles/shared_lib.dir/plots/sources/plotscene.cpp.o" \
 "CMakeFiles/shared_lib.dir/scripter/sources/scripter.cpp.o" \
 "CMakeFiles/shared_lib.dir/datter/sources/datter.cpp.o" \
-"CMakeFiles/shared_lib.dir/utils/sources/fileholder.cpp.o"
+"CMakeFiles/shared_lib.dir/utils/sources/utils_fileholder.cpp.o" \
+"CMakeFiles/shared_lib.dir/utils/sources/utils_threadpool.cpp.o" \
+"CMakeFiles/shared_lib.dir/utils/sources/utils_threadworker.cpp.o" \
+"CMakeFiles/shared_lib.dir/loggy/sources/loggy.cpp.o"
 
 # External object files for target shared_lib
 shared_lib_EXTERNAL_OBJECTS =
@@ -173,10 +218,13 @@ src/libs/plotter2/shared/lib/libshared_lib.a: src/libs/plotter2/shared/lib/CMake
 src/libs/plotter2/shared/lib/libshared_lib.a: src/libs/plotter2/shared/lib/CMakeFiles/shared_lib.dir/plots/sources/plotscene.cpp.o
 src/libs/plotter2/shared/lib/libshared_lib.a: src/libs/plotter2/shared/lib/CMakeFiles/shared_lib.dir/scripter/sources/scripter.cpp.o
 src/libs/plotter2/shared/lib/libshared_lib.a: src/libs/plotter2/shared/lib/CMakeFiles/shared_lib.dir/datter/sources/datter.cpp.o
-src/libs/plotter2/shared/lib/libshared_lib.a: src/libs/plotter2/shared/lib/CMakeFiles/shared_lib.dir/utils/sources/fileholder.cpp.o
+src/libs/plotter2/shared/lib/libshared_lib.a: src/libs/plotter2/shared/lib/CMakeFiles/shared_lib.dir/utils/sources/utils_fileholder.cpp.o
+src/libs/plotter2/shared/lib/libshared_lib.a: src/libs/plotter2/shared/lib/CMakeFiles/shared_lib.dir/utils/sources/utils_threadpool.cpp.o
+src/libs/plotter2/shared/lib/libshared_lib.a: src/libs/plotter2/shared/lib/CMakeFiles/shared_lib.dir/utils/sources/utils_threadworker.cpp.o
+src/libs/plotter2/shared/lib/libshared_lib.a: src/libs/plotter2/shared/lib/CMakeFiles/shared_lib.dir/loggy/sources/loggy.cpp.o
 src/libs/plotter2/shared/lib/libshared_lib.a: src/libs/plotter2/shared/lib/CMakeFiles/shared_lib.dir/build.make
 src/libs/plotter2/shared/lib/libshared_lib.a: src/libs/plotter2/shared/lib/CMakeFiles/shared_lib.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/heathfortin/programing/languages/c++/plotter/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking CXX static library libshared_lib.a"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/heathfortin/programing/languages/c++/plotter/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Linking CXX static library libshared_lib.a"
 	cd /Users/heathfortin/programing/languages/c++/plotter/build/src/libs/plotter2/shared/lib && $(CMAKE_COMMAND) -P CMakeFiles/shared_lib.dir/cmake_clean_target.cmake
 	cd /Users/heathfortin/programing/languages/c++/plotter/build/src/libs/plotter2/shared/lib && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/shared_lib.dir/link.txt --verbose=$(VERBOSE)
 

@@ -1,8 +1,10 @@
 #include <iostream>
 #include "tests_manifest.hpp"
+#include "tests_manager.hpp"
+#include <gtest/gtest.h>
 
-int32_t main() 
+int32_t main(int argc, char **argv) 
 {
-	test1();
-	return 0;
+	::testing::InitGoogleTest(&argc, argv);
+	return RUN_ALL_TESTS();			
 }

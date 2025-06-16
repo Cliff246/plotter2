@@ -1,4 +1,4 @@
 #pragma once
 
-
-void test1(); 
+#include "tests.hpp"
+int test_manifest_1(); 

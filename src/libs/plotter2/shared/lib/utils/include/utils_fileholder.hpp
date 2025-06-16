@@ -4,7 +4,10 @@
 #include <ios>
 #include <iostream>
 #include <fstream>
+#include <memory>
+#include <set>
 #include <vector>
+#include <map>
 
 namespace plt_shared
 {
@@ -16,18 +19,28 @@ namespace plt_shared
 			
 	};
 
-	
+	class fhold
+	{
+	protected: 	
+		filetype m_filetype;
+		path_fs m_path;
+	public:
+		
+		
 
+		virtual bool can_open() = 0;		
+		virtual filetype get_filetype() = 0;
+		virtual bool does_exist() const = 0;
+	};	
+	using fhold_ptr = std::shared_ptr<fhold>;	
 	//base class for file holder
-	class fileholder
+	class fileholder : public fhold
 	{
 	private:
 		//file type(unused right now)
-		filetype m_filetype;
 		//stream
 		std::fstream m_stream;
 		//path 
-		path_fs m_path;
 		//loaded bool... cause it's needed for later
 		bool m_loaded = false; 
 		//flags 
@@ -37,9 +50,9 @@ namespace plt_shared
 		fileholder(path_fs path);	
 		~fileholder();
 		//checks if exists duh
-		//
-		
-		bool does_exist() const;
+		bool can_open() override;
+		filetype get_filetype() override;
+		bool does_exist() const override;
 		bool is_loaded();
 		bool can_write() const;
 		bool can_read() const;
@@ -82,5 +95,25 @@ namespace plt_shared
 		//just get size in bytes
 		size_t get_size();
 
+	};
+	
+
+	class directoryholder : public fhold
+	{
+	private:
+		std::map<std::string, fhold_ptr> m_map;
+	public:
+		directoryholder();
+		~directoryholder();
+
+		bool can_open() override;
+		filetype get_filetype() override;
+		bool does_exist() const override;
+
+		fhold_ptr get_holder(const std::string &key);
+		
+		std::set<std::string> get_keys();
+		std::set<fhold_ptr> get_values();
+		
 	};
 }
