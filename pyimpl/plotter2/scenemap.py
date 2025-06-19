@@ -5,6 +5,11 @@ def recursive_print_map(layer: dict, depth: int = 0):
 		for key, value in layer.items():
 			print(offset + key + ":")
 			recursive_print_map(value, depth + 1)
+	elif isinstance(layer, list):
+		print(offset + "[")
+		for value in layer:
+			recursive_print_map(value, depth + 1)
+		print(offset + "]")
 	else:
 		print(offset + str(layer)) 
 

@@ -172,71 +172,6 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named plotter2_lib
-
-# Build rule for target.
-plotter2_lib: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 plotter2_lib
-.PHONY : plotter2_lib
-
-# fast build rule for target.
-plotter2_lib/fast:
-	$(MAKE) $(MAKESILENT) -f src/libs/plotter2/CMakeFiles/plotter2_lib.dir/build.make src/libs/plotter2/CMakeFiles/plotter2_lib.dir/build
-.PHONY : plotter2_lib/fast
-
-#=============================================================================
-# Target rules for targets named shared_lib
-
-# Build rule for target.
-shared_lib: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 shared_lib
-.PHONY : shared_lib
-
-# fast build rule for target.
-shared_lib/fast:
-	$(MAKE) $(MAKESILENT) -f src/libs/plotter2/shared/lib/CMakeFiles/shared_lib.dir/build.make src/libs/plotter2/shared/lib/CMakeFiles/shared_lib.dir/build
-.PHONY : shared_lib/fast
-
-#=============================================================================
-# Target rules for targets named pipeline_lib
-
-# Build rule for target.
-pipeline_lib: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 pipeline_lib
-.PHONY : pipeline_lib
-
-# fast build rule for target.
-pipeline_lib/fast:
-	$(MAKE) $(MAKESILENT) -f src/libs/plotter2/pipeline/lib/CMakeFiles/pipeline_lib.dir/build.make src/libs/plotter2/pipeline/lib/CMakeFiles/pipeline_lib.dir/build
-.PHONY : pipeline_lib/fast
-
-#=============================================================================
-# Target rules for targets named manager_lib
-
-# Build rule for target.
-manager_lib: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 manager_lib
-.PHONY : manager_lib
-
-# fast build rule for target.
-manager_lib/fast:
-	$(MAKE) $(MAKESILENT) -f src/libs/plotter2/manager/lib/CMakeFiles/manager_lib.dir/build.make src/libs/plotter2/manager/lib/CMakeFiles/manager_lib.dir/build
-.PHONY : manager_lib/fast
-
-#=============================================================================
-# Target rules for targets named manager_tests
-
-# Build rule for target.
-manager_tests: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 manager_tests
-.PHONY : manager_tests
-
-# fast build rule for target.
-manager_tests/fast:
-	$(MAKE) $(MAKESILENT) -f src/libs/plotter2/manager/tests/CMakeFiles/manager_tests.dir/build.make src/libs/plotter2/manager/tests/CMakeFiles/manager_tests.dir/build
-.PHONY : manager_tests/fast
-
-#=============================================================================
 # Target rules for targets named gmock
 
 # Build rule for target.
@@ -289,6 +224,84 @@ gtest_main/fast:
 .PHONY : gtest_main/fast
 
 #=============================================================================
+# Target rules for targets named plotter2_lib
+
+# Build rule for target.
+plotter2_lib: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 plotter2_lib
+.PHONY : plotter2_lib
+
+# fast build rule for target.
+plotter2_lib/fast:
+	$(MAKE) $(MAKESILENT) -f src/libs/plotter2/CMakeFiles/plotter2_lib.dir/build.make src/libs/plotter2/CMakeFiles/plotter2_lib.dir/build
+.PHONY : plotter2_lib/fast
+
+#=============================================================================
+# Target rules for targets named shared_lib
+
+# Build rule for target.
+shared_lib: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 shared_lib
+.PHONY : shared_lib
+
+# fast build rule for target.
+shared_lib/fast:
+	$(MAKE) $(MAKESILENT) -f src/libs/plotter2/shared/lib/CMakeFiles/shared_lib.dir/build.make src/libs/plotter2/shared/lib/CMakeFiles/shared_lib.dir/build
+.PHONY : shared_lib/fast
+
+#=============================================================================
+# Target rules for targets named datter_tests
+
+# Build rule for target.
+datter_tests: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 datter_tests
+.PHONY : datter_tests
+
+# fast build rule for target.
+datter_tests/fast:
+	$(MAKE) $(MAKESILENT) -f src/libs/plotter2/shared/tests/datter/CMakeFiles/datter_tests.dir/build.make src/libs/plotter2/shared/tests/datter/CMakeFiles/datter_tests.dir/build
+.PHONY : datter_tests/fast
+
+#=============================================================================
+# Target rules for targets named pipeline_lib
+
+# Build rule for target.
+pipeline_lib: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 pipeline_lib
+.PHONY : pipeline_lib
+
+# fast build rule for target.
+pipeline_lib/fast:
+	$(MAKE) $(MAKESILENT) -f src/libs/plotter2/pipeline/lib/CMakeFiles/pipeline_lib.dir/build.make src/libs/plotter2/pipeline/lib/CMakeFiles/pipeline_lib.dir/build
+.PHONY : pipeline_lib/fast
+
+#=============================================================================
+# Target rules for targets named manager_lib
+
+# Build rule for target.
+manager_lib: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 manager_lib
+.PHONY : manager_lib
+
+# fast build rule for target.
+manager_lib/fast:
+	$(MAKE) $(MAKESILENT) -f src/libs/plotter2/manager/lib/CMakeFiles/manager_lib.dir/build.make src/libs/plotter2/manager/lib/CMakeFiles/manager_lib.dir/build
+.PHONY : manager_lib/fast
+
+#=============================================================================
+# Target rules for targets named manager_tests
+
+# Build rule for target.
+manager_tests: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 manager_tests
+.PHONY : manager_tests
+
+# fast build rule for target.
+manager_tests/fast:
+	$(MAKE) $(MAKESILENT) -f src/libs/plotter2/manager/tests/CMakeFiles/manager_tests.dir/build.make src/libs/plotter2/manager/tests/CMakeFiles/manager_tests.dir/build
+.PHONY : manager_tests/fast
+
+#=============================================================================
 # Target rules for targets named grapher_lib
 
 # Build rule for target.
@@ -327,6 +340,7 @@ help:
 	@echo "... list_install_components"
 	@echo "... rebuild_cache"
 	@echo "... test"
+	@echo "... datter_tests"
 	@echo "... exe"
 	@echo "... gmock"
 	@echo "... gmock_main"

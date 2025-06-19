@@ -11,15 +11,6 @@ target_include_directories(manager_tests
 	${CMAKE_CURRENT_SOURCE_DIR}/include
 )	
 
-include(FetchContent)
-FetchContent_Declare(
-  googletest
-  URL https://github.com/google/googletest/archive/refs/heads/main.zip
-)
-# For Windows: Prevent overriding the parent project's compiler/linker settings
-set(gtest_force_shared_crt ON CACHE BOOL "" FORCE)
-FetchContent_MakeAvailable(googletest)
-include(GoogleTest)
 gtest_discover_tests(manager_tests)
 target_link_libraries(manager_tests
 

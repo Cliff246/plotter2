@@ -1,5 +1,29 @@
 [
 {
+  "directory": "/Users/heathfortin/programing/languages/c++/plotter/build/_deps/googletest-build/googlemock",
+  "command": "/usr/bin/c++  -I/opt/homebrew/opt/python@3.13/Frameworks/Python.framework/Versions/3.13/include/python3.13 -I/Users/heathfortin/programing/languages/c++/plotter/build/_deps/googletest-src/googlemock/include -I/Users/heathfortin/programing/languages/c++/plotter/build/_deps/googletest-src/googlemock -isystem /Users/heathfortin/programing/languages/c++/plotter/build/_deps/googletest-src/googletest/include -isystem /Users/heathfortin/programing/languages/c++/plotter/build/_deps/googletest-src/googletest -g -std=c++2b -arch arm64  -DGTEST_HAS_PTHREAD=1   -o CMakeFiles/gmock.dir/src/gmock-all.cc.o -c /Users/heathfortin/programing/languages/c++/plotter/build/_deps/googletest-src/googlemock/src/gmock-all.cc",
+  "file": "/Users/heathfortin/programing/languages/c++/plotter/build/_deps/googletest-src/googlemock/src/gmock-all.cc",
+  "output": "_deps/googletest-build/googlemock/CMakeFiles/gmock.dir/src/gmock-all.cc.o"
+},
+{
+  "directory": "/Users/heathfortin/programing/languages/c++/plotter/build/_deps/googletest-build/googlemock",
+  "command": "/usr/bin/c++  -I/opt/homebrew/opt/python@3.13/Frameworks/Python.framework/Versions/3.13/include/python3.13 -isystem /Users/heathfortin/programing/languages/c++/plotter/build/_deps/googletest-src/googlemock/include -isystem /Users/heathfortin/programing/languages/c++/plotter/build/_deps/googletest-src/googlemock -isystem /Users/heathfortin/programing/languages/c++/plotter/build/_deps/googletest-src/googletest/include -isystem /Users/heathfortin/programing/languages/c++/plotter/build/_deps/googletest-src/googletest -g -std=c++2b -arch arm64  -DGTEST_HAS_PTHREAD=1   -o CMakeFiles/gmock_main.dir/src/gmock_main.cc.o -c /Users/heathfortin/programing/languages/c++/plotter/build/_deps/googletest-src/googlemock/src/gmock_main.cc",
+  "file": "/Users/heathfortin/programing/languages/c++/plotter/build/_deps/googletest-src/googlemock/src/gmock_main.cc",
+  "output": "_deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/src/gmock_main.cc.o"
+},
+{
+  "directory": "/Users/heathfortin/programing/languages/c++/plotter/build/_deps/googletest-build/googletest",
+  "command": "/usr/bin/c++  -I/opt/homebrew/opt/python@3.13/Frameworks/Python.framework/Versions/3.13/include/python3.13 -I/Users/heathfortin/programing/languages/c++/plotter/build/_deps/googletest-src/googletest/include -I/Users/heathfortin/programing/languages/c++/plotter/build/_deps/googletest-src/googletest -g -std=c++2b -arch arm64  -DGTEST_HAS_PTHREAD=1   -o CMakeFiles/gtest.dir/src/gtest-all.cc.o -c /Users/heathfortin/programing/languages/c++/plotter/build/_deps/googletest-src/googletest/src/gtest-all.cc",
+  "file": "/Users/heathfortin/programing/languages/c++/plotter/build/_deps/googletest-src/googletest/src/gtest-all.cc",
+  "output": "_deps/googletest-build/googletest/CMakeFiles/gtest.dir/src/gtest-all.cc.o"
+},
+{
+  "directory": "/Users/heathfortin/programing/languages/c++/plotter/build/_deps/googletest-build/googletest",
+  "command": "/usr/bin/c++  -I/opt/homebrew/opt/python@3.13/Frameworks/Python.framework/Versions/3.13/include/python3.13 -isystem /Users/heathfortin/programing/languages/c++/plotter/build/_deps/googletest-src/googletest/include -isystem /Users/heathfortin/programing/languages/c++/plotter/build/_deps/googletest-src/googletest -g -std=c++2b -arch arm64  -DGTEST_HAS_PTHREAD=1   -o CMakeFiles/gtest_main.dir/src/gtest_main.cc.o -c /Users/heathfortin/programing/languages/c++/plotter/build/_deps/googletest-src/googletest/src/gtest_main.cc",
+  "file": "/Users/heathfortin/programing/languages/c++/plotter/build/_deps/googletest-src/googletest/src/gtest_main.cc",
+  "output": "_deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.o"
+},
+{
   "directory": "/Users/heathfortin/programing/languages/c++/plotter/build/src/libs/plotter2",
   "command": "/usr/bin/c++  -I/Users/heathfortin/programing/languages/c++/plotter/src/libs/plotter2/pipeline_lib -I/Users/heathfortin/programing/languages/c++/plotter/src/libs/plotter2/grapher_lib -I/Users/heathfortin/programing/languages/c++/plotter/src/libs/plotter2/manager_lib -I/Users/heathfortin/programing/languages/c++/plotter/src/libs/plotter2/shared_lib -I/Users/heathfortin/programing/languages/c++/plotter/src/libs/plotter2/grapher/lib/include -I/Users/heathfortin/programing/languages/c++/plotter/src/libs/plotter2/manager/lib/include -I/Users/heathfortin/programing/languages/c++/plotter/src/libs/plotter2/shared/lib/plots/include -I/Users/heathfortin/programing/languages/c++/plotter/src/libs/plotter2/shared/lib/scripter/include -I/Users/heathfortin/programing/languages/c++/plotter/src/libs/plotter2/shared/lib/datter/include -I/Users/heathfortin/programing/languages/c++/plotter/src/libs/plotter2/shared/lib/utils/include -I/Users/heathfortin/programing/languages/c++/plotter/src/libs/plotter2/shared/lib/loggy/include -I/Users/heathfortin/programing/languages/c++/plotter/src/libs/plotter2/pipeline/lib/include -isystem /opt/homebrew/opt/python@3.13/Frameworks/Python.framework/Versions/3.13/include/python3.13 -isystem /opt/homebrew/include/eigen3 -isystem /opt/homebrew/include -g -std=gnu++2b -arch arm64 -o CMakeFiles/plotter2_lib.dir/plotter.cpp.o -c /Users/heathfortin/programing/languages/c++/plotter/src/libs/plotter2/plotter.cpp",
   "file": "/Users/heathfortin/programing/languages/c++/plotter/src/libs/plotter2/plotter.cpp",
@@ -37,6 +61,60 @@
 },
 {
   "directory": "/Users/heathfortin/programing/languages/c++/plotter/build/src/libs/plotter2/shared/lib",
+  "command": "/usr/bin/c++  -I/Users/heathfortin/programing/languages/c++/plotter/src/libs/plotter2/shared/lib/plots/include -I/Users/heathfortin/programing/languages/c++/plotter/src/libs/plotter2/shared/lib/scripter/include -I/Users/heathfortin/programing/languages/c++/plotter/src/libs/plotter2/shared/lib/datter/include -I/Users/heathfortin/programing/languages/c++/plotter/src/libs/plotter2/shared/lib/utils/include -I/Users/heathfortin/programing/languages/c++/plotter/src/libs/plotter2/shared/lib/loggy/include -isystem /opt/homebrew/opt/python@3.13/Frameworks/Python.framework/Versions/3.13/include/python3.13 -isystem /opt/homebrew/include/eigen3 -g -std=gnu++2b -arch arm64 -o CMakeFiles/shared_lib.dir/datter/sources/dataholder.cpp.o -c /Users/heathfortin/programing/languages/c++/plotter/src/libs/plotter2/shared/lib/datter/sources/dataholder.cpp",
+  "file": "/Users/heathfortin/programing/languages/c++/plotter/src/libs/plotter2/shared/lib/datter/sources/dataholder.cpp",
+  "output": "src/libs/plotter2/shared/lib/CMakeFiles/shared_lib.dir/datter/sources/dataholder.cpp.o"
+},
+{
+  "directory": "/Users/heathfortin/programing/languages/c++/plotter/build/src/libs/plotter2/shared/lib",
+  "command": "/usr/bin/c++  -I/Users/heathfortin/programing/languages/c++/plotter/src/libs/plotter2/shared/lib/plots/include -I/Users/heathfortin/programing/languages/c++/plotter/src/libs/plotter2/shared/lib/scripter/include -I/Users/heathfortin/programing/languages/c++/plotter/src/libs/plotter2/shared/lib/datter/include -I/Users/heathfortin/programing/languages/c++/plotter/src/libs/plotter2/shared/lib/utils/include -I/Users/heathfortin/programing/languages/c++/plotter/src/libs/plotter2/shared/lib/loggy/include -isystem /opt/homebrew/opt/python@3.13/Frameworks/Python.framework/Versions/3.13/include/python3.13 -isystem /opt/homebrew/include/eigen3 -g -std=gnu++2b -arch arm64 -o CMakeFiles/shared_lib.dir/datter/sources/datasrc.cpp.o -c /Users/heathfortin/programing/languages/c++/plotter/src/libs/plotter2/shared/lib/datter/sources/datasrc.cpp",
+  "file": "/Users/heathfortin/programing/languages/c++/plotter/src/libs/plotter2/shared/lib/datter/sources/datasrc.cpp",
+  "output": "src/libs/plotter2/shared/lib/CMakeFiles/shared_lib.dir/datter/sources/datasrc.cpp.o"
+},
+{
+  "directory": "/Users/heathfortin/programing/languages/c++/plotter/build/src/libs/plotter2/shared/lib",
+  "command": "/usr/bin/c++  -I/Users/heathfortin/programing/languages/c++/plotter/src/libs/plotter2/shared/lib/plots/include -I/Users/heathfortin/programing/languages/c++/plotter/src/libs/plotter2/shared/lib/scripter/include -I/Users/heathfortin/programing/languages/c++/plotter/src/libs/plotter2/shared/lib/datter/include -I/Users/heathfortin/programing/languages/c++/plotter/src/libs/plotter2/shared/lib/utils/include -I/Users/heathfortin/programing/languages/c++/plotter/src/libs/plotter2/shared/lib/loggy/include -isystem /opt/homebrew/opt/python@3.13/Frameworks/Python.framework/Versions/3.13/include/python3.13 -isystem /opt/homebrew/include/eigen3 -g -std=gnu++2b -arch arm64 -o CMakeFiles/shared_lib.dir/datter/sources/datasrc_csv.cpp.o -c /Users/heathfortin/programing/languages/c++/plotter/src/libs/plotter2/shared/lib/datter/sources/datasrc_csv.cpp",
+  "file": "/Users/heathfortin/programing/languages/c++/plotter/src/libs/plotter2/shared/lib/datter/sources/datasrc_csv.cpp",
+  "output": "src/libs/plotter2/shared/lib/CMakeFiles/shared_lib.dir/datter/sources/datasrc_csv.cpp.o"
+},
+{
+  "directory": "/Users/heathfortin/programing/languages/c++/plotter/build/src/libs/plotter2/shared/lib",
+  "command": "/usr/bin/c++  -I/Users/heathfortin/programing/languages/c++/plotter/src/libs/plotter2/shared/lib/plots/include -I/Users/heathfortin/programing/languages/c++/plotter/src/libs/plotter2/shared/lib/scripter/include -I/Users/heathfortin/programing/languages/c++/plotter/src/libs/plotter2/shared/lib/datter/include -I/Users/heathfortin/programing/languages/c++/plotter/src/libs/plotter2/shared/lib/utils/include -I/Users/heathfortin/programing/languages/c++/plotter/src/libs/plotter2/shared/lib/loggy/include -isystem /opt/homebrew/opt/python@3.13/Frameworks/Python.framework/Versions/3.13/include/python3.13 -isystem /opt/homebrew/include/eigen3 -g -std=gnu++2b -arch arm64 -o CMakeFiles/shared_lib.dir/datter/sources/datasrc_json.cpp.o -c /Users/heathfortin/programing/languages/c++/plotter/src/libs/plotter2/shared/lib/datter/sources/datasrc_json.cpp",
+  "file": "/Users/heathfortin/programing/languages/c++/plotter/src/libs/plotter2/shared/lib/datter/sources/datasrc_json.cpp",
+  "output": "src/libs/plotter2/shared/lib/CMakeFiles/shared_lib.dir/datter/sources/datasrc_json.cpp.o"
+},
+{
+  "directory": "/Users/heathfortin/programing/languages/c++/plotter/build/src/libs/plotter2/shared/lib",
+  "command": "/usr/bin/c++  -I/Users/heathfortin/programing/languages/c++/plotter/src/libs/plotter2/shared/lib/plots/include -I/Users/heathfortin/programing/languages/c++/plotter/src/libs/plotter2/shared/lib/scripter/include -I/Users/heathfortin/programing/languages/c++/plotter/src/libs/plotter2/shared/lib/datter/include -I/Users/heathfortin/programing/languages/c++/plotter/src/libs/plotter2/shared/lib/utils/include -I/Users/heathfortin/programing/languages/c++/plotter/src/libs/plotter2/shared/lib/loggy/include -isystem /opt/homebrew/opt/python@3.13/Frameworks/Python.framework/Versions/3.13/include/python3.13 -isystem /opt/homebrew/include/eigen3 -g -std=gnu++2b -arch arm64 -o CMakeFiles/shared_lib.dir/datter/sources/dataholders/dataholder_array.cpp.o -c /Users/heathfortin/programing/languages/c++/plotter/src/libs/plotter2/shared/lib/datter/sources/dataholders/dataholder_array.cpp",
+  "file": "/Users/heathfortin/programing/languages/c++/plotter/src/libs/plotter2/shared/lib/datter/sources/dataholders/dataholder_array.cpp",
+  "output": "src/libs/plotter2/shared/lib/CMakeFiles/shared_lib.dir/datter/sources/dataholders/dataholder_array.cpp.o"
+},
+{
+  "directory": "/Users/heathfortin/programing/languages/c++/plotter/build/src/libs/plotter2/shared/lib",
+  "command": "/usr/bin/c++  -I/Users/heathfortin/programing/languages/c++/plotter/src/libs/plotter2/shared/lib/plots/include -I/Users/heathfortin/programing/languages/c++/plotter/src/libs/plotter2/shared/lib/scripter/include -I/Users/heathfortin/programing/languages/c++/plotter/src/libs/plotter2/shared/lib/datter/include -I/Users/heathfortin/programing/languages/c++/plotter/src/libs/plotter2/shared/lib/utils/include -I/Users/heathfortin/programing/languages/c++/plotter/src/libs/plotter2/shared/lib/loggy/include -isystem /opt/homebrew/opt/python@3.13/Frameworks/Python.framework/Versions/3.13/include/python3.13 -isystem /opt/homebrew/include/eigen3 -g -std=gnu++2b -arch arm64 -o CMakeFiles/shared_lib.dir/datter/sources/dataholders/dataholder_integer.cpp.o -c /Users/heathfortin/programing/languages/c++/plotter/src/libs/plotter2/shared/lib/datter/sources/dataholders/dataholder_integer.cpp",
+  "file": "/Users/heathfortin/programing/languages/c++/plotter/src/libs/plotter2/shared/lib/datter/sources/dataholders/dataholder_integer.cpp",
+  "output": "src/libs/plotter2/shared/lib/CMakeFiles/shared_lib.dir/datter/sources/dataholders/dataholder_integer.cpp.o"
+},
+{
+  "directory": "/Users/heathfortin/programing/languages/c++/plotter/build/src/libs/plotter2/shared/lib",
+  "command": "/usr/bin/c++  -I/Users/heathfortin/programing/languages/c++/plotter/src/libs/plotter2/shared/lib/plots/include -I/Users/heathfortin/programing/languages/c++/plotter/src/libs/plotter2/shared/lib/scripter/include -I/Users/heathfortin/programing/languages/c++/plotter/src/libs/plotter2/shared/lib/datter/include -I/Users/heathfortin/programing/languages/c++/plotter/src/libs/plotter2/shared/lib/utils/include -I/Users/heathfortin/programing/languages/c++/plotter/src/libs/plotter2/shared/lib/loggy/include -isystem /opt/homebrew/opt/python@3.13/Frameworks/Python.framework/Versions/3.13/include/python3.13 -isystem /opt/homebrew/include/eigen3 -g -std=gnu++2b -arch arm64 -o CMakeFiles/shared_lib.dir/datter/sources/dataholders/dataholder_number.cpp.o -c /Users/heathfortin/programing/languages/c++/plotter/src/libs/plotter2/shared/lib/datter/sources/dataholders/dataholder_number.cpp",
+  "file": "/Users/heathfortin/programing/languages/c++/plotter/src/libs/plotter2/shared/lib/datter/sources/dataholders/dataholder_number.cpp",
+  "output": "src/libs/plotter2/shared/lib/CMakeFiles/shared_lib.dir/datter/sources/dataholders/dataholder_number.cpp.o"
+},
+{
+  "directory": "/Users/heathfortin/programing/languages/c++/plotter/build/src/libs/plotter2/shared/lib",
+  "command": "/usr/bin/c++  -I/Users/heathfortin/programing/languages/c++/plotter/src/libs/plotter2/shared/lib/plots/include -I/Users/heathfortin/programing/languages/c++/plotter/src/libs/plotter2/shared/lib/scripter/include -I/Users/heathfortin/programing/languages/c++/plotter/src/libs/plotter2/shared/lib/datter/include -I/Users/heathfortin/programing/languages/c++/plotter/src/libs/plotter2/shared/lib/utils/include -I/Users/heathfortin/programing/languages/c++/plotter/src/libs/plotter2/shared/lib/loggy/include -isystem /opt/homebrew/opt/python@3.13/Frameworks/Python.framework/Versions/3.13/include/python3.13 -isystem /opt/homebrew/include/eigen3 -g -std=gnu++2b -arch arm64 -o CMakeFiles/shared_lib.dir/datter/sources/dataholders/dataholder_string.cpp.o -c /Users/heathfortin/programing/languages/c++/plotter/src/libs/plotter2/shared/lib/datter/sources/dataholders/dataholder_string.cpp",
+  "file": "/Users/heathfortin/programing/languages/c++/plotter/src/libs/plotter2/shared/lib/datter/sources/dataholders/dataholder_string.cpp",
+  "output": "src/libs/plotter2/shared/lib/CMakeFiles/shared_lib.dir/datter/sources/dataholders/dataholder_string.cpp.o"
+},
+{
+  "directory": "/Users/heathfortin/programing/languages/c++/plotter/build/src/libs/plotter2/shared/lib",
+  "command": "/usr/bin/c++  -I/Users/heathfortin/programing/languages/c++/plotter/src/libs/plotter2/shared/lib/plots/include -I/Users/heathfortin/programing/languages/c++/plotter/src/libs/plotter2/shared/lib/scripter/include -I/Users/heathfortin/programing/languages/c++/plotter/src/libs/plotter2/shared/lib/datter/include -I/Users/heathfortin/programing/languages/c++/plotter/src/libs/plotter2/shared/lib/utils/include -I/Users/heathfortin/programing/languages/c++/plotter/src/libs/plotter2/shared/lib/loggy/include -isystem /opt/homebrew/opt/python@3.13/Frameworks/Python.framework/Versions/3.13/include/python3.13 -isystem /opt/homebrew/include/eigen3 -g -std=gnu++2b -arch arm64 -o CMakeFiles/shared_lib.dir/datter/sources/dataholders/dataholder_map.cpp.o -c /Users/heathfortin/programing/languages/c++/plotter/src/libs/plotter2/shared/lib/datter/sources/dataholders/dataholder_map.cpp",
+  "file": "/Users/heathfortin/programing/languages/c++/plotter/src/libs/plotter2/shared/lib/datter/sources/dataholders/dataholder_map.cpp",
+  "output": "src/libs/plotter2/shared/lib/CMakeFiles/shared_lib.dir/datter/sources/dataholders/dataholder_map.cpp.o"
+},
+{
+  "directory": "/Users/heathfortin/programing/languages/c++/plotter/build/src/libs/plotter2/shared/lib",
   "command": "/usr/bin/c++  -I/Users/heathfortin/programing/languages/c++/plotter/src/libs/plotter2/shared/lib/plots/include -I/Users/heathfortin/programing/languages/c++/plotter/src/libs/plotter2/shared/lib/scripter/include -I/Users/heathfortin/programing/languages/c++/plotter/src/libs/plotter2/shared/lib/datter/include -I/Users/heathfortin/programing/languages/c++/plotter/src/libs/plotter2/shared/lib/utils/include -I/Users/heathfortin/programing/languages/c++/plotter/src/libs/plotter2/shared/lib/loggy/include -isystem /opt/homebrew/opt/python@3.13/Frameworks/Python.framework/Versions/3.13/include/python3.13 -isystem /opt/homebrew/include/eigen3 -g -std=gnu++2b -arch arm64 -o CMakeFiles/shared_lib.dir/utils/sources/utils_fileholder.cpp.o -c /Users/heathfortin/programing/languages/c++/plotter/src/libs/plotter2/shared/lib/utils/sources/utils_fileholder.cpp",
   "file": "/Users/heathfortin/programing/languages/c++/plotter/src/libs/plotter2/shared/lib/utils/sources/utils_fileholder.cpp",
   "output": "src/libs/plotter2/shared/lib/CMakeFiles/shared_lib.dir/utils/sources/utils_fileholder.cpp.o"
@@ -58,6 +136,18 @@
   "command": "/usr/bin/c++  -I/Users/heathfortin/programing/languages/c++/plotter/src/libs/plotter2/shared/lib/plots/include -I/Users/heathfortin/programing/languages/c++/plotter/src/libs/plotter2/shared/lib/scripter/include -I/Users/heathfortin/programing/languages/c++/plotter/src/libs/plotter2/shared/lib/datter/include -I/Users/heathfortin/programing/languages/c++/plotter/src/libs/plotter2/shared/lib/utils/include -I/Users/heathfortin/programing/languages/c++/plotter/src/libs/plotter2/shared/lib/loggy/include -isystem /opt/homebrew/opt/python@3.13/Frameworks/Python.framework/Versions/3.13/include/python3.13 -isystem /opt/homebrew/include/eigen3 -g -std=gnu++2b -arch arm64 -o CMakeFiles/shared_lib.dir/loggy/sources/loggy.cpp.o -c /Users/heathfortin/programing/languages/c++/plotter/src/libs/plotter2/shared/lib/loggy/sources/loggy.cpp",
   "file": "/Users/heathfortin/programing/languages/c++/plotter/src/libs/plotter2/shared/lib/loggy/sources/loggy.cpp",
   "output": "src/libs/plotter2/shared/lib/CMakeFiles/shared_lib.dir/loggy/sources/loggy.cpp.o"
+},
+{
+  "directory": "/Users/heathfortin/programing/languages/c++/plotter/build/src/libs/plotter2/shared/tests/datter",
+  "command": "/usr/bin/c++  -I/Users/heathfortin/programing/languages/c++/plotter/src/libs/plotter2/shared/tests/datter/include -I/Users/heathfortin/programing/languages/c++/plotter/src/libs/plotter2/shared/lib/plots/include -I/Users/heathfortin/programing/languages/c++/plotter/src/libs/plotter2/shared/lib/scripter/include -I/Users/heathfortin/programing/languages/c++/plotter/src/libs/plotter2/shared/lib/datter/include -I/Users/heathfortin/programing/languages/c++/plotter/src/libs/plotter2/shared/lib/utils/include -I/Users/heathfortin/programing/languages/c++/plotter/src/libs/plotter2/shared/lib/loggy/include -isystem /opt/homebrew/opt/python@3.13/Frameworks/Python.framework/Versions/3.13/include/python3.13 -isystem /Users/heathfortin/programing/languages/c++/plotter/build/_deps/googletest-src/googletest/include -isystem /Users/heathfortin/programing/languages/c++/plotter/build/_deps/googletest-src/googletest -isystem /opt/homebrew/include/eigen3 -isystem /opt/homebrew/include -g -std=gnu++2b -arch arm64 -o CMakeFiles/datter_tests.dir/tests/datter_tests.cpp.o -c /Users/heathfortin/programing/languages/c++/plotter/src/libs/plotter2/shared/tests/datter/tests/datter_tests.cpp",
+  "file": "/Users/heathfortin/programing/languages/c++/plotter/src/libs/plotter2/shared/tests/datter/tests/datter_tests.cpp",
+  "output": "src/libs/plotter2/shared/tests/datter/CMakeFiles/datter_tests.dir/tests/datter_tests.cpp.o"
+},
+{
+  "directory": "/Users/heathfortin/programing/languages/c++/plotter/build/src/libs/plotter2/shared/tests/datter",
+  "command": "/usr/bin/c++  -I/Users/heathfortin/programing/languages/c++/plotter/src/libs/plotter2/shared/tests/datter/include -I/Users/heathfortin/programing/languages/c++/plotter/src/libs/plotter2/shared/lib/plots/include -I/Users/heathfortin/programing/languages/c++/plotter/src/libs/plotter2/shared/lib/scripter/include -I/Users/heathfortin/programing/languages/c++/plotter/src/libs/plotter2/shared/lib/datter/include -I/Users/heathfortin/programing/languages/c++/plotter/src/libs/plotter2/shared/lib/utils/include -I/Users/heathfortin/programing/languages/c++/plotter/src/libs/plotter2/shared/lib/loggy/include -isystem /opt/homebrew/opt/python@3.13/Frameworks/Python.framework/Versions/3.13/include/python3.13 -isystem /Users/heathfortin/programing/languages/c++/plotter/build/_deps/googletest-src/googletest/include -isystem /Users/heathfortin/programing/languages/c++/plotter/build/_deps/googletest-src/googletest -isystem /opt/homebrew/include/eigen3 -isystem /opt/homebrew/include -g -std=gnu++2b -arch arm64 -o CMakeFiles/datter_tests.dir/tests/tests.cpp.o -c /Users/heathfortin/programing/languages/c++/plotter/src/libs/plotter2/shared/tests/datter/tests/tests.cpp",
+  "file": "/Users/heathfortin/programing/languages/c++/plotter/src/libs/plotter2/shared/tests/datter/tests/tests.cpp",
+  "output": "src/libs/plotter2/shared/tests/datter/CMakeFiles/datter_tests.dir/tests/tests.cpp.o"
 },
 {
   "directory": "/Users/heathfortin/programing/languages/c++/plotter/build/src/libs/plotter2/pipeline/lib",
@@ -112,30 +202,6 @@
   "command": "/usr/bin/c++  -I/Users/heathfortin/programing/languages/c++/plotter/src/libs/plotter2/manager/tests/include -I/Users/heathfortin/programing/languages/c++/plotter/src/libs/plotter2/shared/lib/plots/include -I/Users/heathfortin/programing/languages/c++/plotter/src/libs/plotter2/shared/lib/scripter/include -I/Users/heathfortin/programing/languages/c++/plotter/src/libs/plotter2/shared/lib/datter/include -I/Users/heathfortin/programing/languages/c++/plotter/src/libs/plotter2/shared/lib/utils/include -I/Users/heathfortin/programing/languages/c++/plotter/src/libs/plotter2/shared/lib/loggy/include -I/Users/heathfortin/programing/languages/c++/plotter/src/libs/plotter2/pipeline/lib/include -I/Users/heathfortin/programing/languages/c++/plotter/src/libs/plotter2/manager/lib/include -isystem /opt/homebrew/opt/python@3.13/Frameworks/Python.framework/Versions/3.13/include/python3.13 -isystem /opt/homebrew/include/eigen3 -isystem /Users/heathfortin/programing/languages/c++/plotter/build/_deps/googletest-src/googletest/include -isystem /Users/heathfortin/programing/languages/c++/plotter/build/_deps/googletest-src/googletest -isystem /opt/homebrew/include -g -std=gnu++2b -arch arm64 -o CMakeFiles/manager_tests.dir/sources/tests.cpp.o -c /Users/heathfortin/programing/languages/c++/plotter/src/libs/plotter2/manager/tests/sources/tests.cpp",
   "file": "/Users/heathfortin/programing/languages/c++/plotter/src/libs/plotter2/manager/tests/sources/tests.cpp",
   "output": "src/libs/plotter2/manager/tests/CMakeFiles/manager_tests.dir/sources/tests.cpp.o"
-},
-{
-  "directory": "/Users/heathfortin/programing/languages/c++/plotter/build/_deps/googletest-build/googlemock",
-  "command": "/usr/bin/c++  -I/opt/homebrew/opt/python@3.13/Frameworks/Python.framework/Versions/3.13/include/python3.13 -I/Users/heathfortin/programing/languages/c++/plotter/build/_deps/googletest-src/googlemock/include -I/Users/heathfortin/programing/languages/c++/plotter/build/_deps/googletest-src/googlemock -isystem /Users/heathfortin/programing/languages/c++/plotter/build/_deps/googletest-src/googletest/include -isystem /Users/heathfortin/programing/languages/c++/plotter/build/_deps/googletest-src/googletest -g -std=c++2b -arch arm64  -DGTEST_HAS_PTHREAD=1   -o CMakeFiles/gmock.dir/src/gmock-all.cc.o -c /Users/heathfortin/programing/languages/c++/plotter/build/_deps/googletest-src/googlemock/src/gmock-all.cc",
-  "file": "/Users/heathfortin/programing/languages/c++/plotter/build/_deps/googletest-src/googlemock/src/gmock-all.cc",
-  "output": "_deps/googletest-build/googlemock/CMakeFiles/gmock.dir/src/gmock-all.cc.o"
-},
-{
-  "directory": "/Users/heathfortin/programing/languages/c++/plotter/build/_deps/googletest-build/googlemock",
-  "command": "/usr/bin/c++  -isystem /opt/homebrew/opt/python@3.13/Frameworks/Python.framework/Versions/3.13/include/python3.13 -isystem /Users/heathfortin/programing/languages/c++/plotter/build/_deps/googletest-src/googlemock/include -isystem /Users/heathfortin/programing/languages/c++/plotter/build/_deps/googletest-src/googlemock -isystem /Users/heathfortin/programing/languages/c++/plotter/build/_deps/googletest-src/googletest/include -isystem /Users/heathfortin/programing/languages/c++/plotter/build/_deps/googletest-src/googletest -g -std=c++2b -arch arm64  -DGTEST_HAS_PTHREAD=1   -o CMakeFiles/gmock_main.dir/src/gmock_main.cc.o -c /Users/heathfortin/programing/languages/c++/plotter/build/_deps/googletest-src/googlemock/src/gmock_main.cc",
-  "file": "/Users/heathfortin/programing/languages/c++/plotter/build/_deps/googletest-src/googlemock/src/gmock_main.cc",
-  "output": "_deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/src/gmock_main.cc.o"
-},
-{
-  "directory": "/Users/heathfortin/programing/languages/c++/plotter/build/_deps/googletest-build/googletest",
-  "command": "/usr/bin/c++  -I/opt/homebrew/opt/python@3.13/Frameworks/Python.framework/Versions/3.13/include/python3.13 -I/Users/heathfortin/programing/languages/c++/plotter/build/_deps/googletest-src/googletest/include -I/Users/heathfortin/programing/languages/c++/plotter/build/_deps/googletest-src/googletest -g -std=c++2b -arch arm64  -DGTEST_HAS_PTHREAD=1   -o CMakeFiles/gtest.dir/src/gtest-all.cc.o -c /Users/heathfortin/programing/languages/c++/plotter/build/_deps/googletest-src/googletest/src/gtest-all.cc",
-  "file": "/Users/heathfortin/programing/languages/c++/plotter/build/_deps/googletest-src/googletest/src/gtest-all.cc",
-  "output": "_deps/googletest-build/googletest/CMakeFiles/gtest.dir/src/gtest-all.cc.o"
-},
-{
-  "directory": "/Users/heathfortin/programing/languages/c++/plotter/build/_deps/googletest-build/googletest",
-  "command": "/usr/bin/c++  -I/opt/homebrew/opt/python@3.13/Frameworks/Python.framework/Versions/3.13/include/python3.13 -isystem /Users/heathfortin/programing/languages/c++/plotter/build/_deps/googletest-src/googletest/include -isystem /Users/heathfortin/programing/languages/c++/plotter/build/_deps/googletest-src/googletest -g -std=c++2b -arch arm64  -DGTEST_HAS_PTHREAD=1   -o CMakeFiles/gtest_main.dir/src/gtest_main.cc.o -c /Users/heathfortin/programing/languages/c++/plotter/build/_deps/googletest-src/googletest/src/gtest_main.cc",
-  "file": "/Users/heathfortin/programing/languages/c++/plotter/build/_deps/googletest-src/googletest/src/gtest_main.cc",
-  "output": "_deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.o"
 },
 {
   "directory": "/Users/heathfortin/programing/languages/c++/plotter/build/src/libs/plotter2/grapher/lib",

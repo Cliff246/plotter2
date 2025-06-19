@@ -1,44 +1,37 @@
-#pragma once 
-
-#include <array>
+#pragma once
 #include <vector>
+#include <string>
+#include "utils.hpp"
 namespace plt_shared
 {
-	class dataholder
+	using string_pair = std::pair<std::string, std::string>;
+	class datahold
 	{
-	private:
-				
-	public:	
-	};
-
-	template <class T, uint64_t N>
-	class dataary : public dataholder
-	{
-	private:
-		std::array<T, N> m_ary;
+	protected:
+		bool m_held;
 	public:
-		dataary(std::array<T, N> array);	
-		~dataary();
-	};
+		virtual ~datahold() {};
+		//get the type of this datahold
+		virtual std::string get_type() const = 0;
+		//gets arg information
+		//item1 in pair is the return type,
+		//item2 in pair is the helper
+		virtual std::vector<string_pair> get_args_info() const = 0;
+		//gets the amout of args
+		virtual size_t get_nargs() = 0;
+		//gets the arg at postion 'index'
+		//
+		virtual std::string get_arg(size_t index) = 0; 
 
-	template <class T>
-	class datavec : public dataholder
-	{
-	private:
-		std::vector<T> m_vec;
-	public:
-		datavec(std::vector<T> &m_vec);
-		~datavec();
+		bool check_if_holding() const;
+
 	};
+	using datahold_ptr = std::shared_ptr<datahold>; 
 	
-	template <class T>
-	class datamatrix : public dataholder
-	{
-	private:
-		std::vector<T> m_matrix;
-		size_t m_rows, m_cols;
-	public:
-		datamatrix();
-		~datamatrix();
-	};
+	constexpr char integer_type[] = "int";
+	constexpr char string_type[] = "str";
+	constexpr char array_type[] = "ary";
+	constexpr char float_type[] = "num";
+	constexpr char map_type[] = "map";
+
 }

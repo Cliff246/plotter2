@@ -1,4 +1,7 @@
-manager_tests 13 0.000731782
-manager_tests.manifest 1 0.0104131
-manager_tests.manager 1 0.00959621
+datter_tests.datter 2 0.00452871
+datter_tests 3 0.00271111
+manager_tests.manifest 3 0.00306243
+manager_tests.manager 3 0.0031941
+manager_tests 3 0.00319332
+datter_tests.test1 1 0.00887621
 ---

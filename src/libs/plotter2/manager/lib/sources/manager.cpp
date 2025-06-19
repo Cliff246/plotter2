@@ -24,6 +24,25 @@ plt_manager::manager::~manager()
 {
 
 }
+void plt_manager::manager::set_name(const std::string &name)
+{
+	m_manager_name = name;
+}
+//assuming your manager is valid
+void plt_manager::manager::set_manifest(std::shared_ptr<plt_manager::manifest> ptr)
+{
+	if(m_valid == true)
+	{
+		throw std::runtime_error("cannot override an existing manager");
+	}
+	m_manifest = ptr;	
+	m_valid = true;
+}
+
+bool plt_manager::manager::get_valid() const
+{
+	return m_valid;
+}
 
 std::string &plt_manager::manager::get_manager_name()
 {

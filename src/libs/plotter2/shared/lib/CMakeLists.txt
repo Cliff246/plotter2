@@ -13,7 +13,16 @@ set(LOGGY_SOURCES
 	${CMAKE_CURRENT_SOURCE_DIR}/loggy/sources/loggy.cpp
 )
 set(DATTER_SOURCES
-	${CMAKE_CURRENT_SOURCE_DIR}/datter/sources/datter.cpp
+	${CMAKE_CURRENT_SOURCE_DIR}/datter/sources/datter.cpp	
+	${CMAKE_CURRENT_SOURCE_DIR}/datter/sources/dataholder.cpp	
+	${CMAKE_CURRENT_SOURCE_DIR}/datter/sources/datasrc.cpp
+	${CMAKE_CURRENT_SOURCE_DIR}/datter/sources/datasrc_csv.cpp
+	${CMAKE_CURRENT_SOURCE_DIR}/datter/sources/datasrc_json.cpp
+	${CMAKE_CURRENT_SOURCE_DIR}/datter/sources/dataholders/dataholder_array.cpp
+	${CMAKE_CURRENT_SOURCE_DIR}/datter/sources/dataholders/dataholder_integer.cpp
+	${CMAKE_CURRENT_SOURCE_DIR}/datter/sources/dataholders/dataholder_number.cpp
+	${CMAKE_CURRENT_SOURCE_DIR}/datter/sources/dataholders/dataholder_string.cpp
+	${CMAKE_CURRENT_SOURCE_DIR}/datter/sources/dataholders/dataholder_map.cpp
 )
 
 set(UTILS_SOURCES 
