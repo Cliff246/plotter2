@@ -34,15 +34,12 @@ plt_shared::filetype plt_shared::fileholder::get_filetype()
 
 bool plt_shared::fileholder::does_exist() const
 {
-	return std::filesystem::exists(m_path);	
+	bool output = std::filesystem::exists(m_path);	
+	return output; 
 }
 
 bool plt_shared::fileholder::is_loaded() 
 {
-	if(m_stream.is_open() != m_loaded) 
-	{
-		m_loaded = m_stream.is_open();
-	}
 	return m_loaded;
 }
 
@@ -57,7 +54,7 @@ bool plt_shared::fileholder::open_file(std::ios_base::openmode flags)
 	{	
 
 		//set fstream
-		m_stream.open(m_path, m_flags);
+		m_stream.open(m_path);
 		m_loaded = true;
 		m_flags = flags;
 		return true;
@@ -76,12 +73,15 @@ bool plt_shared::fileholder::can_write() const
 
 bool plt_shared::fileholder::can_read() const
 {
-	return (m_flags & std::ios::in)? true : false;
+	bool canread = (m_flags & std::ios::in)? true : false;
+
+	return canread; 
 }
+
 
 char plt_shared::fileholder::read()
 {
-	if(!is_loaded() || !can_read())
+	if(is_loaded() || !can_read())
 	{
 		throw std::runtime_error("cannot read from a file that's not loaded or readable");
 	}
@@ -108,7 +108,8 @@ std::string plt_shared::fileholder::read_all()
 	}
 	std::stringstream buffer; 
 	buffer << m_stream.rdbuf();
-	return buffer.str();
+	std::string out = buffer.str();
+	return out;
 }
 
 std::vector<char> plt_shared::fileholder::read_bytes()

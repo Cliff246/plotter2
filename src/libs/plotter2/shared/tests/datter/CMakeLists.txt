@@ -1,6 +1,7 @@
 
 set(DATTER_SOURCES_TEST 
 	${CMAKE_CURRENT_SOURCE_DIR}/tests/datter_tests.cpp
+	${CMAKE_CURRENT_SOURCE_DIR}/tests/datasrc_csv_tests.cpp
 	${CMAKE_CURRENT_SOURCE_DIR}/tests/tests.cpp
 )
 
@@ -19,10 +20,10 @@ gtest_discover_tests(datter_tests)
 
 target_link_libraries(datter_tests
 	PRIVATE
-	gtest_main	
 	Eigen3::Eigen
     Python3::Python
 	shared_lib
+	gtest_main	
 	PUBLIC
 	nlohmann_json::nlohmann_json
 )

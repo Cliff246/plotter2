@@ -1,5 +1,4 @@
-
-#include <gtest/gtest.h>
+#include "datter_tests.hpp"
 
 int32_t main(int argc, char **argv) 
 {

@@ -4654,6 +4654,7 @@ src/libs/plotter2/shared/lib/CMakeFiles/shared_lib.dir/datter/sources/datasrc_cs
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/17/include/stddef.h \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/17/include/stdint.h \
   /Users/heathfortin/programing/languages/c++/plotter/src/libs/plotter2/shared/lib/datter/include/dataholder.hpp \
+  /Users/heathfortin/programing/languages/c++/plotter/src/libs/plotter2/shared/lib/datter/include/dataholders/dataholder_string.hpp \
   /Users/heathfortin/programing/languages/c++/plotter/src/libs/plotter2/shared/lib/datter/include/datasrc.hpp \
   /Users/heathfortin/programing/languages/c++/plotter/src/libs/plotter2/shared/lib/datter/include/datasrc_csv.hpp \
   /Users/heathfortin/programing/languages/c++/plotter/src/libs/plotter2/shared/lib/utils/include/utils.hpp \

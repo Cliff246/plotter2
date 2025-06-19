@@ -1,10 +1,10 @@
-Start testing: Jun 18 20:47 EDT
+Start testing: Jun 18 21:49 EDT
 ----------------------------------------------------------
-1/5 Testing: datter_tests.test1
-1/5 Test: datter_tests.test1
+1/6 Testing: datter_tests.test1
+1/6 Test: datter_tests.test1
 Command: "/Users/heathfortin/programing/languages/c++/plotter/build/src/libs/plotter2/shared/tests/datter/datter_tests" "--gtest_filter=datter_tests.test1" "--gtest_also_run_disabled_tests"
 Directory: /Users/heathfortin/programing/languages/c++/plotter/build/src/libs/plotter2/shared/tests/datter
-"datter_tests.test1" start time: Jun 18 20:47 EDT
+"datter_tests.test1" start time: Jun 18 21:49 EDT
 Output:
 ----------------------------------------------------------
 Note: Google Test filter = datter_tests.test1
@@ -22,40 +22,54 @@ Note: Google Test filter = datter_tests.test1
 Test time =   0.01 sec
 ----------------------------------------------------------
 Test Passed.
-"datter_tests.test1" end time: Jun 18 20:47 EDT
+"datter_tests.test1" end time: Jun 18 21:49 EDT
 "datter_tests.test1" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-2/5 Testing: datter_tests
-2/5 Test: datter_tests
-Command: "/Users/heathfortin/programing/languages/c++/plotter/build/src/libs/plotter2/shared/tests/datter/datter_tests"
+2/6 Testing: datter_tests.csv_test1
+2/6 Test: datter_tests.csv_test1
+Command: "/Users/heathfortin/programing/languages/c++/plotter/build/src/libs/plotter2/shared/tests/datter/datter_tests" "--gtest_filter=datter_tests.csv_test1" "--gtest_also_run_disabled_tests"
 Directory: /Users/heathfortin/programing/languages/c++/plotter/build/src/libs/plotter2/shared/tests/datter
-"datter_tests" start time: Jun 18 20:47 EDT
+"datter_tests.csv_test1" start time: Jun 18 21:49 EDT
 Output:
 ----------------------------------------------------------
+Note: Google Test filter = datter_tests.csv_test1
 [==========] Running 1 test from 1 test suite.
 [----------] Global test environment set-up.
 [----------] 1 test from datter_tests
-[ RUN      ] datter_tests.test1
-[       OK ] datter_tests.test1 (0 ms)
-[----------] 1 test from datter_tests (0 ms total)
-
-[----------] Global test environment tear-down
-[==========] 1 test from 1 test suite ran. (0 ms total)
-[  PASSED  ] 1 test.
+[ RUN      ] datter_tests.csv_test1
 <end of output>
 Test time =   0.01 sec
 ----------------------------------------------------------
-Test Passed.
-"datter_tests" end time: Jun 18 20:47 EDT
+Test Failed.
+"datter_tests.csv_test1" end time: Jun 18 21:49 EDT
+"datter_tests.csv_test1" time elapsed: 00:00:00
+----------------------------------------------------------
+
+3/6 Testing: datter_tests
+3/6 Test: datter_tests
+Command: "/Users/heathfortin/programing/languages/c++/plotter/build/src/libs/plotter2/shared/tests/datter/datter_tests"
+Directory: /Users/heathfortin/programing/languages/c++/plotter/build/src/libs/plotter2/shared/tests/datter
+"datter_tests" start time: Jun 18 21:49 EDT
+Output:
+----------------------------------------------------------
+[==========] Running 2 tests from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 2 tests from datter_tests
+[ RUN      ] datter_tests.csv_test1
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Failed.
+"datter_tests" end time: Jun 18 21:49 EDT
 "datter_tests" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-3/5 Testing: manager_tests.manifest
-3/5 Test: manager_tests.manifest
+4/6 Testing: manager_tests.manifest
+4/6 Test: manager_tests.manifest
 Command: "/Users/heathfortin/programing/languages/c++/plotter/build/src/libs/plotter2/manager/tests/manager_tests" "--gtest_filter=manager_tests.manifest" "--gtest_also_run_disabled_tests"
 Directory: /Users/heathfortin/programing/languages/c++/plotter/build/src/libs/plotter2/manager/tests
-"manager_tests.manifest" start time: Jun 18 20:47 EDT
+"manager_tests.manifest" start time: Jun 18 21:49 EDT
 Output:
 ----------------------------------------------------------
 Note: Google Test filter = manager_tests.manifest
@@ -73,15 +87,15 @@ Note: Google Test filter = manager_tests.manifest
 Test time =   0.01 sec
 ----------------------------------------------------------
 Test Passed.
-"manager_tests.manifest" end time: Jun 18 20:47 EDT
+"manager_tests.manifest" end time: Jun 18 21:49 EDT
 "manager_tests.manifest" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-4/5 Testing: manager_tests.manager
-4/5 Test: manager_tests.manager
+5/6 Testing: manager_tests.manager
+5/6 Test: manager_tests.manager
 Command: "/Users/heathfortin/programing/languages/c++/plotter/build/src/libs/plotter2/manager/tests/manager_tests" "--gtest_filter=manager_tests.manager" "--gtest_also_run_disabled_tests"
 Directory: /Users/heathfortin/programing/languages/c++/plotter/build/src/libs/plotter2/manager/tests
-"manager_tests.manager" start time: Jun 18 20:47 EDT
+"manager_tests.manager" start time: Jun 18 21:49 EDT
 Output:
 ----------------------------------------------------------
 Note: Google Test filter = manager_tests.manager
@@ -99,15 +113,15 @@ Note: Google Test filter = manager_tests.manager
 Test time =   0.01 sec
 ----------------------------------------------------------
 Test Passed.
-"manager_tests.manager" end time: Jun 18 20:47 EDT
+"manager_tests.manager" end time: Jun 18 21:49 EDT
 "manager_tests.manager" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-5/5 Testing: manager_tests
-5/5 Test: manager_tests
+6/6 Testing: manager_tests
+6/6 Test: manager_tests
 Command: "/Users/heathfortin/programing/languages/c++/plotter/build/src/libs/plotter2/manager/tests/manager_tests"
 Directory: /Users/heathfortin/programing/languages/c++/plotter/build/src/libs/plotter2/manager/tests
-"manager_tests" start time: Jun 18 20:47 EDT
+"manager_tests" start time: Jun 18 21:49 EDT
 Output:
 ----------------------------------------------------------
 [==========] Running 2 tests from 1 test suite.
@@ -126,8 +140,8 @@ Output:
 Test time =   0.01 sec
 ----------------------------------------------------------
 Test Passed.
-"manager_tests" end time: Jun 18 20:47 EDT
+"manager_tests" end time: Jun 18 21:49 EDT
 "manager_tests" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-End testing: Jun 18 20:47 EDT
+End testing: Jun 18 21:49 EDT

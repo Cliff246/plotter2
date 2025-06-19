@@ -1,7 +1,12 @@
 #include "datasrc_csv.hpp"
+#include "dataholders/dataholder_string.hpp"
 #include <memory>
 #include <vector>
 
+plt_shared::datasrc_csv::datasrc_csv()
+{
+
+}
 
 plt_shared::datasrc_csv::~datasrc_csv()
 {
@@ -16,7 +21,7 @@ const std::string plt_shared::datasrc_csv::get_type() const
 bool plt_shared::datasrc_csv::set_file(plt_shared::path_fs &path)
 {
 	m_holder = std::make_shared<fileholder>(path);
-	if(m_holder->can_open() && m_holder->does_exist() && m_holder->can_read())
+	if(m_holder->can_open() && m_holder->does_exist())
 	{
 		loaded = true;
 		return true;
@@ -34,6 +39,9 @@ std::vector<std::vector<plt_shared::datahold_ptr>> plt_shared::datasrc_csv::get_
 	{
 		return datarows;
 	}
+
+	std::vector<datahold_ptr> first;
+	datarows.push_back(first);
 	m_holder->open_file(std::ios::in);
 	
 
@@ -42,7 +50,7 @@ std::vector<std::vector<plt_shared::datahold_ptr>> plt_shared::datasrc_csv::get_
 	//parse the csv
 	size_t lines = 0;
 	//where the section starts
-	int64_t chunkstart = 0;	
+	int64_t chunkstart = -1;	
 	
 	//how much 'in_quote' are  we ie """hello""" is 3 meaning to get out we need "" and a "
 	int64_t in_quote = 0;	
@@ -74,7 +82,11 @@ std::vector<std::vector<plt_shared::datahold_ptr>> plt_shared::datasrc_csv::get_
 		{
 			//before the chunk is set 
 			
-			
+			std::string sub = filedata.substr(chunkstart + 1, i - chunkstart - 1);
+
+			auto dptr = std::make_shared<dataholder::datahold_string>();	
+			dptr->set_string(sub);
+			datarows[lines].push_back(dptr);	
 			
 
 			chunkstart = i;	
@@ -84,10 +96,16 @@ std::vector<std::vector<plt_shared::datahold_ptr>> plt_shared::datasrc_csv::get_
 		}
 		if(filedata[i] == '\n')
 		{
+			std::string sub = filedata.substr(chunkstart + 1, i - chunkstart - 1);
+
+			auto dptr = std::make_shared<dataholder::datahold_string>();	
+			dptr->set_string(sub);
+			datarows[lines].push_back(dptr);	
 			//chunk, should be simple
 			std::vector<datahold_ptr> cols;
 			datarows.push_back(cols);
 			lines++;
+			chunkstart = i;	
 		}
 		else if(filedata[i] == '\n' && lastchar == '\r')
 		{
@@ -95,6 +113,7 @@ std::vector<std::vector<plt_shared::datahold_ptr>> plt_shared::datasrc_csv::get_
 			std::vector<datahold_ptr> cols;
 			datarows.push_back(cols);
 			lines++;
+			chunkstart = i;	
 		}	
 
 		lastchar = filedata[i];

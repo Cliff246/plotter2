@@ -18,9 +18,9 @@ namespace plt_shared
 		std::shared_ptr<fileholder> m_holder;
 		bool loaded;	
 	public:
-		virtual ~datasrc() = 0;
+		
 		virtual const std::string get_type() const = 0;	
 		virtual bool set_file(path_fs &path) = 0; 
-		virtual std::vector<std::vector<datahold_ptr>> get_data();	
+		virtual std::vector<std::vector<datahold_ptr>> get_data() = 0;	
 	};
 }
