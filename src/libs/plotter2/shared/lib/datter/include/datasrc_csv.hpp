@@ -20,6 +20,10 @@ namespace plt_shared
 		std::vector<std::vector<datahold_ptr>> get_data() override;	
 
 
+		std::vector<std::vector<std::string>> get_data_string();	
+
 		
 	};	
+
+
 }

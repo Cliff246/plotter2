@@ -1,9 +1,8 @@
-datter_tests.test1 13 0.000740144
-datter_tests.csv_test1 3 0
-datter_tests 3 0
-manager_tests.manifest 13 0.000834497
-manager_tests.manager 13 0.000779667
-manager_tests 13 0.000748183
+datter_tests.test1 18 0.000552509
+datter_tests.csv_test1 8 0.0010768
+datter_tests 8 0.00100481
+manager_tests.manifest 18 0.000506106
+manager_tests.manager 18 0.0005529
+manager_tests 18 0.000516139
+datter_tests.csv_test2 5 0.00165261
 ---
-datter_tests.csv_test1
-datter_tests
