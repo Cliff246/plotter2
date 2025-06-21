@@ -324,8 +324,21 @@ exe: cmake_check_build_system
 
 # fast build rule for target.
 exe/fast:
-	$(MAKE) $(MAKESILENT) -f src/executable/exesrcs/CMakeFiles/exe.dir/build.make src/executable/exesrcs/CMakeFiles/exe.dir/build
+	$(MAKE) $(MAKESILENT) -f src/executable/main/exesrcs/CMakeFiles/exe.dir/build.make src/executable/main/exesrcs/CMakeFiles/exe.dir/build
 .PHONY : exe/fast
+
+#=============================================================================
+# Target rules for targets named child
+
+# Build rule for target.
+child: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 child
+.PHONY : child
+
+# fast build rule for target.
+child/fast:
+	$(MAKE) $(MAKESILENT) -f src/executable/child/src/CMakeFiles/child.dir/build.make src/executable/child/src/CMakeFiles/child.dir/build
+.PHONY : child/fast
 
 # Help Target
 help:
@@ -340,6 +353,7 @@ help:
 	@echo "... list_install_components"
 	@echo "... rebuild_cache"
 	@echo "... test"
+	@echo "... child"
 	@echo "... datter_tests"
 	@echo "... exe"
 	@echo "... gmock"

@@ -817,4 +817,5 @@ src/libs/plotter2/manager/tests/CMakeFiles/manager_tests.dir/sources/tests.cpp.o
   /Users/heathfortin/programing/languages/c++/plotter/build/_deps/googletest-src/googletest/include/gtest/gtest-typed-test.h \
   /Users/heathfortin/programing/languages/c++/plotter/build/_deps/googletest-src/googletest/include/gtest/gtest_pred_impl.h \
   /Users/heathfortin/programing/languages/c++/plotter/build/_deps/googletest-src/googletest/include/gtest/gtest_prod.h \
-  /Users/heathfortin/programing/languages/c++/plotter/src/libs/plotter2/manager/tests/include/tests_manager.hpp
+  /Users/heathfortin/programing/languages/c++/plotter/src/libs/plotter2/manager/tests/include/tests_manager.hpp \
+  /Users/heathfortin/programing/languages/c++/plotter/src/libs/plotter2/shared/lib/loggy/include/loggy.hpp

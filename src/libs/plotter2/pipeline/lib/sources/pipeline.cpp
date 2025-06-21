@@ -18,5 +18,5 @@ plt_pipeline::pipeline::~pipeline()
 
 void plt_pipeline::pipeline::add_layer(layer &layer)
 {
-	m_layers.push_back(std::make_unique<plt_pipeline::layer>(layer));	
+	m_nodes.push_back(std::make_unique<plt_pipeline::layer>(layer));	
 }

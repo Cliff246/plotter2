@@ -12,7 +12,10 @@ namespace plt_pipeline
 	class pipeline
 	{
 	private:
-		std::vector<std::unique_ptr<plt_pipeline::layer>> m_layers;
+		std::vector<std::unique_ptr<plt_pipeline::layer>> m_nodes;
+		std::vector<std::vector<int>> m_edges; 
+		int start_node;
+		int end_node;
 		std::shared_ptr<plt_shared::plot> m_plot;
 		
 	public:

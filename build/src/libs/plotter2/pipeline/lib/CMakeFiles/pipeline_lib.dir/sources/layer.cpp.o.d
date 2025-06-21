@@ -848,5 +848,7 @@ src/libs/plotter2/pipeline/lib/CMakeFiles/pipeline_lib.dir/sources/layer.cpp.o: 
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__iterator/move_iterator.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__iterator/move_sentinel.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/map \
+  /Users/heathfortin/programing/languages/c++/plotter/src/libs/plotter2/shared/lib/scripter/include/exposed.hpp \
+  /Users/heathfortin/programing/languages/c++/plotter/src/libs/plotter2/shared/lib/scripter/include/dependency.hpp \
   /Users/heathfortin/programing/languages/c++/plotter/src/libs/plotter2/shared/lib/plots/include/plotscene.hpp \
   /Users/heathfortin/programing/languages/c++/plotter/src/libs/plotter2/shared/lib/plots/include/plotobject.hpp

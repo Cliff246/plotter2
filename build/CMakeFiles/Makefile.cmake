@@ -22,7 +22,10 @@ set(CMAKE_MAKEFILE_DEPENDS
   "_deps/googletest-src/googletest/cmake/internal_utils.cmake"
   "/Users/heathfortin/programing/languages/c++/plotter/src/CMakeLists.txt"
   "/Users/heathfortin/programing/languages/c++/plotter/src/executable/CMakeLists.txt"
-  "/Users/heathfortin/programing/languages/c++/plotter/src/executable/exesrcs/CMakeLists.txt"
+  "/Users/heathfortin/programing/languages/c++/plotter/src/executable/child/CMakeLists.txt"
+  "/Users/heathfortin/programing/languages/c++/plotter/src/executable/child/src/CMakeLists.txt"
+  "/Users/heathfortin/programing/languages/c++/plotter/src/executable/main/CMakeLists.txt"
+  "/Users/heathfortin/programing/languages/c++/plotter/src/executable/main/exesrcs/CMakeLists.txt"
   "/Users/heathfortin/programing/languages/c++/plotter/src/libs/CMakeLists.txt"
   "/Users/heathfortin/programing/languages/c++/plotter/src/libs/plotter2/CMakeLists.txt"
   "/Users/heathfortin/programing/languages/c++/plotter/src/libs/plotter2/grapher/CMakeLists.txt"
@@ -137,7 +140,10 @@ set(CMAKE_MAKEFILE_PRODUCTS
   "src/libs/plotter2/grapher/CMakeFiles/CMakeDirectoryInformation.cmake"
   "src/libs/plotter2/grapher/lib/CMakeFiles/CMakeDirectoryInformation.cmake"
   "src/executable/CMakeFiles/CMakeDirectoryInformation.cmake"
-  "src/executable/exesrcs/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "src/executable/main/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "src/executable/main/exesrcs/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "src/executable/child/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "src/executable/child/src/CMakeFiles/CMakeDirectoryInformation.cmake"
   "src/plotter_module/CMakeFiles/CMakeDirectoryInformation.cmake"
   )
 
@@ -154,5 +160,6 @@ set(CMAKE_DEPEND_INFO_FILES
   "src/libs/plotter2/manager/lib/CMakeFiles/manager_lib.dir/DependInfo.cmake"
   "src/libs/plotter2/manager/tests/CMakeFiles/manager_tests.dir/DependInfo.cmake"
   "src/libs/plotter2/grapher/lib/CMakeFiles/grapher_lib.dir/DependInfo.cmake"
-  "src/executable/exesrcs/CMakeFiles/exe.dir/DependInfo.cmake"
+  "src/executable/main/exesrcs/CMakeFiles/exe.dir/DependInfo.cmake"
+  "src/executable/child/src/CMakeFiles/child.dir/DependInfo.cmake"
   )

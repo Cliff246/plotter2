@@ -1,25 +1,31 @@
 #pragma once
 
 #include <iostream>
-#include <filesystem>
 #include <mutex>
 #include <ostream>
 #include <string>
-#include <type_traits>
 
 namespace plt_shared
-{
+{	
+	enum logstate
+	{
+		LOG,
+		WARNNING,
+		ERROR,
+	};
+
 	void init_loggy();	
-	void log(const std::string &value);
-	
-	
+	void logg(const std::string &value);
+	void logg(logstate state, const char *fmt, ...);	
+
+
 	class loggy
 	{
 	protected:
 	
 			
 	public:
-
+		
 		virtual void log(const std::string &value) = 0;	
 		virtual std::string get_loggy_type() = 0; 
 	};
@@ -36,6 +42,6 @@ namespace plt_shared
 		std::string get_loggy_type() override;
 	};
 
-	extern loggy *loggy_current;
-	extern loggy_console loggy_global;
+	extern plt_shared::loggy *loggy_current;
+	extern plt_shared::loggy_console loggy_global;
 }

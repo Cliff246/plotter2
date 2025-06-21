@@ -287,4 +287,3 @@ std::vector<std::vector<std::string>> plt_shared::datasrc_csv::get_data_string()
 	return datarows;
 
 }
-}	

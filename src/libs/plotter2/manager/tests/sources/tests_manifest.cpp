@@ -5,9 +5,9 @@
 #include "manifest.hpp"
 #include <gtest/gtest.h>
 
-int test_manifest_1()
+int test_manifest_1(std::string fp)
 {
-	std::string buf = "resources/test1.json";
+	std::string buf = fp;
 	std::filesystem::path path(buf);
 	plt_manager::manifest *json_manifest = new plt_manager::manifest(path);
 	json_manifest->load_manifest();
@@ -17,5 +17,6 @@ int test_manifest_1()
 
 
 TEST(manager_tests, manifest) {
-	EXPECT_EQ(test_manifest_1(), 1);
+	EXPECT_EQ(test_manifest_1("resources/test1.json"), 1);
+	EXPECT_EQ(test_manifest_1("resources/test2.json"), 0);
 }

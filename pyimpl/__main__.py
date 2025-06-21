@@ -71,9 +71,9 @@ test2 = {
 
 
 def main():
-	#sm = plotter2.SceneMap(test1) 
-	#sm.print_map()
-	ms = plotter2.SceneMap(test2)
-	ms.print_map()
+	sm = plotter2.SceneMap(test1) 
+	sm.print_map()
+	#ms = plotter2.SceneMap(test2)
+	#ms.print_map()
 if __name__ == "__main__":
 	main()

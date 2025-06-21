@@ -1,10 +1,10 @@
-Start testing: Jun 19 20:15 EDT
+Start testing: Jun 21 15:28 EDT
 ----------------------------------------------------------
 1/7 Testing: datter_tests.test1
 1/7 Test: datter_tests.test1
 Command: "/Users/heathfortin/programing/languages/c++/plotter/build/src/libs/plotter2/shared/tests/datter/datter_tests" "--gtest_filter=datter_tests.test1" "--gtest_also_run_disabled_tests"
 Directory: /Users/heathfortin/programing/languages/c++/plotter/build/src/libs/plotter2/shared/tests/datter
-"datter_tests.test1" start time: Jun 19 20:15 EDT
+"datter_tests.test1" start time: Jun 21 15:28 EDT
 Output:
 ----------------------------------------------------------
 Note: Google Test filter = datter_tests.test1
@@ -22,7 +22,7 @@ Note: Google Test filter = datter_tests.test1
 Test time =   0.01 sec
 ----------------------------------------------------------
 Test Passed.
-"datter_tests.test1" end time: Jun 19 20:15 EDT
+"datter_tests.test1" end time: Jun 21 15:28 EDT
 "datter_tests.test1" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -30,7 +30,7 @@ Test Passed.
 2/7 Test: datter_tests.csv_test1
 Command: "/Users/heathfortin/programing/languages/c++/plotter/build/src/libs/plotter2/shared/tests/datter/datter_tests" "--gtest_filter=datter_tests.csv_test1" "--gtest_also_run_disabled_tests"
 Directory: /Users/heathfortin/programing/languages/c++/plotter/build/src/libs/plotter2/shared/tests/datter
-"datter_tests.csv_test1" start time: Jun 19 20:15 EDT
+"datter_tests.csv_test1" start time: Jun 21 15:28 EDT
 Output:
 ----------------------------------------------------------
 Note: Google Test filter = datter_tests.csv_test1
@@ -48,7 +48,7 @@ Note: Google Test filter = datter_tests.csv_test1
 Test time =   0.01 sec
 ----------------------------------------------------------
 Test Passed.
-"datter_tests.csv_test1" end time: Jun 19 20:15 EDT
+"datter_tests.csv_test1" end time: Jun 21 15:28 EDT
 "datter_tests.csv_test1" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -56,7 +56,7 @@ Test Passed.
 3/7 Test: datter_tests.csv_test2
 Command: "/Users/heathfortin/programing/languages/c++/plotter/build/src/libs/plotter2/shared/tests/datter/datter_tests" "--gtest_filter=datter_tests.csv_test2" "--gtest_also_run_disabled_tests"
 Directory: /Users/heathfortin/programing/languages/c++/plotter/build/src/libs/plotter2/shared/tests/datter
-"datter_tests.csv_test2" start time: Jun 19 20:15 EDT
+"datter_tests.csv_test2" start time: Jun 21 15:28 EDT
 Output:
 ----------------------------------------------------------
 Note: Google Test filter = datter_tests.csv_test2
@@ -74,7 +74,7 @@ Note: Google Test filter = datter_tests.csv_test2
 Test time =   0.01 sec
 ----------------------------------------------------------
 Test Passed.
-"datter_tests.csv_test2" end time: Jun 19 20:15 EDT
+"datter_tests.csv_test2" end time: Jun 21 15:28 EDT
 "datter_tests.csv_test2" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -82,7 +82,7 @@ Test Passed.
 4/7 Test: datter_tests
 Command: "/Users/heathfortin/programing/languages/c++/plotter/build/src/libs/plotter2/shared/tests/datter/datter_tests"
 Directory: /Users/heathfortin/programing/languages/c++/plotter/build/src/libs/plotter2/shared/tests/datter
-"datter_tests" start time: Jun 19 20:15 EDT
+"datter_tests" start time: Jun 21 15:28 EDT
 Output:
 ----------------------------------------------------------
 [==========] Running 3 tests from 1 test suite.
@@ -103,7 +103,7 @@ Output:
 Test time =   0.01 sec
 ----------------------------------------------------------
 Test Passed.
-"datter_tests" end time: Jun 19 20:15 EDT
+"datter_tests" end time: Jun 21 15:28 EDT
 "datter_tests" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -111,7 +111,7 @@ Test Passed.
 5/7 Test: manager_tests.manifest
 Command: "/Users/heathfortin/programing/languages/c++/plotter/build/src/libs/plotter2/manager/tests/manager_tests" "--gtest_filter=manager_tests.manifest" "--gtest_also_run_disabled_tests"
 Directory: /Users/heathfortin/programing/languages/c++/plotter/build/src/libs/plotter2/manager/tests
-"manager_tests.manifest" start time: Jun 19 20:15 EDT
+"manager_tests.manifest" start time: Jun 21 15:28 EDT
 Output:
 ----------------------------------------------------------
 Note: Google Test filter = manager_tests.manifest
@@ -119,6 +119,10 @@ Note: Google Test filter = manager_tests.manifest
 [----------] Global test environment set-up.
 [----------] 1 test from manager_tests
 [ RUN      ] manager_tests.manifest
+0: 
+1: manifest validation failed
+2:   - cannot find name date in manifest 
+
 [       OK ] manager_tests.manifest (0 ms)
 [----------] 1 test from manager_tests (0 ms total)
 
@@ -129,7 +133,7 @@ Note: Google Test filter = manager_tests.manifest
 Test time =   0.01 sec
 ----------------------------------------------------------
 Test Passed.
-"manager_tests.manifest" end time: Jun 19 20:15 EDT
+"manager_tests.manifest" end time: Jun 21 15:28 EDT
 "manager_tests.manifest" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -137,7 +141,7 @@ Test Passed.
 6/7 Test: manager_tests.manager
 Command: "/Users/heathfortin/programing/languages/c++/plotter/build/src/libs/plotter2/manager/tests/manager_tests" "--gtest_filter=manager_tests.manager" "--gtest_also_run_disabled_tests"
 Directory: /Users/heathfortin/programing/languages/c++/plotter/build/src/libs/plotter2/manager/tests
-"manager_tests.manager" start time: Jun 19 20:15 EDT
+"manager_tests.manager" start time: Jun 21 15:28 EDT
 Output:
 ----------------------------------------------------------
 Note: Google Test filter = manager_tests.manager
@@ -155,7 +159,7 @@ Note: Google Test filter = manager_tests.manager
 Test time =   0.01 sec
 ----------------------------------------------------------
 Test Passed.
-"manager_tests.manager" end time: Jun 19 20:15 EDT
+"manager_tests.manager" end time: Jun 21 15:28 EDT
 "manager_tests.manager" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -163,7 +167,7 @@ Test Passed.
 7/7 Test: manager_tests
 Command: "/Users/heathfortin/programing/languages/c++/plotter/build/src/libs/plotter2/manager/tests/manager_tests"
 Directory: /Users/heathfortin/programing/languages/c++/plotter/build/src/libs/plotter2/manager/tests
-"manager_tests" start time: Jun 19 20:15 EDT
+"manager_tests" start time: Jun 21 15:28 EDT
 Output:
 ----------------------------------------------------------
 [==========] Running 2 tests from 1 test suite.
@@ -172,6 +176,10 @@ Output:
 [ RUN      ] manager_tests.manager
 [       OK ] manager_tests.manager (0 ms)
 [ RUN      ] manager_tests.manifest
+0: 
+1: manifest validation failed
+2:   - cannot find name date in manifest 
+
 [       OK ] manager_tests.manifest (0 ms)
 [----------] 2 tests from manager_tests (0 ms total)
 
@@ -182,8 +190,8 @@ Output:
 Test time =   0.01 sec
 ----------------------------------------------------------
 Test Passed.
-"manager_tests" end time: Jun 19 20:15 EDT
+"manager_tests" end time: Jun 21 15:28 EDT
 "manager_tests" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-End testing: Jun 19 20:15 EDT
+End testing: Jun 21 15:28 EDT

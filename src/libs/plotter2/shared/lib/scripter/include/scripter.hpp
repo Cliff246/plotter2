@@ -3,6 +3,8 @@
 #include <Python.h>
 #include <utils_fileholder.hpp>
 #include <memory>
+#include "exposed.hpp"
+#include "dependency.hpp"
 
 namespace plt_shared
 {
@@ -10,7 +12,7 @@ namespace plt_shared
 	class script
 	{
 	private:
-	
+			
 		//file holder	
 		std::shared_ptr<fileholder> m_file;
 		

@@ -1,8 +1,13 @@
+#include "loggy.hpp"
 #include "manifest.hpp"
 #include <array>
 #include <tuple>
 #include <iostream>
 #include <fstream>
+#include <vector>
+#include <format>
+
+using namespace plt_manager;
 
 plt_manager::manifest::manifest(const path_fs &path)
 {
@@ -56,41 +61,28 @@ const std::array<std::string, 4> key_for_path =
 //required
 
 
-enum json_types 
-{
-	jstr,
-	jmap,
-	jnum,	
-	jary,
-	jnil,
-	unknown
-};	
 
-const std::array<std::tuple<std::string, json_types>, 16> manifest_required = 
+const std::vector<field_reqiuriment> manifest_required = 
 {
-	TUP("date", jstr),
-	TUP("time", jnum),
-	TUP("timezone", jstr),
-	TUP("manifest_version", jnum),
-	TUP("orgin_point", jstr),
-	TUP("destination", jstr),
-	TUP("comunication_type", jmap),
-	TUP("user", jstr),
-	TUP("meta", jmap),
-	TUP("preprocessor", jmap),
-	TUP("tasks", jmap),
-	TUP("plots", jmap),
-	TUP("style", jmap),
-	TUP("custom_render_templates", jmap),
-	TUP("directory_tree", jmap),
-	TUP("render_kit", jstr)
+	{"date", jstr},
+	{"time", jnum},
+	{"timezone", jstr},
+	{"user", jstr},
+	{"manifest_version", jnum},
+	{"meta", jmap},
+	{"orgin_point", jstr},
+	{"destination", jstr},
+	{"directory_tree", jmap},
+	{"comunication_type", jmap},
+	{"preprocessor", jmap},
+	{"tasks", jmap},
+	{"plots", jmap},
+	{"style", jmap},
+	{"custom_render_templates", jmap},
+	{"render_kit", jstr}
 };
 
 
-const std::array<std::tuple<std::string, json_types>, 10> manifest_meta_required = 
-{
-	
-};
 
 #undef TUP
 
@@ -103,10 +95,25 @@ const std::array<std::tuple<std::string, json_types>, 10> manifest_meta_required
 
 */
 
-
+std::string plt_manager::get_json_types_string(json_types type)
+{
+	switch(type)
+	{
+		case jmap:
+			return "map";
+		case jstr:
+			return "str";
+		case jnil:
+			return "nil";
+		case jnum:
+			return "ary";
+		default: 
+			return "unk";
+	}
+}
 
 //convert the niohmann json to the custom type
-json_types libjson_to_json_types(plt_manager::json arg)
+json_types plt_manager::libjson_to_json_types(plt_manager::json arg)
 {
 	if(arg.is_object())
 		return jmap;
@@ -139,10 +146,11 @@ bool plt_manager::manifest::validate_manifest()
 		return false;	
 	int count = 0;
 	//this is stupid but fuck it
+	std::vector<std::string> errors;
 	for(auto &elem : manifest_required)
 	{
-		const std::string &elem1 = std::get<0>(elem);	
-		const json_types &elem2 = std::get<1>(elem);
+		const std::string &elem1 = elem.m_field;	
+		const json_types &elem2 = elem.m_type;
 		
 		if(m_json.contains(elem1))
 		{
@@ -151,10 +159,34 @@ bool plt_manager::manifest::validate_manifest()
 			{
 				count++;	
 			}
+			else
+			{
+				std::string type = get_json_types_string(elem2);
+				errors.push_back(std::format("type {} is incompatable with name {}", elem1, type));
+			}
 		}
+		else
+		{
+			errors.push_back(std::format("cannot find name {} in manifest", elem1));
+		}
+		
+		
+		
+	}
+	//erros 
+	if(!errors.empty())
+	{
+		plt_shared::logg("");
+		plt_shared::logg(plt_shared::ERROR, "manifest validation failed");
+		for (auto &e : errors) plt_shared::logg(plt_shared::ERROR, "  - %s \n", e.c_str());
+		return false;
 	}
 	const size_t size = manifest_required.size();
-	if(count == size)
-		return true;
-	return false;
+	return (count >= size)? true : false;
 }	
+
+
+plt_manager::field_reqiuriment::~field_reqiuriment()
+{
+	delete m_children;
+}

@@ -4,16 +4,15 @@
 #include <string>
 
 
-int test_manager_1()
+int test_manager_1(std::string fp)
 {
 	std::string name = "manager1";
-	std::string buf = "resources";
+	std::string buf = fp;
 	std::filesystem::path path(buf);
 	plt_manager::manager manager(name, path);	
 	return manager.get_manifest()->validate_manifest();
 
 }
-
 TEST(manager_tests, manager) {
-	EXPECT_EQ(test_manager_1(), 1);
+	EXPECT_EQ(test_manager_1("resources"), 1);
 }

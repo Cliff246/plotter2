@@ -819,7 +819,8 @@ src/libs/plotter2/manager/tests/CMakeFiles/manager_tests.dir/sources/tests.cpp.o
   _deps/googletest-src/googletest/include/gtest/internal/gtest-type-util.h \
   /Users/heathfortin/programing/languages/c++/plotter/src/libs/plotter2/manager/tests/include/tests.hpp \
   /Users/heathfortin/programing/languages/c++/plotter/src/libs/plotter2/manager/tests/include/tests_manager.hpp \
-  /Users/heathfortin/programing/languages/c++/plotter/src/libs/plotter2/manager/tests/include/tests_manifest.hpp
+  /Users/heathfortin/programing/languages/c++/plotter/src/libs/plotter2/manager/tests/include/tests_manifest.hpp \
+  /Users/heathfortin/programing/languages/c++/plotter/src/libs/plotter2/shared/lib/loggy/include/loggy.hpp
 
 src/libs/plotter2/manager/tests/CMakeFiles/manager_tests.dir/sources/tests_manager.cpp.o: /Users/heathfortin/programing/languages/c++/plotter/src/libs/plotter2/manager/tests/sources/tests_manager.cpp \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/Availability.h \
@@ -3694,6 +3695,8 @@ src/libs/plotter2/manager/tests/CMakeFiles/manager_tests.dir/sources/tests_manif
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__ranges/take_while_view.h:
 
 /Users/heathfortin/programing/languages/c++/plotter/src/libs/plotter2/manager/tests/sources/tests_manager.cpp:
+
+/Users/heathfortin/programing/languages/c++/plotter/src/libs/plotter2/shared/lib/loggy/include/loggy.hpp:
 
 /Users/heathfortin/programing/languages/c++/plotter/src/libs/plotter2/manager/tests/include/tests.hpp:
 
