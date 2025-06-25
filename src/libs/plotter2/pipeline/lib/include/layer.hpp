@@ -6,14 +6,19 @@
 
 namespace plt_pipeline
 {
+
 	class layer
 	{
 	private:
-		std::shared_ptr<plt_shared::script> script;
+		
 
 	public:
-		layer();
-		~layer();
-		plt_shared::plotscene &transform_scene(plt_shared::plotscene &);	
+
+		virtual std::string get_type() const = 0;	
+
+
+		virtual plt_shared::plotscene &transform_scene(plt_shared::plotscene &) = 0;	
 	};
+	using layer_ptr = std::unique_ptr<plt_pipeline::layer *>;
+
 }

@@ -1,6 +1,8 @@
 file(REMOVE_RECURSE
   "CMakeFiles/pipeline_lib.dir/sources/layer.cpp.o"
   "CMakeFiles/pipeline_lib.dir/sources/layer.cpp.o.d"
+  "CMakeFiles/pipeline_lib.dir/sources/layertypes/layerscript.cpp.o"
+  "CMakeFiles/pipeline_lib.dir/sources/layertypes/layerscript.cpp.o.d"
   "CMakeFiles/pipeline_lib.dir/sources/pipeline.cpp.o"
   "CMakeFiles/pipeline_lib.dir/sources/pipeline.cpp.o.d"
   "libpipeline_lib.a"

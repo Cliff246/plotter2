@@ -310,6 +310,9 @@ GTEST_HAS_ABSL:BOOL=OFF
 // may want to turn this OFF.)
 INSTALL_GTEST:BOOL=ON
 
+//Dependencies for the target
+child_lib_LIB_DEPENDS:STATIC=general;messenger_shared_lib;
+
 //Value Computed by CMake
 gmock_BINARY_DIR:STATIC=/Users/heathfortin/programing/languages/c++/plotter/build/_deps/googletest-build/googlemock
 
@@ -364,6 +367,9 @@ manager_lib_LIB_DEPENDS:STATIC=general;Python3::Python;general;shared_lib;genera
 
 //The directory containing a CMake configuration file for nlohmann_json.
 nlohmann_json_DIR:PATH=/opt/homebrew/share/cmake/nlohmann_json
+
+//Dependencies for the target
+parent_lib_LIB_DEPENDS:STATIC=general;messenger_shared_lib;
 
 //Dependencies for the target
 pipeline_lib_LIB_DEPENDS:STATIC=general;Python3::Python;general;shared_lib;
@@ -519,7 +525,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=24
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=28
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP

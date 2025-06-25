@@ -4,6 +4,7 @@ cmake_minimum_required(VERSION 3.10)
 set(PIPELINE_SUBLIB_SOURCES
 	${CMAKE_CURRENT_SOURCE_DIR}/sources/pipeline.cpp
 	${CMAKE_CURRENT_SOURCE_DIR}/sources/layer.cpp
+	${CMAKE_CURRENT_SOURCE_DIR}/sources/layertypes/layerscript.cpp
 )
 
 

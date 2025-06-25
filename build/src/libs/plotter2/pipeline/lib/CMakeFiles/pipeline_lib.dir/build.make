@@ -100,19 +100,35 @@ src/libs/plotter2/pipeline/lib/CMakeFiles/pipeline_lib.dir/sources/layer.cpp.s: 
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/pipeline_lib.dir/sources/layer.cpp.s"
 	cd /Users/heathfortin/programing/languages/c++/plotter/build/src/libs/plotter2/pipeline/lib && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/heathfortin/programing/languages/c++/plotter/src/libs/plotter2/pipeline/lib/sources/layer.cpp -o CMakeFiles/pipeline_lib.dir/sources/layer.cpp.s
 
+src/libs/plotter2/pipeline/lib/CMakeFiles/pipeline_lib.dir/sources/layertypes/layerscript.cpp.o: src/libs/plotter2/pipeline/lib/CMakeFiles/pipeline_lib.dir/flags.make
+src/libs/plotter2/pipeline/lib/CMakeFiles/pipeline_lib.dir/sources/layertypes/layerscript.cpp.o: /Users/heathfortin/programing/languages/c++/plotter/src/libs/plotter2/pipeline/lib/sources/layertypes/layerscript.cpp
+src/libs/plotter2/pipeline/lib/CMakeFiles/pipeline_lib.dir/sources/layertypes/layerscript.cpp.o: src/libs/plotter2/pipeline/lib/CMakeFiles/pipeline_lib.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/heathfortin/programing/languages/c++/plotter/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object src/libs/plotter2/pipeline/lib/CMakeFiles/pipeline_lib.dir/sources/layertypes/layerscript.cpp.o"
+	cd /Users/heathfortin/programing/languages/c++/plotter/build/src/libs/plotter2/pipeline/lib && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/libs/plotter2/pipeline/lib/CMakeFiles/pipeline_lib.dir/sources/layertypes/layerscript.cpp.o -MF CMakeFiles/pipeline_lib.dir/sources/layertypes/layerscript.cpp.o.d -o CMakeFiles/pipeline_lib.dir/sources/layertypes/layerscript.cpp.o -c /Users/heathfortin/programing/languages/c++/plotter/src/libs/plotter2/pipeline/lib/sources/layertypes/layerscript.cpp
+
+src/libs/plotter2/pipeline/lib/CMakeFiles/pipeline_lib.dir/sources/layertypes/layerscript.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/pipeline_lib.dir/sources/layertypes/layerscript.cpp.i"
+	cd /Users/heathfortin/programing/languages/c++/plotter/build/src/libs/plotter2/pipeline/lib && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/heathfortin/programing/languages/c++/plotter/src/libs/plotter2/pipeline/lib/sources/layertypes/layerscript.cpp > CMakeFiles/pipeline_lib.dir/sources/layertypes/layerscript.cpp.i
+
+src/libs/plotter2/pipeline/lib/CMakeFiles/pipeline_lib.dir/sources/layertypes/layerscript.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/pipeline_lib.dir/sources/layertypes/layerscript.cpp.s"
+	cd /Users/heathfortin/programing/languages/c++/plotter/build/src/libs/plotter2/pipeline/lib && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/heathfortin/programing/languages/c++/plotter/src/libs/plotter2/pipeline/lib/sources/layertypes/layerscript.cpp -o CMakeFiles/pipeline_lib.dir/sources/layertypes/layerscript.cpp.s
+
 # Object files for target pipeline_lib
 pipeline_lib_OBJECTS = \
 "CMakeFiles/pipeline_lib.dir/sources/pipeline.cpp.o" \
-"CMakeFiles/pipeline_lib.dir/sources/layer.cpp.o"
+"CMakeFiles/pipeline_lib.dir/sources/layer.cpp.o" \
+"CMakeFiles/pipeline_lib.dir/sources/layertypes/layerscript.cpp.o"
 
 # External object files for target pipeline_lib
 pipeline_lib_EXTERNAL_OBJECTS =
 
 src/libs/plotter2/pipeline/lib/libpipeline_lib.a: src/libs/plotter2/pipeline/lib/CMakeFiles/pipeline_lib.dir/sources/pipeline.cpp.o
 src/libs/plotter2/pipeline/lib/libpipeline_lib.a: src/libs/plotter2/pipeline/lib/CMakeFiles/pipeline_lib.dir/sources/layer.cpp.o
+src/libs/plotter2/pipeline/lib/libpipeline_lib.a: src/libs/plotter2/pipeline/lib/CMakeFiles/pipeline_lib.dir/sources/layertypes/layerscript.cpp.o
 src/libs/plotter2/pipeline/lib/libpipeline_lib.a: src/libs/plotter2/pipeline/lib/CMakeFiles/pipeline_lib.dir/build.make
 src/libs/plotter2/pipeline/lib/libpipeline_lib.a: src/libs/plotter2/pipeline/lib/CMakeFiles/pipeline_lib.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/heathfortin/programing/languages/c++/plotter/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX static library libpipeline_lib.a"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/heathfortin/programing/languages/c++/plotter/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX static library libpipeline_lib.a"
 	cd /Users/heathfortin/programing/languages/c++/plotter/build/src/libs/plotter2/pipeline/lib && $(CMAKE_COMMAND) -P CMakeFiles/pipeline_lib.dir/cmake_clean_target.cmake
 	cd /Users/heathfortin/programing/languages/c++/plotter/build/src/libs/plotter2/pipeline/lib && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/pipeline_lib.dir/link.txt --verbose=$(VERBOSE)
 

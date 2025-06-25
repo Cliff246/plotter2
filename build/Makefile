@@ -315,6 +315,45 @@ grapher_lib/fast:
 .PHONY : grapher_lib/fast
 
 #=============================================================================
+# Target rules for targets named messenger_shared_lib
+
+# Build rule for target.
+messenger_shared_lib: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 messenger_shared_lib
+.PHONY : messenger_shared_lib
+
+# fast build rule for target.
+messenger_shared_lib/fast:
+	$(MAKE) $(MAKESILENT) -f src/libs/messenger/shared/CMakeFiles/messenger_shared_lib.dir/build.make src/libs/messenger/shared/CMakeFiles/messenger_shared_lib.dir/build
+.PHONY : messenger_shared_lib/fast
+
+#=============================================================================
+# Target rules for targets named parent_lib
+
+# Build rule for target.
+parent_lib: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 parent_lib
+.PHONY : parent_lib
+
+# fast build rule for target.
+parent_lib/fast:
+	$(MAKE) $(MAKESILENT) -f src/libs/messenger/parent/CMakeFiles/parent_lib.dir/build.make src/libs/messenger/parent/CMakeFiles/parent_lib.dir/build
+.PHONY : parent_lib/fast
+
+#=============================================================================
+# Target rules for targets named child_lib
+
+# Build rule for target.
+child_lib: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 child_lib
+.PHONY : child_lib
+
+# fast build rule for target.
+child_lib/fast:
+	$(MAKE) $(MAKESILENT) -f src/libs/messenger/children/CMakeFiles/child_lib.dir/build.make src/libs/messenger/children/CMakeFiles/child_lib.dir/build
+.PHONY : child_lib/fast
+
+#=============================================================================
 # Target rules for targets named exe
 
 # Build rule for target.
@@ -324,7 +363,7 @@ exe: cmake_check_build_system
 
 # fast build rule for target.
 exe/fast:
-	$(MAKE) $(MAKESILENT) -f src/executable/main/exesrcs/CMakeFiles/exe.dir/build.make src/executable/main/exesrcs/CMakeFiles/exe.dir/build
+	$(MAKE) $(MAKESILENT) -f src/executable/main/src/CMakeFiles/exe.dir/build.make src/executable/main/src/CMakeFiles/exe.dir/build
 .PHONY : exe/fast
 
 #=============================================================================
@@ -354,6 +393,7 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... test"
 	@echo "... child"
+	@echo "... child_lib"
 	@echo "... datter_tests"
 	@echo "... exe"
 	@echo "... gmock"
@@ -363,6 +403,8 @@ help:
 	@echo "... gtest_main"
 	@echo "... manager_lib"
 	@echo "... manager_tests"
+	@echo "... messenger_shared_lib"
+	@echo "... parent_lib"
 	@echo "... pipeline_lib"
 	@echo "... plotter2_lib"
 	@echo "... shared_lib"

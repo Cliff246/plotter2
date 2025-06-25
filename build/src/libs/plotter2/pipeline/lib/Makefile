@@ -209,6 +209,30 @@ sources/layer.cpp.s:
 	cd /Users/heathfortin/programing/languages/c++/plotter/build && $(MAKE) $(MAKESILENT) -f src/libs/plotter2/pipeline/lib/CMakeFiles/pipeline_lib.dir/build.make src/libs/plotter2/pipeline/lib/CMakeFiles/pipeline_lib.dir/sources/layer.cpp.s
 .PHONY : sources/layer.cpp.s
 
+sources/layertypes/layerscript.o: sources/layertypes/layerscript.cpp.o
+.PHONY : sources/layertypes/layerscript.o
+
+# target to build an object file
+sources/layertypes/layerscript.cpp.o:
+	cd /Users/heathfortin/programing/languages/c++/plotter/build && $(MAKE) $(MAKESILENT) -f src/libs/plotter2/pipeline/lib/CMakeFiles/pipeline_lib.dir/build.make src/libs/plotter2/pipeline/lib/CMakeFiles/pipeline_lib.dir/sources/layertypes/layerscript.cpp.o
+.PHONY : sources/layertypes/layerscript.cpp.o
+
+sources/layertypes/layerscript.i: sources/layertypes/layerscript.cpp.i
+.PHONY : sources/layertypes/layerscript.i
+
+# target to preprocess a source file
+sources/layertypes/layerscript.cpp.i:
+	cd /Users/heathfortin/programing/languages/c++/plotter/build && $(MAKE) $(MAKESILENT) -f src/libs/plotter2/pipeline/lib/CMakeFiles/pipeline_lib.dir/build.make src/libs/plotter2/pipeline/lib/CMakeFiles/pipeline_lib.dir/sources/layertypes/layerscript.cpp.i
+.PHONY : sources/layertypes/layerscript.cpp.i
+
+sources/layertypes/layerscript.s: sources/layertypes/layerscript.cpp.s
+.PHONY : sources/layertypes/layerscript.s
+
+# target to generate assembly for a file
+sources/layertypes/layerscript.cpp.s:
+	cd /Users/heathfortin/programing/languages/c++/plotter/build && $(MAKE) $(MAKESILENT) -f src/libs/plotter2/pipeline/lib/CMakeFiles/pipeline_lib.dir/build.make src/libs/plotter2/pipeline/lib/CMakeFiles/pipeline_lib.dir/sources/layertypes/layerscript.cpp.s
+.PHONY : sources/layertypes/layerscript.cpp.s
+
 sources/pipeline.o: sources/pipeline.cpp.o
 .PHONY : sources/pipeline.o
 
@@ -250,6 +274,9 @@ help:
 	@echo "... sources/layer.o"
 	@echo "... sources/layer.i"
 	@echo "... sources/layer.s"
+	@echo "... sources/layertypes/layerscript.o"
+	@echo "... sources/layertypes/layerscript.i"
+	@echo "... sources/layertypes/layerscript.s"
 	@echo "... sources/pipeline.o"
 	@echo "... sources/pipeline.i"
 	@echo "... sources/pipeline.s"
