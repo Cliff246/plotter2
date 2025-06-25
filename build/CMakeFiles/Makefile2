@@ -795,7 +795,7 @@ src/libs/plotter2/CMakeFiles/plotter2_lib.dir/all: src/libs/plotter2/grapher/lib
 
 # Build rule for subdir invocation for target.
 src/libs/plotter2/CMakeFiles/plotter2_lib.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/heathfortin/programing/languages/c++/plotter/build/CMakeFiles 32
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/heathfortin/programing/languages/c++/plotter/build/CMakeFiles 35
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/libs/plotter2/CMakeFiles/plotter2_lib.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/heathfortin/programing/languages/c++/plotter/build/CMakeFiles 0
 .PHONY : src/libs/plotter2/CMakeFiles/plotter2_lib.dir/rule
@@ -822,12 +822,12 @@ src/libs/plotter2/CMakeFiles/plotter2_lib.dir/clean:
 src/libs/plotter2/shared/lib/CMakeFiles/shared_lib.dir/all:
 	$(MAKE) $(MAKESILENT) -f src/libs/plotter2/shared/lib/CMakeFiles/shared_lib.dir/build.make src/libs/plotter2/shared/lib/CMakeFiles/shared_lib.dir/depend
 	$(MAKE) $(MAKESILENT) -f src/libs/plotter2/shared/lib/CMakeFiles/shared_lib.dir/build.make src/libs/plotter2/shared/lib/CMakeFiles/shared_lib.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/heathfortin/programing/languages/c++/plotter/build/CMakeFiles --progress-num=45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63 "Built target shared_lib"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/heathfortin/programing/languages/c++/plotter/build/CMakeFiles --progress-num=45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66 "Built target shared_lib"
 .PHONY : src/libs/plotter2/shared/lib/CMakeFiles/shared_lib.dir/all
 
 # Build rule for subdir invocation for target.
 src/libs/plotter2/shared/lib/CMakeFiles/shared_lib.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/heathfortin/programing/languages/c++/plotter/build/CMakeFiles 19
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/heathfortin/programing/languages/c++/plotter/build/CMakeFiles 22
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/libs/plotter2/shared/lib/CMakeFiles/shared_lib.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/heathfortin/programing/languages/c++/plotter/build/CMakeFiles 0
 .PHONY : src/libs/plotter2/shared/lib/CMakeFiles/shared_lib.dir/rule
@@ -839,7 +839,7 @@ shared_lib: src/libs/plotter2/shared/lib/CMakeFiles/shared_lib.dir/rule
 # codegen rule for target.
 src/libs/plotter2/shared/lib/CMakeFiles/shared_lib.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f src/libs/plotter2/shared/lib/CMakeFiles/shared_lib.dir/build.make src/libs/plotter2/shared/lib/CMakeFiles/shared_lib.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/heathfortin/programing/languages/c++/plotter/build/CMakeFiles --progress-num=45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63 "Finished codegen for target shared_lib"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/heathfortin/programing/languages/c++/plotter/build/CMakeFiles --progress-num=45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66 "Finished codegen for target shared_lib"
 .PHONY : src/libs/plotter2/shared/lib/CMakeFiles/shared_lib.dir/codegen
 
 # clean rule for target.
@@ -861,7 +861,7 @@ src/libs/plotter2/shared/tests/datter/CMakeFiles/datter_tests.dir/all: src/libs/
 
 # Build rule for subdir invocation for target.
 src/libs/plotter2/shared/tests/datter/CMakeFiles/datter_tests.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/heathfortin/programing/languages/c++/plotter/build/CMakeFiles 27
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/heathfortin/programing/languages/c++/plotter/build/CMakeFiles 30
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/libs/plotter2/shared/tests/datter/CMakeFiles/datter_tests.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/heathfortin/programing/languages/c++/plotter/build/CMakeFiles 0
 .PHONY : src/libs/plotter2/shared/tests/datter/CMakeFiles/datter_tests.dir/rule
@@ -893,7 +893,7 @@ src/libs/plotter2/pipeline/lib/CMakeFiles/pipeline_lib.dir/all: src/libs/plotter
 
 # Build rule for subdir invocation for target.
 src/libs/plotter2/pipeline/lib/CMakeFiles/pipeline_lib.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/heathfortin/programing/languages/c++/plotter/build/CMakeFiles 23
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/heathfortin/programing/languages/c++/plotter/build/CMakeFiles 26
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/libs/plotter2/pipeline/lib/CMakeFiles/pipeline_lib.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/heathfortin/programing/languages/c++/plotter/build/CMakeFiles 0
 .PHONY : src/libs/plotter2/pipeline/lib/CMakeFiles/pipeline_lib.dir/rule
@@ -926,7 +926,7 @@ src/libs/plotter2/manager/lib/CMakeFiles/manager_lib.dir/all: src/libs/plotter2/
 
 # Build rule for subdir invocation for target.
 src/libs/plotter2/manager/lib/CMakeFiles/manager_lib.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/heathfortin/programing/languages/c++/plotter/build/CMakeFiles 28
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/heathfortin/programing/languages/c++/plotter/build/CMakeFiles 31
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/libs/plotter2/manager/lib/CMakeFiles/manager_lib.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/heathfortin/programing/languages/c++/plotter/build/CMakeFiles 0
 .PHONY : src/libs/plotter2/manager/lib/CMakeFiles/manager_lib.dir/rule
@@ -962,7 +962,7 @@ src/libs/plotter2/manager/tests/CMakeFiles/manager_tests.dir/all: src/libs/plott
 
 # Build rule for subdir invocation for target.
 src/libs/plotter2/manager/tests/CMakeFiles/manager_tests.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/heathfortin/programing/languages/c++/plotter/build/CMakeFiles 36
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/heathfortin/programing/languages/c++/plotter/build/CMakeFiles 39
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/libs/plotter2/manager/tests/CMakeFiles/manager_tests.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/heathfortin/programing/languages/c++/plotter/build/CMakeFiles 0
 .PHONY : src/libs/plotter2/manager/tests/CMakeFiles/manager_tests.dir/rule
@@ -994,7 +994,7 @@ src/libs/plotter2/grapher/lib/CMakeFiles/grapher_lib.dir/all: src/libs/plotter2/
 
 # Build rule for subdir invocation for target.
 src/libs/plotter2/grapher/lib/CMakeFiles/grapher_lib.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/heathfortin/programing/languages/c++/plotter/build/CMakeFiles 21
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/heathfortin/programing/languages/c++/plotter/build/CMakeFiles 24
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/libs/plotter2/grapher/lib/CMakeFiles/grapher_lib.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/heathfortin/programing/languages/c++/plotter/build/CMakeFiles 0
 .PHONY : src/libs/plotter2/grapher/lib/CMakeFiles/grapher_lib.dir/rule
@@ -1128,7 +1128,7 @@ src/executable/main/src/CMakeFiles/exe.dir/all: src/libs/messenger/parent/CMakeF
 
 # Build rule for subdir invocation for target.
 src/executable/main/src/CMakeFiles/exe.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/heathfortin/programing/languages/c++/plotter/build/CMakeFiles 43
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/heathfortin/programing/languages/c++/plotter/build/CMakeFiles 46
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/executable/main/src/CMakeFiles/exe.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/heathfortin/programing/languages/c++/plotter/build/CMakeFiles 0
 .PHONY : src/executable/main/src/CMakeFiles/exe.dir/rule
@@ -1166,7 +1166,7 @@ src/executable/child/src/CMakeFiles/child.dir/all: src/libs/messenger/children/C
 
 # Build rule for subdir invocation for target.
 src/executable/child/src/CMakeFiles/child.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/heathfortin/programing/languages/c++/plotter/build/CMakeFiles 39
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/heathfortin/programing/languages/c++/plotter/build/CMakeFiles 42
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/executable/child/src/CMakeFiles/child.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/heathfortin/programing/languages/c++/plotter/build/CMakeFiles 0
 .PHONY : src/executable/child/src/CMakeFiles/child.dir/rule

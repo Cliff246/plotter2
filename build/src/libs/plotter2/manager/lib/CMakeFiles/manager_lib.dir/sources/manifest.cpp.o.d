@@ -1058,6 +1058,5 @@ src/libs/plotter2/manager/lib/CMakeFiles/manager_lib.dir/sources/manifest.cpp.o:
   /opt/homebrew/include/nlohmann/detail/macro_unscope.hpp \
   /opt/homebrew/include/nlohmann/thirdparty/hedley/hedley_undef.hpp \
   /Users/heathfortin/programing/languages/c++/plotter/src/libs/plotter2/manager/lib/include/file_manager.hpp \
-  /Users/heathfortin/programing/languages/c++/plotter/src/libs/plotter2/shared/lib/utils/include/utils_fileholder.hpp \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/fstream \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/set
+  /Users/heathfortin/programing/languages/c++/plotter/src/libs/plotter2/shared/lib/utils/include/fhold.hpp \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/fstream

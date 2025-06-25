@@ -1,10 +1,9 @@
 #pragma once
 
 #include <Python.h>
-#include <utils_fileholder.hpp>
+#include <fhold.hpp>
 #include <memory>
 #include "exposed.hpp"
-#include "dependency.hpp"
 
 namespace plt_shared
 {
@@ -14,7 +13,7 @@ namespace plt_shared
 	private:
 			
 		//file holder	
-		std::shared_ptr<fileholder> m_file;
+		std::shared_ptr<fhold> m_file;
 		
 
 		//script_content

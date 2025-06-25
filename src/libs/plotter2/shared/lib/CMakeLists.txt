@@ -26,11 +26,15 @@ set(DATTER_SOURCES
 )
 
 set(UTILS_SOURCES 
-	${CMAKE_CURRENT_SOURCE_DIR}/utils/sources/utils_fileholder.cpp
+	${CMAKE_CURRENT_SOURCE_DIR}/utils/sources/fhold.cpp
 
 	${CMAKE_CURRENT_SOURCE_DIR}/utils/sources/utils_threadpool.cpp
 	${CMAKE_CURRENT_SOURCE_DIR}/utils/sources/utils_threadworker.cpp
+	${CMAKE_CURRENT_SOURCE_DIR}/utils/sources/dependency.cpp
+	${CMAKE_CURRENT_SOURCE_DIR}/utils/sources/fholdtypes/file_holder.cpp
+	${CMAKE_CURRENT_SOURCE_DIR}/utils/sources/fholdtypes/directory_holder.cpp
 )
+
 
 add_library(shared_lib STATIC 
 	${LOGGY_SOURCES}
@@ -54,4 +58,5 @@ target_link_libraries(shared_lib
 	PRIVATE
     Eigen3::Eigen
     Python3::Python
+	nlohmann_json 
 )

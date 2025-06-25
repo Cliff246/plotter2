@@ -19,6 +19,6 @@ namespace plt_pipeline
 
 		virtual plt_shared::plotscene &transform_scene(plt_shared::plotscene &) = 0;	
 	};
-	using layer_ptr = std::unique_ptr<plt_pipeline::layer *>;
+	using layer_ptr = std::shared_ptr<plt_pipeline::layer >;
 
 }

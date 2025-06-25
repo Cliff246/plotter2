@@ -1,5 +1,6 @@
 #include "datasrc_csv.hpp"
 #include "dataholders/dataholder_string.hpp"
+#include <stdexcept>
 #include <string>
 #include <memory>
 #include <vector>
@@ -14,14 +15,14 @@ plt_shared::datasrc_csv::~datasrc_csv()
 	
 }
 
-const std::string plt_shared::datasrc_csv::get_type() const 
+std::string plt_shared::datasrc_csv::get_type() const 
 {
 	return "csv";
 }
 
 bool plt_shared::datasrc_csv::set_file(plt_shared::path_fs &path)
 {
-	m_holder = std::make_shared<fileholder>(path);
+	m_holder = std::make_shared<file_holder>(path);
 	if(m_holder->can_open() && m_holder->does_exist())
 	{
 		loaded = true;
@@ -35,18 +36,29 @@ bool plt_shared::datasrc_csv::set_file(plt_shared::path_fs &path)
 
 std::vector<std::vector<plt_shared::datahold_ptr>> plt_shared::datasrc_csv::get_data() 
 {
+
+
+
 	std::vector<std::vector<plt_shared::datahold_ptr>> datarows ;
 	if(loaded == false)
 	{
 		return datarows;
 	}
 
+	if(m_holder->get_fholdtype() != file)
+	{
+		throw std::runtime_error("cannot load from a non file fhold type");
+	}
 	std::vector<datahold_ptr> first;
 	datarows.push_back(first);
-	m_holder->open_file(std::ios::in);
+
+	plt_shared::file_holder *file = static_cast<plt_shared::file_holder *>(&*m_holder);
+
+
+	file->open_file(std::ios::in);
 	
 
-	std::string filedata = m_holder->read_all();	
+	std::string filedata = file->read_all();	
 
 	//parse the csv
 	size_t lines = 0;
@@ -171,13 +183,20 @@ std::vector<std::vector<std::string>> plt_shared::datasrc_csv::get_data_string()
 	{
 		return datarows;
 	}
+	if(m_holder->get_fholdtype() != file)
+	{
+		throw std::runtime_error("cannot load from a non file fhold type");
+	}
+
+	plt_shared::file_holder *file = static_cast<plt_shared::file_holder *>(&*m_holder);
+
 
 	std::vector<std::string> first;
 	datarows.push_back(first);
-	m_holder->open_file(std::ios::in);
+	file->open_file(std::ios::in);
 	
 
-	std::string filedata = m_holder->read_all();	
+	std::string filedata = file->read_all();	
 
 	//parse the csv
 	size_t lines = 0;

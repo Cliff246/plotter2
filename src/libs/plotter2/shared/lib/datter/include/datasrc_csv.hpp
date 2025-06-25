@@ -14,7 +14,7 @@ namespace plt_shared
 	public:	
 		~datasrc_csv();
 		datasrc_csv();
-		const std::string get_type() const override;
+		std::string get_type() const override;
 		bool set_file(path_fs &path) override; 
 
 		std::vector<std::vector<datahold_ptr>> get_data() override;	

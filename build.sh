@@ -28,4 +28,4 @@ fi
 # Run CMake and build
 cd "$BUILD_DIR" || exit 1
 cmake .. $CMAKE_OPTIONS
-make
+make -j10

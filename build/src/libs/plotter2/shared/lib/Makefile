@@ -545,29 +545,101 @@ scripter/sources/scripter.cpp.s:
 	cd /Users/heathfortin/programing/languages/c++/plotter/build && $(MAKE) $(MAKESILENT) -f src/libs/plotter2/shared/lib/CMakeFiles/shared_lib.dir/build.make src/libs/plotter2/shared/lib/CMakeFiles/shared_lib.dir/scripter/sources/scripter.cpp.s
 .PHONY : scripter/sources/scripter.cpp.s
 
-utils/sources/utils_fileholder.o: utils/sources/utils_fileholder.cpp.o
-.PHONY : utils/sources/utils_fileholder.o
+utils/sources/dependency.o: utils/sources/dependency.cpp.o
+.PHONY : utils/sources/dependency.o
 
 # target to build an object file
-utils/sources/utils_fileholder.cpp.o:
-	cd /Users/heathfortin/programing/languages/c++/plotter/build && $(MAKE) $(MAKESILENT) -f src/libs/plotter2/shared/lib/CMakeFiles/shared_lib.dir/build.make src/libs/plotter2/shared/lib/CMakeFiles/shared_lib.dir/utils/sources/utils_fileholder.cpp.o
-.PHONY : utils/sources/utils_fileholder.cpp.o
+utils/sources/dependency.cpp.o:
+	cd /Users/heathfortin/programing/languages/c++/plotter/build && $(MAKE) $(MAKESILENT) -f src/libs/plotter2/shared/lib/CMakeFiles/shared_lib.dir/build.make src/libs/plotter2/shared/lib/CMakeFiles/shared_lib.dir/utils/sources/dependency.cpp.o
+.PHONY : utils/sources/dependency.cpp.o
 
-utils/sources/utils_fileholder.i: utils/sources/utils_fileholder.cpp.i
-.PHONY : utils/sources/utils_fileholder.i
+utils/sources/dependency.i: utils/sources/dependency.cpp.i
+.PHONY : utils/sources/dependency.i
 
 # target to preprocess a source file
-utils/sources/utils_fileholder.cpp.i:
-	cd /Users/heathfortin/programing/languages/c++/plotter/build && $(MAKE) $(MAKESILENT) -f src/libs/plotter2/shared/lib/CMakeFiles/shared_lib.dir/build.make src/libs/plotter2/shared/lib/CMakeFiles/shared_lib.dir/utils/sources/utils_fileholder.cpp.i
-.PHONY : utils/sources/utils_fileholder.cpp.i
+utils/sources/dependency.cpp.i:
+	cd /Users/heathfortin/programing/languages/c++/plotter/build && $(MAKE) $(MAKESILENT) -f src/libs/plotter2/shared/lib/CMakeFiles/shared_lib.dir/build.make src/libs/plotter2/shared/lib/CMakeFiles/shared_lib.dir/utils/sources/dependency.cpp.i
+.PHONY : utils/sources/dependency.cpp.i
 
-utils/sources/utils_fileholder.s: utils/sources/utils_fileholder.cpp.s
-.PHONY : utils/sources/utils_fileholder.s
+utils/sources/dependency.s: utils/sources/dependency.cpp.s
+.PHONY : utils/sources/dependency.s
 
 # target to generate assembly for a file
-utils/sources/utils_fileholder.cpp.s:
-	cd /Users/heathfortin/programing/languages/c++/plotter/build && $(MAKE) $(MAKESILENT) -f src/libs/plotter2/shared/lib/CMakeFiles/shared_lib.dir/build.make src/libs/plotter2/shared/lib/CMakeFiles/shared_lib.dir/utils/sources/utils_fileholder.cpp.s
-.PHONY : utils/sources/utils_fileholder.cpp.s
+utils/sources/dependency.cpp.s:
+	cd /Users/heathfortin/programing/languages/c++/plotter/build && $(MAKE) $(MAKESILENT) -f src/libs/plotter2/shared/lib/CMakeFiles/shared_lib.dir/build.make src/libs/plotter2/shared/lib/CMakeFiles/shared_lib.dir/utils/sources/dependency.cpp.s
+.PHONY : utils/sources/dependency.cpp.s
+
+utils/sources/fhold.o: utils/sources/fhold.cpp.o
+.PHONY : utils/sources/fhold.o
+
+# target to build an object file
+utils/sources/fhold.cpp.o:
+	cd /Users/heathfortin/programing/languages/c++/plotter/build && $(MAKE) $(MAKESILENT) -f src/libs/plotter2/shared/lib/CMakeFiles/shared_lib.dir/build.make src/libs/plotter2/shared/lib/CMakeFiles/shared_lib.dir/utils/sources/fhold.cpp.o
+.PHONY : utils/sources/fhold.cpp.o
+
+utils/sources/fhold.i: utils/sources/fhold.cpp.i
+.PHONY : utils/sources/fhold.i
+
+# target to preprocess a source file
+utils/sources/fhold.cpp.i:
+	cd /Users/heathfortin/programing/languages/c++/plotter/build && $(MAKE) $(MAKESILENT) -f src/libs/plotter2/shared/lib/CMakeFiles/shared_lib.dir/build.make src/libs/plotter2/shared/lib/CMakeFiles/shared_lib.dir/utils/sources/fhold.cpp.i
+.PHONY : utils/sources/fhold.cpp.i
+
+utils/sources/fhold.s: utils/sources/fhold.cpp.s
+.PHONY : utils/sources/fhold.s
+
+# target to generate assembly for a file
+utils/sources/fhold.cpp.s:
+	cd /Users/heathfortin/programing/languages/c++/plotter/build && $(MAKE) $(MAKESILENT) -f src/libs/plotter2/shared/lib/CMakeFiles/shared_lib.dir/build.make src/libs/plotter2/shared/lib/CMakeFiles/shared_lib.dir/utils/sources/fhold.cpp.s
+.PHONY : utils/sources/fhold.cpp.s
+
+utils/sources/fholdtypes/directory_holder.o: utils/sources/fholdtypes/directory_holder.cpp.o
+.PHONY : utils/sources/fholdtypes/directory_holder.o
+
+# target to build an object file
+utils/sources/fholdtypes/directory_holder.cpp.o:
+	cd /Users/heathfortin/programing/languages/c++/plotter/build && $(MAKE) $(MAKESILENT) -f src/libs/plotter2/shared/lib/CMakeFiles/shared_lib.dir/build.make src/libs/plotter2/shared/lib/CMakeFiles/shared_lib.dir/utils/sources/fholdtypes/directory_holder.cpp.o
+.PHONY : utils/sources/fholdtypes/directory_holder.cpp.o
+
+utils/sources/fholdtypes/directory_holder.i: utils/sources/fholdtypes/directory_holder.cpp.i
+.PHONY : utils/sources/fholdtypes/directory_holder.i
+
+# target to preprocess a source file
+utils/sources/fholdtypes/directory_holder.cpp.i:
+	cd /Users/heathfortin/programing/languages/c++/plotter/build && $(MAKE) $(MAKESILENT) -f src/libs/plotter2/shared/lib/CMakeFiles/shared_lib.dir/build.make src/libs/plotter2/shared/lib/CMakeFiles/shared_lib.dir/utils/sources/fholdtypes/directory_holder.cpp.i
+.PHONY : utils/sources/fholdtypes/directory_holder.cpp.i
+
+utils/sources/fholdtypes/directory_holder.s: utils/sources/fholdtypes/directory_holder.cpp.s
+.PHONY : utils/sources/fholdtypes/directory_holder.s
+
+# target to generate assembly for a file
+utils/sources/fholdtypes/directory_holder.cpp.s:
+	cd /Users/heathfortin/programing/languages/c++/plotter/build && $(MAKE) $(MAKESILENT) -f src/libs/plotter2/shared/lib/CMakeFiles/shared_lib.dir/build.make src/libs/plotter2/shared/lib/CMakeFiles/shared_lib.dir/utils/sources/fholdtypes/directory_holder.cpp.s
+.PHONY : utils/sources/fholdtypes/directory_holder.cpp.s
+
+utils/sources/fholdtypes/file_holder.o: utils/sources/fholdtypes/file_holder.cpp.o
+.PHONY : utils/sources/fholdtypes/file_holder.o
+
+# target to build an object file
+utils/sources/fholdtypes/file_holder.cpp.o:
+	cd /Users/heathfortin/programing/languages/c++/plotter/build && $(MAKE) $(MAKESILENT) -f src/libs/plotter2/shared/lib/CMakeFiles/shared_lib.dir/build.make src/libs/plotter2/shared/lib/CMakeFiles/shared_lib.dir/utils/sources/fholdtypes/file_holder.cpp.o
+.PHONY : utils/sources/fholdtypes/file_holder.cpp.o
+
+utils/sources/fholdtypes/file_holder.i: utils/sources/fholdtypes/file_holder.cpp.i
+.PHONY : utils/sources/fholdtypes/file_holder.i
+
+# target to preprocess a source file
+utils/sources/fholdtypes/file_holder.cpp.i:
+	cd /Users/heathfortin/programing/languages/c++/plotter/build && $(MAKE) $(MAKESILENT) -f src/libs/plotter2/shared/lib/CMakeFiles/shared_lib.dir/build.make src/libs/plotter2/shared/lib/CMakeFiles/shared_lib.dir/utils/sources/fholdtypes/file_holder.cpp.i
+.PHONY : utils/sources/fholdtypes/file_holder.cpp.i
+
+utils/sources/fholdtypes/file_holder.s: utils/sources/fholdtypes/file_holder.cpp.s
+.PHONY : utils/sources/fholdtypes/file_holder.s
+
+# target to generate assembly for a file
+utils/sources/fholdtypes/file_holder.cpp.s:
+	cd /Users/heathfortin/programing/languages/c++/plotter/build && $(MAKE) $(MAKESILENT) -f src/libs/plotter2/shared/lib/CMakeFiles/shared_lib.dir/build.make src/libs/plotter2/shared/lib/CMakeFiles/shared_lib.dir/utils/sources/fholdtypes/file_holder.cpp.s
+.PHONY : utils/sources/fholdtypes/file_holder.cpp.s
 
 utils/sources/utils_threadpool.o: utils/sources/utils_threadpool.cpp.o
 .PHONY : utils/sources/utils_threadpool.o
@@ -676,9 +748,18 @@ help:
 	@echo "... scripter/sources/scripter.o"
 	@echo "... scripter/sources/scripter.i"
 	@echo "... scripter/sources/scripter.s"
-	@echo "... utils/sources/utils_fileholder.o"
-	@echo "... utils/sources/utils_fileholder.i"
-	@echo "... utils/sources/utils_fileholder.s"
+	@echo "... utils/sources/dependency.o"
+	@echo "... utils/sources/dependency.i"
+	@echo "... utils/sources/dependency.s"
+	@echo "... utils/sources/fhold.o"
+	@echo "... utils/sources/fhold.i"
+	@echo "... utils/sources/fhold.s"
+	@echo "... utils/sources/fholdtypes/directory_holder.o"
+	@echo "... utils/sources/fholdtypes/directory_holder.i"
+	@echo "... utils/sources/fholdtypes/directory_holder.s"
+	@echo "... utils/sources/fholdtypes/file_holder.o"
+	@echo "... utils/sources/fholdtypes/file_holder.i"
+	@echo "... utils/sources/fholdtypes/file_holder.s"
 	@echo "... utils/sources/utils_threadpool.o"
 	@echo "... utils/sources/utils_threadpool.i"
 	@echo "... utils/sources/utils_threadpool.s"
