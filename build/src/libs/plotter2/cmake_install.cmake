@@ -40,6 +40,7 @@ endif()
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
   include("/Users/heathfortin/programing/languages/c++/plotter/build/src/libs/plotter2/shared/cmake_install.cmake")
+  include("/Users/heathfortin/programing/languages/c++/plotter/build/src/libs/plotter2/datter/cmake_install.cmake")
   include("/Users/heathfortin/programing/languages/c++/plotter/build/src/libs/plotter2/pipeline/cmake_install.cmake")
   include("/Users/heathfortin/programing/languages/c++/plotter/build/src/libs/plotter2/manager/cmake_install.cmake")
   include("/Users/heathfortin/programing/languages/c++/plotter/build/src/libs/plotter2/grapher/cmake_install.cmake")

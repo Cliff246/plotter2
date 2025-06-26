@@ -90,11 +90,13 @@ bool plt_shared::file_holder::can_read() const
 
 char plt_shared::file_holder::read()
 {
-	if(is_loaded() || !can_read())
+	if(!is_loaded() || !can_read())
 	{
 		throw std::runtime_error("cannot read from a file that's not loaded or readable");
 	}
-	char value;
+	
+	char value = m_stream.get();
+
 	return value;
 }
 

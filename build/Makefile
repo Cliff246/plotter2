@@ -250,6 +250,32 @@ shared_lib/fast:
 .PHONY : shared_lib/fast
 
 #=============================================================================
+# Target rules for targets named utils_tests
+
+# Build rule for target.
+utils_tests: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 utils_tests
+.PHONY : utils_tests
+
+# fast build rule for target.
+utils_tests/fast:
+	$(MAKE) $(MAKESILENT) -f src/libs/plotter2/shared/tests/utils/CMakeFiles/utils_tests.dir/build.make src/libs/plotter2/shared/tests/utils/CMakeFiles/utils_tests.dir/build
+.PHONY : utils_tests/fast
+
+#=============================================================================
+# Target rules for targets named datter_lib
+
+# Build rule for target.
+datter_lib: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 datter_lib
+.PHONY : datter_lib
+
+# fast build rule for target.
+datter_lib/fast:
+	$(MAKE) $(MAKESILENT) -f src/libs/plotter2/datter/lib/CMakeFiles/datter_lib.dir/build.make src/libs/plotter2/datter/lib/CMakeFiles/datter_lib.dir/build
+.PHONY : datter_lib/fast
+
+#=============================================================================
 # Target rules for targets named datter_tests
 
 # Build rule for target.
@@ -259,7 +285,7 @@ datter_tests: cmake_check_build_system
 
 # fast build rule for target.
 datter_tests/fast:
-	$(MAKE) $(MAKESILENT) -f src/libs/plotter2/shared/tests/datter/CMakeFiles/datter_tests.dir/build.make src/libs/plotter2/shared/tests/datter/CMakeFiles/datter_tests.dir/build
+	$(MAKE) $(MAKESILENT) -f src/libs/plotter2/datter/tests/CMakeFiles/datter_tests.dir/build.make src/libs/plotter2/datter/tests/CMakeFiles/datter_tests.dir/build
 .PHONY : datter_tests/fast
 
 #=============================================================================
@@ -394,6 +420,7 @@ help:
 	@echo "... test"
 	@echo "... child"
 	@echo "... child_lib"
+	@echo "... datter_lib"
 	@echo "... datter_tests"
 	@echo "... exe"
 	@echo "... gmock"
@@ -408,6 +435,7 @@ help:
 	@echo "... pipeline_lib"
 	@echo "... plotter2_lib"
 	@echo "... shared_lib"
+	@echo "... utils_tests"
 .PHONY : help
 
 

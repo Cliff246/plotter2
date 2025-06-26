@@ -1,8 +1,8 @@
 
 set(DATTER_SOURCES_TEST 
-	${CMAKE_CURRENT_SOURCE_DIR}/tests/datter_tests.cpp
-	${CMAKE_CURRENT_SOURCE_DIR}/tests/datasrc_csv_tests.cpp
-	${CMAKE_CURRENT_SOURCE_DIR}/tests/tests.cpp
+	${CMAKE_CURRENT_SOURCE_DIR}/sources/datter_tests.cpp
+	${CMAKE_CURRENT_SOURCE_DIR}/sources/datasrc_csv_tests.cpp
+	${CMAKE_CURRENT_SOURCE_DIR}/sources/tests.cpp
 )
 
 
@@ -20,6 +20,7 @@ gtest_discover_tests(datter_tests)
 
 target_link_libraries(datter_tests
 	PRIVATE
+	datter_lib
 	Eigen3::Eigen
     Python3::Python
 	shared_lib

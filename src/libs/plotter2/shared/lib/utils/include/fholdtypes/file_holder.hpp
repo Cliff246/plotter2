@@ -14,9 +14,10 @@ namespace plt_shared
 {
 	class file_holder : public fhold
 	{
+	//TODO this is highly flawed
+	//should implement caching and thread saftey
 	private:
 		path_fs m_path;
-		//file type(unused right now)
 		//stream
 		//
 		std::fstream m_stream;

@@ -313,6 +313,9 @@ INSTALL_GTEST:BOOL=ON
 //Dependencies for the target
 child_lib_LIB_DEPENDS:STATIC=general;messenger_shared_lib;
 
+//Dependencies for the target
+datter_lib_LIB_DEPENDS:STATIC=general;Python3::Python;general;shared_lib;general;pipeline_lib;
+
 //Value Computed by CMake
 gmock_BINARY_DIR:STATIC=/Users/heathfortin/programing/languages/c++/plotter/build/_deps/googletest-build/googlemock
 
@@ -384,7 +387,7 @@ plotter2_IS_TOP_LEVEL:STATIC=ON
 plotter2_SOURCE_DIR:STATIC=/Users/heathfortin/programing/languages/c++/plotter
 
 //Dependencies for the target
-plotter2_lib_LIB_DEPENDS:STATIC=general;Python3::Python;general;grapher_lib;general;manager_lib;general;shared_lib;general;pipeline_lib;
+plotter2_lib_LIB_DEPENDS:STATIC=general;Python3::Python;general;datter_lib;general;shared_lib;general;grapher_lib;general;manager_lib;general;pipeline_lib;
 
 //The directory containing a CMake configuration file for pybind11.
 pybind11_DIR:PATH=/opt/homebrew/share/cmake/pybind11
@@ -525,7 +528,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=28
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=31
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP
