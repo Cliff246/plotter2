@@ -276,17 +276,56 @@ datter_lib/fast:
 .PHONY : datter_lib/fast
 
 #=============================================================================
-# Target rules for targets named datter_tests
+# Target rules for targets named datter_core_lib
 
 # Build rule for target.
-datter_tests: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 datter_tests
-.PHONY : datter_tests
+datter_core_lib: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 datter_core_lib
+.PHONY : datter_core_lib
 
 # fast build rule for target.
-datter_tests/fast:
-	$(MAKE) $(MAKESILENT) -f src/libs/plotter2/datter/tests/CMakeFiles/datter_tests.dir/build.make src/libs/plotter2/datter/tests/CMakeFiles/datter_tests.dir/build
-.PHONY : datter_tests/fast
+datter_core_lib/fast:
+	$(MAKE) $(MAKESILENT) -f src/libs/plotter2/datter/lib/core/CMakeFiles/datter_core_lib.dir/build.make src/libs/plotter2/datter/lib/core/CMakeFiles/datter_core_lib.dir/build
+.PHONY : datter_core_lib/fast
+
+#=============================================================================
+# Target rules for targets named datter_datatypes_lib
+
+# Build rule for target.
+datter_datatypes_lib: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 datter_datatypes_lib
+.PHONY : datter_datatypes_lib
+
+# fast build rule for target.
+datter_datatypes_lib/fast:
+	$(MAKE) $(MAKESILENT) -f src/libs/plotter2/datter/lib/core/datatypes/CMakeFiles/datter_datatypes_lib.dir/build.make src/libs/plotter2/datter/lib/core/datatypes/CMakeFiles/datter_datatypes_lib.dir/build
+.PHONY : datter_datatypes_lib/fast
+
+#=============================================================================
+# Target rules for targets named datter_datasrc_lib
+
+# Build rule for target.
+datter_datasrc_lib: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 datter_datasrc_lib
+.PHONY : datter_datasrc_lib
+
+# fast build rule for target.
+datter_datasrc_lib/fast:
+	$(MAKE) $(MAKESILENT) -f src/libs/plotter2/datter/lib/core/datasrc/CMakeFiles/datter_datasrc_lib.dir/build.make src/libs/plotter2/datter/lib/core/datasrc/CMakeFiles/datter_datasrc_lib.dir/build
+.PHONY : datter_datasrc_lib/fast
+
+#=============================================================================
+# Target rules for targets named datter_dataframe_lib
+
+# Build rule for target.
+datter_dataframe_lib: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 datter_dataframe_lib
+.PHONY : datter_dataframe_lib
+
+# fast build rule for target.
+datter_dataframe_lib/fast:
+	$(MAKE) $(MAKESILENT) -f src/libs/plotter2/datter/lib/core/dataframe/CMakeFiles/datter_dataframe_lib.dir/build.make src/libs/plotter2/datter/lib/core/dataframe/CMakeFiles/datter_dataframe_lib.dir/build
+.PHONY : datter_dataframe_lib/fast
 
 #=============================================================================
 # Target rules for targets named pipeline_lib
@@ -298,8 +337,21 @@ pipeline_lib: cmake_check_build_system
 
 # fast build rule for target.
 pipeline_lib/fast:
-	$(MAKE) $(MAKESILENT) -f src/libs/plotter2/pipeline/lib/CMakeFiles/pipeline_lib.dir/build.make src/libs/plotter2/pipeline/lib/CMakeFiles/pipeline_lib.dir/build
+	$(MAKE) $(MAKESILENT) -f src/libs/plotter2/datter/lib/pipeline/lib/CMakeFiles/pipeline_lib.dir/build.make src/libs/plotter2/datter/lib/pipeline/lib/CMakeFiles/pipeline_lib.dir/build
 .PHONY : pipeline_lib/fast
+
+#=============================================================================
+# Target rules for targets named datter_tests
+
+# Build rule for target.
+datter_tests: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 datter_tests
+.PHONY : datter_tests
+
+# fast build rule for target.
+datter_tests/fast:
+	$(MAKE) $(MAKESILENT) -f src/libs/plotter2/datter/tests/CMakeFiles/datter_tests.dir/build.make src/libs/plotter2/datter/tests/CMakeFiles/datter_tests.dir/build
+.PHONY : datter_tests/fast
 
 #=============================================================================
 # Target rules for targets named manager_lib
@@ -420,6 +472,10 @@ help:
 	@echo "... test"
 	@echo "... child"
 	@echo "... child_lib"
+	@echo "... datter_core_lib"
+	@echo "... datter_dataframe_lib"
+	@echo "... datter_datasrc_lib"
+	@echo "... datter_datatypes_lib"
 	@echo "... datter_lib"
 	@echo "... datter_tests"
 	@echo "... exe"

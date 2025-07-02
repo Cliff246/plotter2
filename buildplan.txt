@@ -1,0 +1,122 @@
+
+
+build feature plan:
+
+logger2 != loggy
+loggy = runtime logs
+logger2 = data formater from experiment -> plotter2
+essentually rather than manually configruing plotter2 logger2 will help the experiment author(me) do the whole shebang with not much need
+
+current size:
+	3k
+
+1st:
+expected code size 0k: 10k
+expected data: august 2025
+	get the child and main system working
+	build datter's bones and start
+	build up the root's of the entire projects
+	build the basic manifest sytsem
+	prepare for pipelines
+
+2nd:
+expected code size 10k: 20k
+expected data: september/october 2025
+ 	finish Pipelines
+	get a working data flow with basic pipelines
+	confirm multiproccess Orchestration works
+	linking basics and data flow proof of concept
+
+	//we want a actual graph rendered at this state using a matplotlib convertion
+	additonally logger2 starts taking shape(source machine data formater) and working for plotter2
+
+
+3rd:
+
+expected code size: 20k: 30k
+expected data: late 2025 early 2026
+	begin with expansion, configs, state control and saftey.
+
+	begin threading convertion and actual server capacity
+	prepare the batching system, safe copies and more
+	prepare scripting and api
+	get the python library in a pre 'bare bones' state
+
+	//another step, this is a 'rewrite' in all but names. not critical but ensure threading is safe and secure
+	logger2 is in
+4th:
+expected code size: 30k: 50k
+expected date: 2026(mid to early 2026)
+	lay out ground work for the cli,
+	start the threading refactor.
+	begin real time Orchestration
+	start scripting as an option, mostly configurations of pipelines and premath, but get it working
+	watchdog1 start
+	//start looking for more uptime, input management. this is the first 'WORKING' state
+
+
+5th:
+expected code date(mid to late 2026)
+expected code size: 50k: 70/80k
+	full scale convertion to plotter2 as a workflow. this is when we will get full features working
+	cli should work, datter should work nominally, threading should work.
+
+	staging ground start
+	watchdog3 start
+	children saftey should be strong
+
+	scripting should be in a functional state for use
+	batching optimization basics
+	pipeline is refined and clean/easy to use
+	manifest version upgrade to v2 for scripting in a plot as well as pushing towards a ready version
+	renderkit nominally working.
+	pre release effectively
+
+6th:
+expected code size: 70/80k: 120k+
+expected date: start of 2027
+
+	actual code functionallity, tests working and clean, this should feel natural to use and TALI experements should be fullswing
+
+	we will begin with code signing for scripting, saftey checks
+
+	servicer begining!!!
+	service begining!!!
+	watchdog 2 begining
+	ai work flow begining!!!
+
+	async IO
+	DOCUMENTATION completed for api and more
+
+	childsaftey and windows port?
+
+	build time optimizations
+
+	binary optimizations
+
+7th:
+expected date: end of 2027
+expected code size: 120k+
+	plotter2 version1, show and tell.
+	servicers are functional
+	services are functional
+	ai work flow if nice is completed
+	we start making renderkit more portable and useable
+	clean use and more
+	logger2 works
+	scripting is natural for it's usecases
+	pipelines are SUPER natural and well tested
+	optimization
+
+8th:
+expected date: start of 2028
+expected code size: 120k : 150k/200k
+	look for collaberators
+	fix problems in workflow
+	more optimizations
+	native renderkit?
+
+	continue show and tell.
+
+	possible non me users? so we work on their features?
+	this is where I may slow down

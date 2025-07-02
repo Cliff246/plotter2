@@ -12,11 +12,11 @@
 
 int csv_test1()
 {
-	plt_shared::datasrc_csv csv;
+	datter::datasrc_csv csv;
 	std::filesystem::path path("resources/csv1.csv");
 	
 	csv.set_file(path);	
-	std::vector<std::vector<plt_shared::datahold_ptr>> results = csv.get_data();
+	std::vector<std::vector<datter::datahold_ptr>> results = csv.get_data();
 	
 	const std::string data[] = {
 		"hello",
@@ -30,8 +30,8 @@ int csv_test1()
 	int needed = 0;
 	for(int i = 0; i < results[0].size(); ++i)
 	{
-		plt_shared::datahold_ptr holder = results[0][i];
-		plt_shared::dataholder::datahold_string *str = dynamic_cast<plt_shared::dataholder::datahold_string*>(&*holder);
+		datter::datahold_ptr holder = results[0][i];
+		datter::dataholder::datahold_string *str = dynamic_cast<datter::dataholder::datahold_string*>(&*holder);
 		std::string string = str->get_string();
 		if(!data[i].compare(string))
 		{
@@ -46,11 +46,11 @@ int csv_test1()
 
 int csv_test2()
 {
-	plt_shared::datasrc_csv csv;
+	datter::datasrc_csv csv;
 	std::filesystem::path path("resources/csv2.csv");
 	
 	csv.set_file(path);	
-	std::vector<std::vector<plt_shared::datahold_ptr>> results = csv.get_data();
+	std::vector<std::vector<datter::datahold_ptr>> results = csv.get_data();
 
 
 	const std::vector<std::vector<std::string>> expected = {
@@ -95,13 +95,14 @@ int csv_test2()
 				throw std::runtime_error("c > size");
 			}
 		
-			plt_shared::datahold_ptr holder = k;
+			datter::datahold_ptr holder = k;
 
 			if(holder == nullptr)
 			{
 				throw std::runtime_error("shared pointer held onto null");
 			}
-			plt_shared::dataholder::datahold_string *str = dynamic_cast<plt_shared::dataholder::datahold_string*>(&*holder);
+			datter::dataholder::datahold_string *str = dynamic_cast<datter::dataholder::datahold_string*>(&*holder);
+			
 			if(!str)
 			{
 				throw std::runtime_error("dynamic cast to datahold_string failed");

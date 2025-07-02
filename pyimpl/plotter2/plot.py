@@ -7,3 +7,5 @@ class Plot:
 
 	def __init__(self):
 		self.scenemap = SceneMap({})
+
+
