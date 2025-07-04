@@ -176,7 +176,7 @@ class Bundle:
 		self.add_to_frame("hello")
 		for n in self.neighbours:
 
-			if(random.randint(0, 10) != 11):
+			if(random.randint(0, 1) != 1):
 				self.share(n)
 
 

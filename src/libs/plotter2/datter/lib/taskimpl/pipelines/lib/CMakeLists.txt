@@ -20,5 +20,6 @@ target_link_libraries(pipeline_lib
     Python3::Python
 	shared_lib
 	datter_core_lib
+	datter_model_lib
 	PUBLIC
 )

@@ -2,17 +2,17 @@
 
 let's work towards an understanding of the system design
 
-in general plotter2 should sit in between data and experiments acting as a bridge and coordnater all in one
+in general plotter2 should sit in between data and experiments acting as a bridge and coordinator all in one
 
 				plotting and analysis
 					^
 					|
 datasources ->	[plotter2]  -> long term storage
-					/\
+				    /\
 				   /  \
-				  /	   \
-				 /		\
-				<		 >
+				  /    \
+				 /      \
+				<	 >
 			[commands]	[reruns and experimental versioning]
 
 
@@ -26,32 +26,32 @@ something like
 
 source_1245132 ---> output_data/[contains data base csv's, json's, anything really. could be gb's to terabytes of data in a tree]
 			   \--> manifest.json
-				\-> source_data/[contains the source code and generation system, not the actual data necessarily, it's to ensure how data is gotten is not lost, more simple then git]
-				 \> tbd/[idk more space]
+			    \-> source_data/[contains the source code and generation system, not the actual data necessarily, it's to ensure how data is gotten is not lost, more simple then git]
+			      \> tbd/[idk more space]
 
 
 plotter2 is a server. it's always on, always watching. the way plotter works is it's the gate way in. while data may be stored on a filesystem like drive.
  you don't insert shit your self, you ask plotter2 to do that.
 
-how plotter2 may look at a dirve is like this:
+how plotter2 may look at a drive is like this:
 
 
 we will have 7 directories that plotter2 manages.
 
 1st: source directory(where data is stored)
 2nd: temp directory(staging ground and buffer(could be in /tmp))
-3rd: config directory(configurations and extentions)
+3rd: config directory(configurations and extensions)
 4th: service directory(external app's and experiments reloaded(could also be in /tmp))
 5th: registry directory(registry of everything)
-6th: output directory(where shit is retreived from)
-7th: log/daemon moniter directory(the watchdog of plotter2 run by cron or systemd)
+6th: output directory(where shit is retrieved from)
+7th: log/daemon monitor directory(the watchdog of plotter2 run by cron or systemd)
 
 
 plotter2 will run on a multiple input type system.
 
 
 	firstly:
-		it will recieve bundles, data information. this can be from it's self, or from a user.
+		it will receive bundles, data information. this can be from it's self, or from a user.
 		(by it's self means plotter2 starts an experiment in the service directory, the service outputs a bundle, plotter2 pushes the bundle into staging)
 
 		this will be done using a watched file directory, as in, plotter2 watches some directory for a package and then loads it into this
@@ -60,11 +60,11 @@ plotter2 will run on a multiple input type system.
 		command and api system(plotter2 will not be something you demand from. you ask it and it will do it for you.
 		you don't just say:
 
-			>kill proccess 4
+			>kill process 4
 
-		there will likely be a cli interface but as a service baked ontop of plotter2 for maintaince.
+		there will likely be a cli interface but as a service baked on-top of plotter2 for maintenance.
 
-		rather plotter2 will recieve requests from an api, these will be well formated and targeted. these will not be 'lost' but persistant and logged. you ask it to do something, plotter2 rememebers
+		rather plotter2 will receive requests from an api, these will be well formatted and targeted. these will not be 'lost' but persistent and logged. you ask it to do something, plotter2 remembers
 
 		for example let's say i ask plotter2 in layman's terms(cause I currently lack a design doc for the api):
 
@@ -74,18 +74,18 @@ plotter2 will run on a multiple input type system.
 
 
 	thirdly:
-		automatic input generation will be saught out. that's to say AI enabled work flow's will be built into plotter2 if it comes to that. ai will help schedule out and create precise instructions for plotter2 from user requests or from a chain of successes.
+		automatic input generation will be sought out. that's to say AI enabled work flow's will be built into plotter2 if it comes to that. ai will help schedule out and create precise instructions for plotter2 from user requests or from a chain of successes.
 
 		as in the ai may be asked.
-			"generate a plot of the output's where data that's clustered is circled and labled and non clusted data is removed"
+			"generate a plot of the output's where data that's clustered is circled and labeled and non closeted data is removed"
 
 		in the context of an experiment, the ai will determine the scope, what to draw, how to draw and if it can be accomplished.
 
 		it's not supposed to 'find the meaning of life' but give it a scope that's strong it can help manufacture this easier.
 
-		of course plotter2 owns the ai. that's to say, plotter2 has final juristiction and it can just say no. think of the ai as an 'auto user'
+		of course plotter2 owns the ai. that's to say, plotter2 has final jurisdiction and it can just say no. think of the ai as an 'auto user'
 
-	finaly:
+	finally:
 		plotter2 will work with all three systems from the same vantage point. there are two things you can do. give plotter information. or ask for something to be done. both can be bundled together but in general, thing's are non mutable. as in do something, You don't delete it, you move on past it or archive it.
 
 
@@ -95,7 +95,7 @@ Workflow kinda:
 
 plotter2 logs, stores and begins to cycle up a experiment, that's to say, plotter2 already knows what it's expecting.
 if plotter2 has been told for experiment2 batches to log the mean reward over time or generate a report for the entire experiment2.
-then plotter2 will begin this proccess automatically. if plotter2 has been told to generate a meta meta report of experiment2 it also will.
+then plotter2 will begin this process automatically. if plotter2 has been told to generate a meta meta report of experiment2 it also will.
 what that means is let's say I ran experiment2 before, it's stored, charted and effectively 'done'. but I told plotter2 to compare experiment2 with it's future results before.
 plotter2 when given a new instruction will reread the old data and generate a new report.
 
@@ -198,14 +198,16 @@ what are bundles?
 		[bundle1]
 		   /\
 		  /  \
-		 /	  \
-		/	   \
-[bundle1 data] [children]
-				/		\
-			   /		 \
-			[bundle2]	[bundle3]
-			/					\
-			[bundle2 data] 		[bundle3 data]
+		 /    \
+		/      \
+	[bundle1 data]	\
+			[children]	 
+                	 /      \
+			/        \
+	     	       /          \
+		[bundle2]	[bundle3]
+		/		    \
+	[bundle2 data] 		[bundle3 data]
 
 		we say:
 			bundles include their data as an element. that's expected
@@ -214,10 +216,10 @@ what are bundles?
 		[data]
 		[children]
 		|	   \
-		|		\
-		\ 		 [bundle3]
-		 \		 [data]
-		  \		 [no children]
+		|	    \
+		\ 	   [bundle3]
+		 \	   [data]
+		  \	   [no children]
 		   \
 	  	    \
 		[bundle2]
@@ -228,28 +230,28 @@ what are bundles?
 
 Now what is a manifest?
 
-	Like in the past ocean faring day's manifests's represent information on cargo. they are transit information for data! you don't really wan't to be using the API for long data stream's. It can be used but it's really for small snipet's and extentions.
+	Like in the past ocean faring day's manifests's represent information on cargo. they are transit information for data! you don't really wan't to be using the API for long data stream's. It can be used but it's really for small snippets and extensions.
 
 	Manifests serve as a transport's book keeping. they define what something is, what it's doing.
 
 	but plotter2 get's to decide what something is actually.
-	not in the 'well actually🤓' but in the 'ehhh, experiment15_revision4 barely links with experiment15_revision3 so they probablly aren't children. it will listen to you,
+	not in the 'well actually🤓' but in the 'ehhh, experiment15_revision4 barely links with experiment15_revision3 so they probably aren't children. it will listen to you,
 
-	manifests are complicated but will include version codes, users, date & time, dependencies and what the transport contains. links, tasks, everything else is optional and included in submanifests.
+	manifests are complicated but will include version codes, users, date & time, dependencies and what the transport contains. links, tasks, everything else is optional and included in sub manifests.
 	manifests can contain just new configurations, updates, and new data Or could be a whole new work flow
 
 
 
-	back to manifests. they are temporary and just define updates, they presupose something new to plotter2
+	back to manifests. they are temporary and just define updates, they presuppose something new to plotter2
 
-	but plotter2's state is king, and a manifest can represcribe conditions.
+	but plotter2's state is king, and a manifest can re-perscribe conditions.
 
 	let's be clear. manifests only describe. setting and everything else is a task, which manifests can describe. Why are they important... cause they describe projects in such a way that is clear.
 
-	that's also to say... manifests exist within their scope only. a manifest does not update old information just installs new information. a manifest also does not gurantee anything. if a manifest says experiment1 links to experiment2. if you update experiment1 with new information. the manifest is no longer valid for experiment1. it's actually not even used. it only describes what it contains.
+	that's also to say... manifests exist within their scope only. a manifest does not update old information just installs new information. a manifest also does not guarantee anything. if a manifest says experiment1 links to experiment2. if you update experiment1 with new information. the manifest is no longer valid for experiment1. it's actually not even used. it only describes what it contains.
 
 
-	let's also seperate this. manifests describe packages and tasks. they can do any combination of this. to say it can describe both, none, tasks or packages only. packages define links.
+	let's also separate this. manifests describe bundles and tasks. they can do any combination of this. to say it can describe both, none, tasks or bundles only. Bundles define links.
 
 
 	manifests will look like this minimally
@@ -309,7 +311,7 @@ LINKS:
 	link A->B:
 		A:
 			forward1(input)
-			parms:
+			params:
 				vector
 			returns:
 				vector
@@ -320,19 +322,19 @@ LINKS:
 			returns:
 				vector
 
-	where forward1 and forward2 are defined by packages
+	where forward1 and forward2 are defined by bundles
 
-	a link does not need to proccess anything. a link can just alias data.
+	a link does not need to process anything. a link can just alias data.
 
 	in the sense A -> B = weights.csv
 
 		if A expect
 
-	additonally neither given room to overwrite anything if it executes.
+	additionally neither given room to overwrite anything if it executes.
 
 	links may be mutable or constant. that's to say, a link can expect mutable data as in data that varies in size, shape or paramaters. still the same type of data. just bigger or smaller. constant means if it's expecting a R^3 float. it's getting a R^3 float. not a R^3 int, not a R^4 float. it's exactly the same. that's done through ε it converts to what defined.
 
-	a tranlation looks like:
+	a translation looks like:
 
 
 	A->B:
@@ -378,21 +380,21 @@ DATA SYSTEM...
 
 plotter 2 runs under this execution model
 
-Watchdog's are unmanaged by plotter2. they are expected to work with systemd, cron, task scheduler and launchd. but systemd initally.
+Watchdog's are unmanaged by plotter2. they are expected to work with systemd, cron, task scheduler and launchd. but systemd initially.
 
 Execution model:
 
 
 		watchdog main 		   		 stager					watchdog 3
-		[saftey]	  			[save state slave] <--->[saftey for this guy]
-	   	     \	  		 	        /
-			  \	 	  		   	   /
-			   \	   		  	  /
-				\	   		 	 /
-				 \  		network
-			      \   	   	   /
-				   \ 	 	  /
-			 	 	\ 		 /
+		[safety]	  			[save state slave] <--->[safety for this guy]
+	   	                 \	  	         /
+			          \	 	        /
+			           \	   	       /
+				    \	   	      /
+			             \             network
+			              \   	   /
+				       \ 	  /
+			 	 	\        /
 	   				 \   	/
 outside link <--> 	main exe <----> children * N
 					[parent] 	[each run a python interpreter]
@@ -400,38 +402,38 @@ outside link <--> 	main exe <----> children * N
 					   |	 \
 					   |  	  \
 					   |	   \
-	   				   |		\
-					   |		 \
-					   |		  \
-					  \;/		   \
-					servicer	    \
+	   				   |	    \
+					   |	     \
+					   |	      \
+					  \;/	       \
+					servicer.       \
 				[service handler]<-> Watchdog2
-					  /;\			[saftey again for outer proccesses]
-					   |			/
-					  \;/		   /
-					service's	  /
+					  /;\	     [safety again for outer processes]
+					   |	    /
+					  \;/      /
+					service'  /
 				[service executables]
 
 
 main exe:
 	managed by: watchdog 1
 	machine: main
-	description: primary plotter2 interface, it run's the code, sanatizes and schedules children. it's the primary decider on what data does.
+	description: primary plotter2 interface, it run's the code, sanitizes and schedules children. it's the primary decider on what data does.
 
 children:
 	managed by: watchdog 1, main exe(kinda)
 	machine: main/shared
-	description: essentually a python interperter due to GIL, acts as the primary data pusher and cruncher.
-	Also performs ploting, rendering and all parallel data, can be instantiated and copied many times.
-	Does not do IO normally(initally).
+	description: essentially a python interpreter due to GIL, acts as the primary data pusher and cruncher.
+	Also performs plotting, rendering and all parallel data, can be instantiated and copied many times.
+	Does not do IO normally(initially).
 	these guys potentially are going to be alway's held in form of stasis when unused but that's tbd.
 
 Servicer:
 	managed by: watchdog 1(kinda), main exe(kinda), watchdog 2
 	machine: main
-	description: acts as a inbetween of plotter2 and it's services(ie experiments)
+	description: acts as a in-between of plotter2 and it's services(ie experiments)
 	this program ensures services are running and managing io between them and main exe.
-	can do async writing and also get's access to the sourcess. It's coupled tightly with watchdog 2.
+	can do async writing and also get's access to the sources. It's coupled tightly with watchdog 2.
 	it's not exactly needed as a unique system but prevent's services from dying due to plotter2 reboots or any error.
 
 
@@ -439,14 +441,14 @@ Servicer:
 Service:
 	managed by: watchdog 2, servicer(kinda), os
 	machine: shared
-	description: a service, a program designed to run under it's own load. essentually an experiment or data source. this program just run's does it's thing. It has no need to do anything special, think of it like job.
+	description: a service, a program designed to run under it's own load. essentially an experiment or data source. this program just run's does it's thing. It has no need to do anything special, think of it like job.
 
 Stager:
 	managed by: watchdog 3
 	machine: buffer machine
-	description: a buffer, this thing essentually ensures data thats coming in is not killed by a power outage.
-	this guy operates alone, potentailly coupled with watchdog 3 it's self. to say it simply.
-	when sending to plotter, you send to this guy, which sends to plotter2's main machine. Intrestingly enough also handles services.
+	description: a buffer, this thing essentially ensures data thats coming in is not killed by a power outage.
+	this guy operates alone, potentially coupled with watchdog 3 it's self. to say it simply.
+	when sending to plotter, you send to this guy, which sends to plotter2's main machine. Interestingly enough also handles services.
 	as in it just ensures they are relocated when the main machine reboots.
 
 
@@ -455,7 +457,7 @@ watchdog 1
 	machine: main
 	description: ensures plotter2 is cooperating and functional, every so often cleans and restarts plotter2 to ensure no memory leaks.
 	also manages children and servicer.
-	act's as god themselves, full authority to kill and restart everthing including watchdog 2, and everything except watchdog 3.
+	act's as god themselves, full authority to kill and restart everything including watchdog 2, and everything except watchdog 3.
 
 watchdog 2:
 	managed by: os, watchdog1
@@ -465,7 +467,7 @@ watchdog 2:
 watchdog 3:
 	managed by: os
 	machine: buffer machine
-	description: a buffer stager designed to hold data before plotter2 sees it. additonally act's as a offsite relay. watchdog 3 is unique, it's designed to act as a offsite back up.
+	description: a buffer stager designed to hold data before plotter2 sees it. additionally act's as a offsite relay. watchdog 3 is unique, it's designed to act as a offsite back up.
 	it ensures data is NEVER lost. watchdog 3, listens to watchdog 1
 
 
@@ -473,7 +475,7 @@ DATAFLOW
 
 	plotter2 runs using a mix between python and cpp and a form of mix, with watchdog's likely bash or python.
 
-	most core logic and code is done in cpp such as managing procceses, file streams, data parsing and networking. almost all logic that's base code is cpp
+	most core logic and code is done in cpp such as managing process, file streams, data parsing and networking. almost all logic that's base code is cpp
 
 	with python being a scripting language for running experiment workflow's
 
@@ -510,15 +512,15 @@ DATAFLOW
 
 		me; current context
 
-		datter ;datter class (how bundles and data are handled as well as the analyist system of plotter)
+		datter ;datter class (how bundles and data are handled as well as the analyst system of plotter)
 
-		loggy() ;logging system(essentually print just more exposed)
+		loggy() ;logging system(essentially print just more exposed)
 
 		pipe  ;pipeline functions and class
 
 		giveup() ;give up means quit safely,
 
-		order() ; order, like sort but essentually the back bone of all the automatic meta generation data
+		order() ; order, like sort but essentially the back bone of all the automatic meta generation data
 
 		frame() ; frame produces a frame. can frame a frame
 
@@ -529,12 +531,12 @@ DATAFLOW
 
 		label() ;label data
 
-		colour()/color() ; color data
+		colour()/color() ; colour data
 
 		axis() ; define axis's(how many there are how big)
 
 		legend() ; define legend
-		graident() ; a graident
+		graident() ; a gradient
 		point() ; a point
 		shape() ;draw shape
 		line() ; draw line
@@ -569,7 +571,7 @@ DATAFLOW
 		handin() ;give data to someone else(also takes your ownership but rather than releasing, you transfer with a key)
 
 		access() ; how you get your data(with or without key)
-		share() ; shares data away(ugh... scary as well, essentually gives someone else your data while still asserting it's yours)(basis of handin, handout)
+		share() ; shares data away(ugh... scary as well, essentially gives someone else your data while still asserting it's yours)(basis of handin, handout)
 
 
 		task() ; start's a task
@@ -590,11 +592,11 @@ DATAFLOW
 		page() ; page a response
 		repeat() ; repeats something (special i will explain)
 
-		load() ; imports data from a bundle(very expcit should use access)(basis of access)
-		export() ; pushes data to a bundle(very expcit should use handoff)(basis of share)
+		load() ; imports data from a bundle(very explicit  should use access)(basis of access)
+		export() ; pushes data to a bundle(very explicit should use handoff)(basis of share)
 
-		impose() ; force something(assert essentually but plotter2 prelistens like a preproccesed instruction)
-		expose() ; share to plotter2( how you share what you do. also like a preproccesed instruction)
+		impose() ; force something(assert essentially but plotter2 pre listens like a pre-processed instruction)
+		expose() ; share to plotter2( how you share what you do. also like a pre-processed instruction)
 
 
 		exposed() ; get's everything exposed to you
@@ -604,35 +606,35 @@ DATAFLOW
 plotter2 work flow involves 8 major systems
 
 
-	Main proccess threads
+	Main process threads
 
-	|1	[Runtime(the main loop)		   		]
-	|2	[Orchestratior (manages children)	]
-	|3	[Datter	(analysist system)	   		]
+	|1	[Runtime(the main loop)		   	]
+	|2	[Orchestrator (manages children)	]
+	|3	[Datter	(analysist system)	   	]
 	|4	[IO system(async io for children)	]
 	|5 	[Organizer(manages memory map)		]
 
 
 	Children
 
-	|1	[Runtime(messenger, optimizer)		]
-	|2,1[Python interperter
+	|1. [Runtime(messenger, optimizer)		]
+	|2,1[Python interpreter				]
 	|2,2[Pipeliner and actor (datter)		]
 
 
-the main proccess runs under a individual component system. each component is designed to carry out it's task indivdually without growth or thread creep
+the main process runs under a individual component system. each component is designed to carry out it's task individually without growth or thread creep
 
 Children are designed to follow a more event based system. while there are two threads for each child.
 the threading model is designed to 'switch' the use case of thread's for the task.
 
 plotter is not just a bunch of IO race conditions in a box, the system runs as a memory mapped system, where data is shared between each of the children.
 children don't interface with files, they interface with the main executable loading the data as it need's.
-the children may in the future be given task scopes for IO. but initally they are to be essentually shared memory.
+the children may in the future be given task scopes for IO. but initially they are to be essentially shared memory.
 
 that's not to say children edit shared memory each over writing themselves. rather they share read head's but each communicate to plotter2 write wise themselves.
 
 
-plotter 2 is designed for two forms of data manipulation.
+plotter 2 is designed for three forms of data manipulation.
 
 	scripts and pipelines.
 
@@ -641,16 +643,16 @@ plotter 2 is designed for two forms of data manipulation.
 		a script should not solve 1000 plots of the same type at once. rather they should solve a small subset of the problem.
 		they are instanced 1000 times by the children to complete tasks. optimized of course but they complete a small task.
 
-		in this way scripts are different then pipelines by one key factor. they can contain runtime dependencies and conditonal's.
+		in this way scripts are different then pipelines by one key factor. they can contain runtime dependencies and conditionals.
 
-		scripts can gate input's for example wheras pipelines struggle with this.
+		scripts can gate input's for example whereas pipelines struggle with this.
 
 		scripts are designed to be light weight and simple but since they are python they can be very complex
 
 	Pipelines:
 
 		pipelines are plotter2 native features, they implement datter(the backbone of plotter2). d
-		atter essentually is the main data format and tranformation engine.
+		after essentially is the main data format and transformation engine.
 
 		Pipelines are just sequences of instructions built up and run a bunch
 
@@ -658,26 +660,32 @@ plotter 2 is designed for two forms of data manipulation.
 			[access, label, pca, scale, frame, colour, axis, legend, plot, handoff]
 
 		what this does is load data, label it implicitly, pca the data, scale the data.
-		then it creates a frame. colours the data, places the axis, then the legend. finally it 'plots' it which queues the data up, and hands it off. letting datter reaccess it.
+		then it creates a frame. colours the data, places the axis, then the legend. finally it 'plots' it which queues the data up, and hands it off. letting datter re-access it.
 
 
+	Configurations:
+		
+		configurations are just load systems that describe how data is stored. Very basic. Basically just a data grabber as a raw system. Plotter2 auto executes these and they are default tasks for most bundle operations. 
+		
+
+	these are three way tasks are executed. Tasks and bundles are very similar
 
 
 plotter2 and datter
 
-	datter is the data analysis engine of plotter and data managment engine.
+	datter is the data analysis engine of plotter and data management engine.
 	when doing something in plotter, you are interfacing with datter.
 
-	datter deal's with packages. these are loaded bundles of information scoped to exactly what you want by the linking system.
+	datter deal's with bundles  these are loaded bundles of information scoped to exactly what you want by the linking system.
 
 	datter acts as a shared pool of information.
 
 	for example datter can deal with all stages of information, from the starting data like raw numbers.
 	to meta information like clusters for every experiment. datter is the exposed core of the system
 
-	datter works under two assumptions. you have data you want computed and you have alot of that data.
+	datter works under two assumptions. you have data you want computed and you have a-lot of that data.
 
-	datter essentually paralellizes all the common data flows into tasks based on dependency
+	datter essentially parallelizes all the common data flows into tasks based on dependency
 
 
 	for a pipeline dependence is trivial.
@@ -688,7 +696,7 @@ plotter2 and datter
 
 	a script for example can do this:
 
-		let's say we have 10000 sets of matrix's. I want to find what each of them when combined combined have shared regions as well as plot each matrix. but I want each matrix plot to be side and side with the combined total over time.
+		let's say we have 10000 sets of matrix's. I want to find what each of them when combined have shared regions as well as plot each matrix. but I want each matrix plot to be side and side with the combined total over time.
 
 		with a pipeline this is not possible exactly, you cannot just interface with every thing at the same time then restart. you depend on the combined shared regions existing already but you have not found that yet.
 
@@ -791,12 +799,24 @@ plotter2 and datter
 		a->b
 		but A collects 'task1' this mean's it wait's until task1 is released.
 		so task1 executes in scope.
-		task1 conditonally works with links.
+		task1 conditionally works with links.
 		so since we linked it, task1 exposes it's data and releases to each of it's links
 		this mean's we are back at task_meta.
 		we then check if 'matrix' is exposed to us.
-		we recieve EVERY(YES EVERY SINGLE EXPOSED MATRIX) of task1.
+		we receive EVERY(YES EVERY SINGLE EXPOSED MATRIX) of task1.
 		we then store a copy of it and hand off.
 		then we release again. well... how does that work? well since task1 and task_meta are functionally independent past this we are allowed to continue each.
 		so each task1 is finished and at the same time since the dependency is met.
 		every task_meta is also finished
+
+
+Tasks:
+
+
+	these are complicated, but are defined under bundles. Tasks are defined in scope and are propagated down. Tasks can affect their own bundles given the stick.
+ 	but tasks are mostly designed to 'pollute' the local scope and chain up. Then the origin scope now see's the results of all the bundles
+	tasks are not to be used as executions environments. Plotter2 will kill long winded tasks. tasks act as the do'er of a bundle that sits along side the data. When you ask a bundle to do something, tasks are what are called to give you what you want
+
+
+
+Plotter2: automatically creates holder bundles, for you. These hold authentication and are where you 

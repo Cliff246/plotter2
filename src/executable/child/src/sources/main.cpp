@@ -7,15 +7,15 @@
 #include "message.hpp"
 #include <iostream>
 #include <string>
+#include "listener.hpp"
 
-int main() 
+using namespace p2child;
+
+int main(int argc, char **argv) 
 {
-	
-    std::string line;
-    while (std::getline(std::cin, line)) 
-	{
-        std::cout << "[child] Received: " << line << std::endl;
-        if (line == "exit") break;
-    }
-    return 0;
+	listener childlistener(argc, argv);
+	childlistener.start();
+	childlistener.update();
+
+
 }

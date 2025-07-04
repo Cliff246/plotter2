@@ -6,7 +6,7 @@ CXX_DEFINES =
 
 CXX_INCLUDES = -I/Users/heathfortin/programing/languages/c++/plotter/src/libs/plotter2/shared/lib/plots/include -I/Users/heathfortin/programing/languages/c++/plotter/src/libs/plotter2/shared/lib/scripter/include -I/Users/heathfortin/programing/languages/c++/plotter/src/libs/plotter2/shared/lib/utils/include -I/Users/heathfortin/programing/languages/c++/plotter/src/libs/plotter2/shared/lib/loggy/include -isystem /opt/homebrew/opt/python@3.13/Frameworks/Python.framework/Versions/3.13/include/python3.13 -isystem /opt/homebrew/include/eigen3 -isystem /opt/homebrew/include
 
-CXX_FLAGSarm64 = -g -std=gnu++2b -arch arm64
+CXX_FLAGSarm64 = -std=gnu++2b -arch arm64
 
-CXX_FLAGS = -g -std=gnu++2b -arch arm64
+CXX_FLAGS = -std=gnu++2b -arch arm64
 

@@ -2,6 +2,9 @@ cmake_minimum_required(VERSION 3.10)
 
 SET(CHILD_SOURCES 
 	${CMAKE_CURRENT_SOURCE_DIR}/sources/main.cpp
+	${CMAKE_CURRENT_SOURCE_DIR}/sources/worker.cpp
+	${CMAKE_CURRENT_SOURCE_DIR}/sources/listener.cpp
+
 )
 
 add_executable(child ${CHILD_SOURCES})

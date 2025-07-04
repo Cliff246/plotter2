@@ -30,41 +30,41 @@ CMAKE_BUILD_TYPE:STRING=Debug
 //Enable/Disable color output during build.
 CMAKE_COLOR_MAKEFILE:BOOL=ON
 
-//CXX compiler
-CMAKE_CXX_COMPILER:FILEPATH=/usr/bin/c++
+//No help, variable specified on the command line.
+CMAKE_CXX_COMPILER:UNINITIALIZED=c++
 
 //Flags used by the CXX compiler during all build types.
 CMAKE_CXX_FLAGS:STRING=
 
 //Flags used by the CXX compiler during DEBUG builds.
-CMAKE_CXX_FLAGS_DEBUG:STRING=-g
+CMAKE_CXX_FLAGS_DEBUG:STRING=
 
 //Flags used by the CXX compiler during MINSIZEREL builds.
-CMAKE_CXX_FLAGS_MINSIZEREL:STRING=-Os -DNDEBUG
+CMAKE_CXX_FLAGS_MINSIZEREL:STRING=
 
 //Flags used by the CXX compiler during RELEASE builds.
-CMAKE_CXX_FLAGS_RELEASE:STRING=-O3 -DNDEBUG
+CMAKE_CXX_FLAGS_RELEASE:STRING=
 
 //Flags used by the CXX compiler during RELWITHDEBINFO builds.
-CMAKE_CXX_FLAGS_RELWITHDEBINFO:STRING=-O2 -g -DNDEBUG
+CMAKE_CXX_FLAGS_RELWITHDEBINFO:STRING=
 
-//C compiler
-CMAKE_C_COMPILER:FILEPATH=/usr/bin/cc
+//No help, variable specified on the command line.
+CMAKE_C_COMPILER:UNINITIALIZED=cc
 
 //Flags used by the C compiler during all build types.
 CMAKE_C_FLAGS:STRING=
 
 //Flags used by the C compiler during DEBUG builds.
-CMAKE_C_FLAGS_DEBUG:STRING=-g
+CMAKE_C_FLAGS_DEBUG:STRING=
 
 //Flags used by the C compiler during MINSIZEREL builds.
-CMAKE_C_FLAGS_MINSIZEREL:STRING=-Os -DNDEBUG
+CMAKE_C_FLAGS_MINSIZEREL:STRING=
 
 //Flags used by the C compiler during RELEASE builds.
-CMAKE_C_FLAGS_RELEASE:STRING=-O3 -DNDEBUG
+CMAKE_C_FLAGS_RELEASE:STRING=
 
 //Flags used by the C compiler during RELWITHDEBINFO builds.
-CMAKE_C_FLAGS_RELWITHDEBINFO:STRING=-O2 -g -DNDEBUG
+CMAKE_C_FLAGS_RELWITHDEBINFO:STRING=
 
 //Path to a program.
 CMAKE_DLLTOOL:FILEPATH=CMAKE_DLLTOOL-NOTFOUND
@@ -314,7 +314,7 @@ INSTALL_GTEST:BOOL=ON
 child_lib_LIB_DEPENDS:STATIC=general;messenger_shared_lib;
 
 //Dependencies for the target
-datter_core_lib_LIB_DEPENDS:STATIC=general;Python3::Python;general;shared_lib;general;pipeline_lib;general;datter_datatypes_lib;general;datter_datasrc_lib;
+datter_core_lib_LIB_DEPENDS:STATIC=general;Python3::Python;general;shared_lib;
 
 //Dependencies for the target
 datter_dataframe_lib_LIB_DEPENDS:STATIC=general;Python3::Python;general;datter_datatypes_lib;general;shared_lib;general;pipeline_lib;
@@ -326,7 +326,10 @@ datter_datasrc_lib_LIB_DEPENDS:STATIC=general;Python3::Python;general;datter_dat
 datter_datatypes_lib_LIB_DEPENDS:STATIC=general;Python3::Python;general;shared_lib;general;pipeline_lib;
 
 //Dependencies for the target
-datter_lib_LIB_DEPENDS:STATIC=general;Python3::Python;general;shared_lib;general;pipeline_lib;general;datter_core_lib;general;pipeline_lib;
+datter_lib_LIB_DEPENDS:STATIC=general;Python3::Python;general;shared_lib;general;pipeline_lib;general;datter_core_lib;general;datter_model_lib;general;pipeline_lib;
+
+//Dependencies for the target
+datter_model_lib_LIB_DEPENDS:STATIC=general;Python3::Python;general;datter_core_lib;general;shared_lib;
 
 //Value Computed by CMake
 gmock_BINARY_DIR:STATIC=/Users/heathfortin/programing/languages/c++/plotter/build/_deps/googletest-build/googlemock
@@ -387,7 +390,7 @@ nlohmann_json_DIR:PATH=/opt/homebrew/share/cmake/nlohmann_json
 parent_lib_LIB_DEPENDS:STATIC=general;messenger_shared_lib;
 
 //Dependencies for the target
-pipeline_lib_LIB_DEPENDS:STATIC=general;Python3::Python;general;shared_lib;general;datter_core_lib;
+pipeline_lib_LIB_DEPENDS:STATIC=general;Python3::Python;general;shared_lib;general;datter_core_lib;general;datter_model_lib;
 
 //Value Computed by CMake
 plotter2_BINARY_DIR:STATIC=/Users/heathfortin/programing/languages/c++/plotter/build
@@ -461,7 +464,7 @@ CMAKE_DLLTOOL-ADVANCED:INTERNAL=1
 //Path to cache edit program executable.
 CMAKE_EDIT_COMMAND:INTERNAL=/opt/homebrew/bin/ccmake
 //Executable file format
-CMAKE_EXECUTABLE_FORMAT:INTERNAL=MACHO
+CMAKE_EXECUTABLE_FORMAT:INTERNAL=Unknown
 //ADVANCED property for variable: CMAKE_EXE_LINKER_FLAGS
 CMAKE_EXE_LINKER_FLAGS-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_EXE_LINKER_FLAGS_DEBUG
@@ -472,6 +475,8 @@ CMAKE_EXE_LINKER_FLAGS_MINSIZEREL-ADVANCED:INTERNAL=1
 CMAKE_EXE_LINKER_FLAGS_RELEASE-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_EXE_LINKER_FLAGS_RELWITHDEBINFO
 CMAKE_EXE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CMAKE_EXPORT_COMPILE_COMMANDS
+CMAKE_EXPORT_COMPILE_COMMANDS-ADVANCED:INTERNAL=1
 //Name of external makefile project generator.
 CMAKE_EXTRA_GENERATOR:INTERNAL=
 //Name of generator.
@@ -540,7 +545,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=35
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=34
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP

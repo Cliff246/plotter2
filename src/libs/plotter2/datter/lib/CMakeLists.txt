@@ -1,7 +1,10 @@
 
 
 add_subdirectory(core)
-add_subdirectory(pipeline)
+add_subdirectory(models)
+add_subdirectory(taskimpl)
+
+
 
 set(DATTER_SUBLIB_SOURCES 
 	${CMAKE_CURRENT_SOURCE_DIR}/base_datter.cpp
@@ -25,6 +28,7 @@ target_link_libraries(datter_lib
 	pipeline_lib
 	PUBLIC
 	datter_core_lib
+	datter_model_lib
 	pipeline_lib
 
 	nlohmann_json::nlohmann_json

@@ -1,19 +1,42 @@
 
 
-add_subdirectory(datatypes)
-add_subdirectory(datasrc)
-add_subdirectory(dataframe)
-cmake_minimum_required(VERSION 3.10)
+
+
+
+
 set(DATTER_CORE_SUBLIB_SOURCES
 	${CMAKE_CURRENT_SOURCE_DIR}/sources/datter.cpp	
 )	
 
 
 
-add_library(datter_core_lib ${DATTER_CORE_SUBLIB_SOURCES})
+
+set(DATTER_DATASRC_SUBLIB_SOURCES
+	
+	${CMAKE_CURRENT_SOURCE_DIR}/datasrc/sources/datasrc.cpp
+	${CMAKE_CURRENT_SOURCE_DIR}/datasrc/sources/datasrc_csv.cpp
+	${CMAKE_CURRENT_SOURCE_DIR}/datasrc/sources/datasrc_json.cpp
+)
+
+set(DATTER_DATATYPES_SUBLIB_SOURCES
+	${CMAKE_CURRENT_SOURCE_DIR}/datatypes/sources/dataholders/dataholder_array.cpp
+	${CMAKE_CURRENT_SOURCE_DIR}/datatypes/sources/dataholders/dataholder_integer.cpp
+	${CMAKE_CURRENT_SOURCE_DIR}/datatypes/sources/dataholders/dataholder_number.cpp
+	${CMAKE_CURRENT_SOURCE_DIR}/datatypes/sources/dataholders/dataholder_string.cpp
+	${CMAKE_CURRENT_SOURCE_DIR}/datatypes/sources/dataholders/dataholder_array.cpp
+	${CMAKE_CURRENT_SOURCE_DIR}/datatypes/sources/dataholder.cpp
+)
+
+add_library(datter_core_lib 
+	${DATTER_CORE_SUBLIB_SOURCES}
+	${DATTER_DATASRC_SUBLIB_SOURCES}
+	${DATTER_DATATYPES_SUBLIB_SOURCES}
+)
 
 target_include_directories(datter_core_lib PUBLIC 	
 	${CMAKE_CURRENT_SOURCE_DIR}/include
+	${CMAKE_CURRENT_SOURCE_DIR}/datasrc/include
+	${CMAKE_CURRENT_SOURCE_DIR}/datatypes/include
 )
 
 
@@ -24,10 +47,7 @@ target_link_libraries(datter_core_lib
     Python3::Python
 		
 	shared_lib
-	pipeline_lib
 	PUBLIC
 	
-	datter_datatypes_lib
-	datter_datasrc_lib
 	nlohmann_json::nlohmann_json
 )
