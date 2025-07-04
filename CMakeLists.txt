@@ -4,6 +4,8 @@ enable_testing()
 # Define the project name and language.
 project(plotter2)
 
+# Use libc++ only when building with Clang on Linux (not macOS), and set linker flags appropriately.
+
 # Set C++ standard (adjust as needed) and ensure it's required.
 set(CMAKE_CXX_STANDARD 23)
 set(CMAKE_CXX_STANDARD_REQUIRED YES)
@@ -57,7 +59,7 @@ find_package(pybind11 REQUIRED)
 include_directories(
     ${Python3_INCLUDE_DIRS}
     ${Eigen3_INCLUDE_DIRS}
-	
+
 )
 
 

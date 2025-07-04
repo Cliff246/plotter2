@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# Detect platform and set compilers
+OS="$(uname)"
+
 BUILD_DIR="build"
 CMAKE_OPTIONS="-DCMAKE_EXPORT_COMPILE_COMMANDS=ON -DCMAKE_BUILD_TYPE=Debug "
 
@@ -27,5 +30,5 @@ fi
 
 # Run CMake and build
 cd "$BUILD_DIR" || exit 1
-cmake .. $CMAKE_OPTIONS
+cmake .. $CMAKE_OPTIONS -DCMAKE_C_COMPILER="$CC" -DCMAKE_CXX_COMPILER="$CXX"
 make -j10

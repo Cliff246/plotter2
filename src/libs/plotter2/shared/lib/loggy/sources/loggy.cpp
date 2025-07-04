@@ -20,9 +20,9 @@ void plt_shared::init_loggy()
 void plt_shared::logg(const std::string &log)
 {
 	static size_t count = 0;
-	std::string formated = std::format("{}: {}", count, log); 
+	std::string formated = std::format("{}: {}", count, log);
 	count++;
-	plt_shared::loggy_current->log(formated);	
+	plt_shared::loggy_current->log(formated);
 }
 
 
@@ -40,9 +40,9 @@ void plt_shared::loggy_console::log(const std::string &value)
 	m_output << value << std::endl;
 }
 
-	
 
-	
+
+
 
 
 void plt_shared::logg(plt_shared::logstate state, const char *fmt, ...) {
@@ -77,4 +77,4 @@ void plt_shared::logg(plt_shared::logstate state, const char *fmt, ...) {
     plt_shared::logg(buf);
 	//thanks chatgpt
 }
-	
+
