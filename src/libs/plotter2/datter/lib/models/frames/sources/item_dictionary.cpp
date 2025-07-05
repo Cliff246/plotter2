@@ -15,16 +15,16 @@ item_dictionary::item_dictionary()
 	return;
 }
 		
-std::string item_dictionary::get_name(int64_t framekey)
+std::string item_dictionary::get_name(int64_t key)
 {
 	//has name recognized
-	if(m_overlapping_names.contains(framekey))
+	if(m_overlapping_names.contains(key))
 	{
 		//
-		int64_t dest = m_overlapping_names[framekey];
+		int64_t dest = m_overlapping_names[key];
 		if(m_to_remove.contains(dest))
 		{
-			m_overlapping_names.erase(framekey);
+			m_overlapping_names.erase(key);
 			return "";
 		}
 		else
@@ -134,12 +134,40 @@ bool item_dictionary::add_name(int64_t key, std::string exposed)
 
 std::string item_dictionary::copy_name(int64_t key, int64_t newkey)
 {
-
+	//TODO
 }
 
 void item_dictionary::delete_name(std::string name)
 {
-
+	int64_t hash = item_dictionary::hash_name(name);
+	int64_t length = m_name_hashes.size();
+	int64_t low = m_name_hashes[0].first, high = m_name_hashes[length - 1].first == 0; 
+	bool found = false;
+	int64_t dest = 0;
+	while(low <= high)
+	{
+		int64_t mid = low + (high - low) / 2;
+		if(m_name_hashes[mid].first == hash)
+		{
+			found = true;
+			dest = mid;
+			break;
+		}	
+		if(m_name_hashes[mid].first < hash)
+			low = mid + 1;
+		else
+			high = mid - 1;
+	}
+	if(found)
+	{
+		m_to_remove.insert(m_name_hashes[dest].second);	
+		m_names_exposed.erase(m_name_hashes[dest].second);
+		return;
+	}
+	else
+	{
+		return;
+	}	
 }
 
 void item_dictionary::delete_key(int64_t)
