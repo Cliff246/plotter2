@@ -1,6 +1,7 @@
 #pragma once
 
 #include <map>
+#include <memory>
 #include <vector>
 
 #include "dataholder.hpp"
@@ -12,11 +13,14 @@ namespace datter
 	{
 	private:
 		//points to frame item postions.
-		std::map<int, item> m_framekeys;
+		std::map<int, std::unique_ptr<item>> m_frame;
 	
 		std::map<std::string, int> m_exposed;
-
+		
 	public:
+		frame();
+		
+		
 
 	};
 }

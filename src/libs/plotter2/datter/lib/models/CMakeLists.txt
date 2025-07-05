@@ -3,6 +3,7 @@
 set(DATTER_FRAME_SUBLIB_SOURCES
 	${CMAKE_CURRENT_SOURCE_DIR}/frames/sources/frame.cpp
 	${CMAKE_CURRENT_SOURCE_DIR}/frames/sources/item.cpp
+	${CMAKE_CURRENT_SOURCE_DIR}/frames/sources/item_dictionary.cpp
 
 )
 
