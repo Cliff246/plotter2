@@ -9,7 +9,10 @@ set(MESSENGER_HEADERS
 	${CMAKE_CURRENT_SOURCE_DIR}/include/socketer.hpp
 )
 
-add_library(messenger_shared_lib STATIC ${MESSENGER_SOURCES} ${MESSENGER_HEADERS})
+add_library(messenger_shared_lib STATIC 
+	${MESSENGER_SOURCES} 
+	${MESSENGER_HEADERS}
+)
 
 target_include_directories(messenger_shared_lib
    	PUBLIC	

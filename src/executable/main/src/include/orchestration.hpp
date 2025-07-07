@@ -14,7 +14,6 @@ namespace p2exe
 	{
 	private:
 		//
-		messenger::parent_messenger m_messenger;
 		//map of the processes based on id
 		std::vector<std::unique_ptr<process>> m_processes;
 		//list of the processes 
@@ -26,5 +25,8 @@ namespace p2exe
 
 		orchestrator();
 		void refresh();
+		void new_proccess(char **env);
+		void close_all();
+		void kill_all();
 	};
 }

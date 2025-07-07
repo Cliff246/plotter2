@@ -16,6 +16,7 @@ target_link_libraries(exe
     Eigen3::Eigen
     Python3::Python
 	parent_lib
+	messenger_shared_lib
 	nlohmann_json::nlohmann_json
 )
 

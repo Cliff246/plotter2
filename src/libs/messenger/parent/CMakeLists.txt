@@ -6,7 +6,8 @@ set(PARENT_SOURCES_LIBRARY
 
 add_library(parent_lib STATIC ${PARENT_SOURCES_LIBRARY}) 
 
-target_include_directories(parent_lib PUBLIC 
+target_include_directories(parent_lib 
+	PUBLIC 
 	${CMAKE_CURRENT_SOURCE_DIR}/include
 )
 

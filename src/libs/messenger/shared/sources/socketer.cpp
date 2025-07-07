@@ -9,7 +9,7 @@ using namespace messenger;
 //int
 
 
-sockint create_a_socket(const char *path)
+int messenger::create_a_socket(const char *path)
 {
 	int sock = socket(AF_UNIX, SOCK_STREAM, 0);
 	sockaddr_un addr {};

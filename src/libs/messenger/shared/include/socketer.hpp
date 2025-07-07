@@ -8,6 +8,6 @@ namespace messenger
 {
 	using sockint = int;
 
-	void write_socket(sockint socket, message &msg);
-	sockint create_a_socket(const char *path);
+	void write_socket(int socket, message &msg);
+	int create_a_socket(const char *path);
 }

@@ -2,6 +2,7 @@
 #include <mutex>
 #include <thread>
 #include <iostream>
+#include <unistd.h>
 using namespace p2child;
 
 
@@ -21,9 +22,12 @@ void worker::initialize()
 //run worker
 void worker::updater()
 {
+	int count = 0;
 	while(m_running)
 	{
 
+		std::cout << "running" << "count: " << count++ << "\n";
+		sleep(1);
 	}	
 
 	std::cout << "thread die\n";

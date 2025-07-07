@@ -4,7 +4,9 @@
 #include <cstdint>
 #include <string>
 #include <unistd.h>
+#include <spawn.h>
 #include <vector>
+#include <queue>
 #include "childholder.hpp"
 
 namespace p2exe
@@ -15,28 +17,43 @@ namespace p2exe
 	{
 	private:
 		pid_t m_pid;
-		int m_pipe[2];
+		int m_pipe_out[2];
+		int m_pipe_in[2];
+		int m_pipe_err[2];
 		//-1 is uninitialized
 		int m_id = -1;
-
 		
+		
+		std::queue<std::string> m_queue_in;		
+
+    	posix_spawn_file_actions_t m_actions;
 		
 		//pipe buffers
-		std::string read_buffer;
-		std::string write_buffer;
+		std::string m_read_buffer;
+		std::string m_write_buffer;
 		//is stalled 	
 		uint64_t m_timeup;
 		uint64_t m_heartbeat_counter;
-		
+		//test for that
 		bool is_stalled;
+		bool is_open;
+		messenger::childholder_ptr m_socketholder;		
 		
-		messenger::childholder m_socketholder;		
-		
+
+		//memeory map shit
+		char *m_read_memmap = nullptr;
+		char *m_write_memmap = nullptr;
+		char **m_environment;
+
+		int writeto(const std::string &str);
+
 	public:
-		process();
+		process(char **environ);
 
 
-		void start_up();
-			
+		int start_up();
+		void check_in();
+		void shutdown();
+		void killit();
 	};
 }

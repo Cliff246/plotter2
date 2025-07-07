@@ -3,6 +3,8 @@
 #include <memory>
 #include <string>
 #include <vector>
+#include <filesystem>
+
 #include "child.hpp"
 #include "worker.hpp"
 
@@ -12,9 +14,8 @@ namespace p2child
 	{
 	private:
 		//messenger child class
-		messenger::child m_child;		
-
-
+		messenger::sockchild m_child;		
+			
 		//the worker
 		std::unique_ptr<worker> m_worker;
 		
