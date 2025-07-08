@@ -70,10 +70,11 @@ int process::start_up()
 	//posix_spawn_file_actions_adddup2(&m_actions, m_pipe_err[1], STDERR_FILENO);
 	//posix_spawn_file_actions_addclose(&m_actions, m_pipe_err[0]);	
 	m_socketholder->set_socket_code(id_counter++);
+	std::string socket_path = m_socketholder->get_socket_path();
 	plt_shared::logg("binded");
     char *argv[] = {
 		const_cast<char *>("./child"),
-		const_cast<char *>((m_socketholder->get_socket_path()).c_str()),
+		const_cast<char *>(socket_path.c_str()),
 	   	nullptr
 	};
 

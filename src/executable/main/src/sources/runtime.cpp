@@ -1,3 +1,4 @@
+#include <exception>
 #include <unistd.h>
 
 
@@ -35,14 +36,59 @@ void runtime::init()
 
 }
 
+
+
+//this is the runner and should attempt to recover or clean shutdown at all costs 
+void runtime::runner()
+{
+	try
+	{
+		update();
+	}
+
+
+
+	catch(const std::exception &except1)
+	{
+
+
+
+		std::cerr << "error down to runner: " << except1.what() << "\n";
+		//csd = clean shutdown
+		//esd = emergency shutdown
+		const int csd = -1, esd = -2; 
+		//clean shutdown
+		try
+		{
+			//please die
+			shutdown();
+			exit(csd);
+		}
+		//very hard shutdown
+		catch(const std::exception &except2)
+		{
+			
+			std::cerr << "serius shutdown failure hard exit:" << except2.what() << "\n";
+			//die die die
+			eshutdown();
+			abort();
+		}
+	}
+
+}
+
+
+
+
 //SHOULD be our main runtime 
 void runtime::update()
 {
-	for(int i = 0; i < 5; ++i)
+	while(m_running == true)
 	{
 		sleep(1);
 		m_orchestrator.refresh();
 	}
+
 }
 
 
@@ -67,5 +113,5 @@ void runtime::eshutdown()
 {
 	plt_shared::logg(plt_shared::ERROR, "killing all");
 	m_orchestrator.kill_all();
-	exit(1);
+	abort();
 }

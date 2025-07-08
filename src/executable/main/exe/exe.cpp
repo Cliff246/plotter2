@@ -1,5 +1,4 @@
 #include <iostream>
-#include <Python.h>
 #include <filesystem>
 
 #include <unistd.h>
@@ -35,7 +34,7 @@ int main(int argc, char **argv)
 	//init runtime
 	rt.init();
 	//TODO the main entrance loop
-	rt.update();
+	rt.runner();
 		
     return 0;
 }
