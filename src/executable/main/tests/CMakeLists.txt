@@ -5,7 +5,6 @@ set(P2MAIN_SOURCES_TESTS
 	${CMAKE_CURRENT_SOURCE_DIR}/sources/tests.cpp
 	${CMAKE_CURRENT_SOURCE_DIR}/sources/start_test.cpp
 	${CMAKE_CURRENT_SOURCE_DIR}/sources/runtime_tests.cpp
-	${CMAKE_CURRENT_SOURCE_DIR}/sources/testscommons.cpp
 )
 add_executable(p2main_tests ${P2MAIN_SOURCES_TESTS})
 target_include_directories(p2main_tests

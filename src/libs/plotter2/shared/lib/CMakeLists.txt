@@ -16,6 +16,7 @@ set(LOGGY_SOURCES
 
 set(UTILS_SOURCES 
 	${CMAKE_CURRENT_SOURCE_DIR}/utils/sources/fhold.cpp
+	${CMAKE_CURRENT_SOURCE_DIR}/utils/sources/process_inspector.cpp
 
 	${CMAKE_CURRENT_SOURCE_DIR}/utils/sources/utils_threadpool.cpp
 	${CMAKE_CURRENT_SOURCE_DIR}/utils/sources/utils_threadworker.cpp

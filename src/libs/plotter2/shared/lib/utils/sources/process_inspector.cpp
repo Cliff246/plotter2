@@ -1,8 +1,14 @@
-#include "testscommons.hpp"
-#include <iostream>
-#include <cstdlib>
 
-std::vector<std::string> get_open_proccesses()
+
+#include "process_inspector.hpp"
+#include <iostream>
+#include <vector>
+#include <string>
+
+using namespace plt_shared;
+
+
+std::vector<std::string> plt_shared::get_open_processes()
 {
 	std::FILE *file = popen("ps aux", "r");
 	std::vector<std::string> ps_aux_results;
@@ -12,10 +18,10 @@ std::vector<std::string> get_open_proccesses()
 		return ps_aux_results;
 	}
 
-	const size_t buffer_size = 10000;
-	char buffer[buffer_size];
+	const size_t buffer_size = 100;
+	char buffer[buffer_size + 1] = {0};
 	const std::string delim = "\n";
-	std::string spill_over = "";
+	std::string spill_over;
 	size_t pos = 0;
 	
 	while(std::fgets(buffer, buffer_size, file))
@@ -43,7 +49,7 @@ std::vector<std::string> get_open_proccesses()
 			{
 				token = temp.substr(0, pos);
 			}
-			token = temp.substr(0, pos);
+
 
 			ps_aux_results.push_back(temp);
 			temp.erase(0, pos + delim.size());
