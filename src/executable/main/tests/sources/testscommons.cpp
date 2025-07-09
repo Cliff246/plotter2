@@ -52,6 +52,6 @@ std::vector<std::string> get_open_proccesses()
 
 		
 	}	
-
+	std::fclose(file);
 	return ps_aux_results;
 }
