@@ -4,6 +4,7 @@ SET(MAIN_SOURCES
 	${CMAKE_CURRENT_SOURCE_DIR}/sources/runtime.cpp
 	${CMAKE_CURRENT_SOURCE_DIR}/sources/process.cpp
 	${CMAKE_CURRENT_SOURCE_DIR}/sources/orchestration.cpp
+	${CMAKE_CURRENT_SOURCE_DIR}/sources/event.cpp
 )
 
 add_library(p2exe ${MAIN_SOURCES})

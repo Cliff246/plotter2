@@ -32,6 +32,8 @@ void runtime::init()
 	plt_shared::logg("logging this");
 	m_orchestrator.new_proccess(m_external);	
 	m_orchestrator.new_proccess(m_external);	
+	m_running = true;
+	runner();
 	//update();
 
 }
@@ -87,6 +89,7 @@ void runtime::update()
 	{
 		sleep(1);
 		m_orchestrator.refresh();
+
 	}
 
 }

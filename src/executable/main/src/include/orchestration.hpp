@@ -5,6 +5,7 @@
 #include "childholder.hpp"
 #include <cstdint>
 #include <map>
+#include <queue>
 #include <vector>
 
 
@@ -19,7 +20,6 @@ namespace p2exe
 		//list of the processes 
 		//default of 4
 		int max_procceses = 4;
-
 
 	public:
 

@@ -4,6 +4,11 @@
 #include <atomic>
 #include <mutex>
 
+
+
+#include <pybind11/embed.h>
+namespace py = pybind11;
+
 namespace p2child
 {
 
@@ -23,7 +28,6 @@ namespace p2child
 		std::mutex m_type_mutex;
 		worker_type m_type;
 		
-
 		//initalize on the threads side
 		void initialize();
 			

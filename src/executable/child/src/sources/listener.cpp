@@ -41,11 +41,11 @@ void listener::start()
 	//assumes arg 1 is the socket 
 	m_child.init(m_arguments[1]); 	
 	//joins socket
-	m_child.set_up_socket();
+	//m_child.set_up_socket();
 	//starts worker thread
+	m_running = true;
 	m_worker->start();
 	
-	m_running = true;
 		
 }
 
