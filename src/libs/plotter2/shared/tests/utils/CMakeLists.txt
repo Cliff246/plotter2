@@ -3,6 +3,8 @@ set(UTILS_SOURCES_TEST
 	${CMAKE_CURRENT_SOURCE_DIR}/tests/tests.cpp
 	${CMAKE_CURRENT_SOURCE_DIR}/tests/fhold_tests.cpp
 	${CMAKE_CURRENT_SOURCE_DIR}/tests/process_inspector_tests.cpp
+	
+	${CMAKE_CURRENT_SOURCE_DIR}/tests/utils_cpp_tests.cpp
 )
 
 

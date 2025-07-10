@@ -6,7 +6,7 @@ using namespace plt_shared;
 
 TEST(utils_tests, proccess_test ) 
 {
-	for(const auto &i : get_open_proccesses())
+	for(const auto &i : get_open_processes())
 	{
 		//std::cerr << i << "\n";
 	}

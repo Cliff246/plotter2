@@ -61,3 +61,15 @@ std::vector<std::string> plt_shared::get_open_processes()
 	std::fclose(file);
 	return ps_aux_results;
 }
+
+std::string plt_shared::get_proccess_name(const std::string &ps_format, const std::string &ps_str)
+{
+	const std::vector<std::string> delims = { 
+		"COMMAND",
+		"CMD",
+
+	};
+
+	
+	return "";	
+}
