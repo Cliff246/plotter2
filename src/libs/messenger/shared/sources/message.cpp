@@ -13,6 +13,18 @@ message::message()
 
 }
 
+message::message(int type, const std::string& bytes)
+{
+	m_typeid = type;
+	m_message = bytes;
+}
+
+message::~message()
+{
+
+}
+
+
 std::string message::serialize() const
 {
 
@@ -44,7 +56,7 @@ inline uint32_t read_uint32_be(const char* data) {
 
 
 //deseralize the
-messenger::message deserialize(const std::string& bytes)
+messenger::message messenger::deserialize(const std::string& bytes)
 {
 	//check the bytes are long enough
 	if(bytes.size() < 8)

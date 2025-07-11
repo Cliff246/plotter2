@@ -1,4 +1,5 @@
 #pragma once
+#include <memory>
 #include <string>
 #include <unistd.h>
 #include <sys/socket.h>
@@ -45,7 +46,7 @@ namespace messenger
 	};
 		
 	messenger::message deserialize(const std::string& bytes);
-
+	using message_ptr = std::unique_ptr<message>;
 }
 
 

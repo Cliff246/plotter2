@@ -1,4 +1,5 @@
 #include "child.hpp"
+#include <memory>
 #include <unistd.h>
 #include <sys/socket.h>
 #include <sys/un.h>
@@ -7,6 +8,12 @@ using namespace messenger;
 
 sockchild::sockchild()
 {
+	m_transit_message = std::make_unique<message>();
+}
+
+sockchild::~sockchild()
+{
+
 }
 
 void sockchild::init(std::string &path)
@@ -28,3 +35,34 @@ int sockchild::set_up_socket()
 		return -1;		
 	return ret;
 }
+
+
+
+void conjoin_data_and_add(std::string extra)
+{
+	
+};
+void sockchild::refresh()
+{
+	ssize_t result = recv(m_socket, m_buffer.data() + m_buffer_scroll, m_buffer.size() - m_buffer_scroll, 0);	
+	if(result < 0)
+	{
+
+	}
+	else if(result == m_buffer_size)
+	{
+		
+	}	
+}
+
+
+
+message sockchild::read_message()
+{
+	message current_message;
+	return current_message;
+}	
+
+
+
+
