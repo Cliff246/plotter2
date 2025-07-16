@@ -176,20 +176,20 @@ what are bundles?
 		so x = { { A, {r1, {r2, r3}}}, {B, {2b, v2}, C, D}
 
 		as in they are self included.
-		anything beneth you includes your self so that means...
+		anything beneath you includes your self so that means...
 
 	So if I ask at x to render a pca of lr=0.1 for all of them. they are each expected to implement a way to get that or be superset'd by x it's self.
 
 	if I never ask X to do anything... that mean's X is blank, it simply exists as a encapsulating bundle. only there to sort information.
 
-	We do this through linking. essentually we say A, B, C, D must link to x. if they can link they are defined. if not, they are not really a member of x. they are a memeber of the set's of 'imposter' children. now, that's not a universal feature. A may link some features of X, B may link some other features.
-	the intersection between A's and B's links are a valid task defintion.
+	We do this through linking. essentially we say A, B, C, D must link to x. if they can link they are defined. if not, they are not really a member of x. they are a member of the set's of 'imposter' children. now, that's not a universal feature. A may link some features of X, B may link some other features.
+	the intersection between A's and B's links are a valid task definition.
 	if you want. you can 'unlink' manually, or force link(bad idea) but the idea is that they are there.
 
-	the union of A's and B's link's are essentually the valid operations of A and B.
+	the union of A's and B's link's are essentially the valid operations of A and B.
 
 	ANOTHER HUGE NOTE!
-		X is linked to it's self. that's to say. the parent is expected to link it's self fully. X must incorperate X. cause ugh... that makes no sense if it doesnt.
+		X is linked to it's self. that's to say. the parent is expected to link it's self fully. X must incorporate X. cause ugh... that makes no sense if it doesn't.
 
 		we can think of bundle as containing it's self and it's children. or both.
 
@@ -332,7 +332,7 @@ LINKS:
 
 	additionally neither given room to overwrite anything if it executes.
 
-	links may be mutable or constant. that's to say, a link can expect mutable data as in data that varies in size, shape or paramaters. still the same type of data. just bigger or smaller. constant means if it's expecting a R^3 float. it's getting a R^3 float. not a R^3 int, not a R^4 float. it's exactly the same. that's done through ε it converts to what defined.
+	links may be mutable or constant. that's to say, a link can expect mutable data as in data that varies in size, shape or parameters. still the same type of data. just bigger or smaller. constant means if it's expecting a R^3 float. it's getting a R^3 float. not a R^3 int, not a R^4 float. it's exactly the same. that's done through ε it converts to what defined.
 
 	a translation looks like:
 

@@ -1,0 +1,28 @@
+digraph
+{
+	Parent -> experimenthead
+
+	OuterParent->Outer
+
+	Outer -> experimenthead
+	
+	Outer->output
+	output->{OutBundleA, OutBundleB, OutBundleC}
+	OutBundleA->{OAa, OAb, OAc}
+	OutBundleB->{OBa, OBb, OBc}
+	OutBundleC->{OCa, OCb, OCc}	
+	
+	experimenthead->bundleA
+	experimenthead->bundleB
+	experimenthead->bundleC
+
+
+	bundleA->{Aa, Ab, Ac}
+	bundleB->{Ba, Bb, Bc}
+	bundleC->{Ca, Cb, Cc}
+
+
+}
+
+
+

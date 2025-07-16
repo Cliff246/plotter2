@@ -6,8 +6,8 @@
 
 using namespace messenger;
 
-//int
 
+//static size of all the buffers 
 
 int messenger::create_a_socket(const char *path)
 {

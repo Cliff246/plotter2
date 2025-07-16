@@ -6,10 +6,8 @@
 
 namespace messenger
 {
-	using sockint = int;
 
+	#define BUFFER_SIZE 4096
 
-	void write_socket(int socket, message &msg);
-	void listen_socket(const char *path); 
 	int create_a_socket(const char *path);
 }

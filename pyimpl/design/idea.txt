@@ -1,0 +1,7 @@
+
+
+
+bundle 	<- own's it's frame
+\h		<- task's are a member of a bundle
+
+\n
