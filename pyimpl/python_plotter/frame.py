@@ -93,3 +93,27 @@ class Frame:
 
 		newframe = Frame(content=copy_data)
 		return newframe
+
+	#TODO
+	def serialize(self) -> bytes:
+		"""
+		serialzie into bytes.
+		this should be compatable with the c++ version
+
+		returns a list of bytes
+		"""
+		raise NotImplementedError()
+
+		pass
+
+#TODO
+def deserialize(info: bytes) -> Frame:
+	"""
+	deserialzie into frame.
+	this should be compatable with the c++ version
+	"""
+	raise NotImplementedError()
+
+	frame = Frame()
+
+	return frame
