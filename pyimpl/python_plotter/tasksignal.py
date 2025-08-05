@@ -1,5 +1,10 @@
+from enum import Enum
+
+
 
 
 class TaskSignal:
 
-	def __init__(self, ):
+	NONE = 0
+	INTERUPT_FLAG = 1
+	

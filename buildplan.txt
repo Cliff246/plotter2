@@ -12,12 +12,12 @@ current size:
 
 1st:
 expected code size 0k: 10k
-expected data: august 2025
-	get the child and main system working
-	build datter's bones and start
-	build up the root's of the entire projects
-	build the basic manifest sytsem
-	prepare for pipelines
+expected data: august 2025(lol we need to slow down, executive dysfunction and school are killing me)
+	get the child and main system working (^)
+	build datter's bones and start (^)
+	build up the root's of the entire projects (^)
+	build the basic manifest sytsem (^)
+	prepare for pipelines (^)
 
 2nd:
 expected code size 10k: 20k
