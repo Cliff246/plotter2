@@ -36,7 +36,7 @@ void orchestrator::kill_all()
 {
 	for(const auto &proc : m_processes)
 	{
-		proc->killit();	
+		proc->kill_it();	
 	}
 }
 

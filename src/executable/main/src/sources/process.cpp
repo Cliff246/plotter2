@@ -24,9 +24,9 @@ std::atomic<int64_t> p2exe::id_counter = 0;
 
 p2exe::process::process(char **environ)
 {
-	std::string path = messenger::generate_socket_path(id_counter);	
-	
-	m_socketholder = std::make_shared<messenger::childholder>(path); 
+	 std::string m_socket_path = messenger::generate_socket_path(id_counter);	
+
+	m_socketholder = std::make_shared<messenger::childholder>(m_socket_path); 
 	m_timeup = 0;
 
 
@@ -100,7 +100,7 @@ int process::start_up()
 	if(m_socketholder->start_socket() == -1)
 	{
 		//shittttt
-		writeto("exit");
+		write_to("exit");
 		plt_shared::logg(plt_shared::ERROR, "could not start socket");
 
 		is_open = false;		
@@ -177,7 +177,7 @@ void process::check_in()
 }
 
 
-int process::writeto(const std::string &str)
+int process::write_to(const std::string &str)
 {
 	if(is_open)
 	{
@@ -195,7 +195,7 @@ int process::writeto(const std::string &str)
 void process::shutdown()
 {
 	is_open = false;		
-	writeto("exit");
+	write_to("exit");
 	//close it ALL
     close(m_pipe_in[0]);
     close(m_pipe_in[1]);
@@ -206,7 +206,7 @@ void process::shutdown()
 }
 
 //should be only used in emergencies or unresponsive
-void process::killit()
+void process::kill_it()
 {
 	
 	kill(m_pid, SIGKILL);	
@@ -219,5 +219,4 @@ void process::killit()
 
 	is_open = false;		
 }
-
 

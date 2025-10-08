@@ -8,7 +8,8 @@ using namespace messenger;
 
 sockchild::sockchild()
 {
-	m_transit_message = std::make_unique<message>();
+	m_transit_message_in = std::make_unique<message>();
+	m_transit_message_out = std::make_unique<message>();
 }
 
 sockchild::~sockchild()

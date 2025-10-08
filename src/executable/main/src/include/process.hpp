@@ -27,7 +27,7 @@ namespace p2exe
 		std::queue<std::string> m_queue_in;		
 
     	posix_spawn_file_actions_t m_actions;
-		
+		std::string m_socket_path;		
 		//pipe buffers
 		std::string m_read_buffer;
 		std::string m_write_buffer;
@@ -45,7 +45,7 @@ namespace p2exe
 		char *m_write_memmap = nullptr;
 		char **m_environment;
 
-		int writeto(const std::string &str);
+		int write_to(const std::string &str);
 
 	public:
 		process(char **environ);
@@ -54,6 +54,6 @@ namespace p2exe
 		int start_up();
 		void check_in();
 		void shutdown();
-		void killit();
+		void kill_it();
 	};
 }
